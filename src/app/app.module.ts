@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { NewUserComponent } from './componets/new-user/new-user.component';
 import { AddInventoryComponent } from './componets/add-inventory/add-inventory.component';
@@ -11,6 +15,16 @@ import { SalesReportComponent } from './componets/sales-report/sales-report.comp
 import { IncomeReportComponent } from './componets/income-report/income-report.component';
 import { ToolBarComponent } from './componets/tool-bar/tool-bar.component';
 import { NavigationBarComponent } from './componets/navigation-bar/navigation-bar.component';
+
+const appRoutes: Routes = [
+  { path: 'newUser', component: NewUserComponent },
+  {path: 'addInventory', component: AddInventoryComponent },
+  { path: 'updateInventory', component: UpdateInventoryComponent},
+  { path: 'stock', component: StockComponent },
+  { path: 'salesReport', component: SalesReportComponent },
+  { path: 'incomeReport', component: IncomeReportComponent },
+  { path: '**', redirectTo: 'newUser' }
+];
 
 @NgModule({
   declarations: [
@@ -26,7 +40,11 @@ import { NavigationBarComponent } from './componets/navigation-bar/navigation-ba
     NavigationBarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+  
+  
+  RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
