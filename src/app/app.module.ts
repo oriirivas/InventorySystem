@@ -19,6 +19,7 @@ import { NavigationBarComponent } from './componets/navigation-bar/navigation-ba
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
   {path: 'addInventory', component: AddInventoryComponent },
+  {path: 'inventory', component: InventoryComponent },
   { path: 'updateInventory', component: UpdateInventoryComponent},
   { path: 'stock', component: StockComponent },
   { path: 'salesReport', component: SalesReportComponent },
