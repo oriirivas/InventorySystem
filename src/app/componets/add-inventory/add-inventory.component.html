@@ -1,37 +1,66 @@
-<div class="row col-9">
-    <div class="card" style="width: 18rem;">
-        <img src="../../../assets/register.png" height="10" class="card-img-top" alt="...">
+<div class="col-4">
+    <app-tool-bar style="float: left;"></app-tool-bar>
+</div>
+
+<div class="row col-8" style="float: right;">
+    <div class="card col-12"  style="width: 40rem;">
         <div class="card-body">
-          <h5 class="card-title">Ingresa Nuevos Vendedores</h5>
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Nombre del Vendedor</label>
-              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+            <div class="col-12"align="center">
+                <h2 class="title">Ingresa nuevo prodcto al inventario</h2>
+                <img src="../../../assets/productImg.jpg" style="width: 18rem;" class="card-img-top" alt="...">
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Repite la contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-              <label for="exampleInputPassword1">Sucursal</label>
-              <br>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input (click)="sucursa1()" type="radio" name="options" id="option1" checked> Ñuñoa
-                </label>
-                <label class="btn btn-secondary">
-                  <input (click)="sucursa2()" type="radio" name="options" id="option2"> Providencia
-                </label>
-                <br>
-            </div>
-            <br>
-            <label for="exampleInputPassword1">     </label>
-            <br>
-            <button type="submit" class="btn btn-primary">agregar</button>
-          </form>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer01">Fecha</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer02">Marca</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer03">Modelo</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Modelo.
+                            </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationServer03">Stock</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Stock.
+                            </div>
+                    </div>
+                
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer05">precio de compra</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer05" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid.
+                            </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer05">precio de Venta</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer05" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid.
+                            </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" type="submit">Agregar Producto</button>
+            </form>
         </div>
     </div>
 </div>
