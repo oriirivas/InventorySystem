@@ -1,16 +1,37 @@
-<form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="row col-9">
+    <div class="card" style="width: 18rem;">
+        <img src="../../../assets/register.png" height="10" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ingresa Nuevos Vendedores</h5>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nombre del Vendedor</label>
+              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Repite la contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+              <label for="exampleInputPassword1">Sucursal</label>
+              <br>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input (click)="sucursa1()" type="radio" name="options" id="option1" checked> Ñuñoa
+                </label>
+                <label class="btn btn-secondary">
+                  <input (click)="sucursa2()" type="radio" name="options" id="option2"> Providencia
+                </label>
+                <br>
+            </div>
+            <br>
+            <label for="exampleInputPassword1">     </label>
+            <br>
+            <button type="submit" class="btn btn-primary">agregar</button>
+          </form>
+        </div>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+</div>
