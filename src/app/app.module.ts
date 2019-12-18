@@ -15,6 +15,7 @@ import { SalesReportComponent } from './componets/sales-report/sales-report.comp
 import { IncomeReportComponent } from './componets/income-report/income-report.component';
 import { ToolBarComponent } from './componets/tool-bar/tool-bar.component';
 import { NavigationBarComponent } from './componets/navigation-bar/navigation-bar.component';
+import { SalesComponent } from './componets/sales/sales.component';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'updateInventory', component: UpdateInventoryComponent},
   { path: 'stock', component: StockComponent },
   { path: 'salesReport', component: SalesReportComponent },
+  { path: 'sales', component: SalesComponent },
   { path: 'incomeReport', component: IncomeReportComponent },
   { path: '**', redirectTo: 'newUser' }
 ];
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     SalesReportComponent,
     IncomeReportComponent,
     ToolBarComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
