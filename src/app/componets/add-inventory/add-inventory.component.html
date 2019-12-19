@@ -6,8 +6,8 @@
     <div class="card col-12"  style="width: 40rem;">
         <div class="card-body">
             <div class="col-12"align="center">
-                <h2 class="title">Ingresa nuevo prodcto al inventario</h2>
-                <img src="../../../assets/productImg.jpg" style="width: 18rem;" class="card-img-top" alt="...">
+                <h2 class="title">Ingresa nuevo producto al inventario</h2>
+                <img src="../../../assets/img/ico_16.png" style="width: 8rem;" class="card-img-top" alt="...">
             </div>
             <form>
                 <div class="form-row">
@@ -19,13 +19,29 @@
                             </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="validationServer02">Marca</label>
+                        <label for="validationServer02">N° de Factura</label>
                         <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                     </div>
                     <div class="col-md-4 mb-3">
+                        <label for="validationServer03">provedor</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Modelo.
+                            </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer02">Marca</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
                         <label for="validationServer03">Modelo</label>
                         <input type="text" class="form-control is-invalid" id="validationServer03" required>
                             <div class="invalid-feedback">
@@ -59,7 +75,7 @@
                     </div>
                 </div>
                 
-                <button class="btn btn-primary" type="submit">Agregar Producto</button>
+                <button class="btn btn-add btn-primary" type="submit" align="center">Agregar Producto</button>
             </form>
         </div>
     </div>

@@ -2,5 +2,8 @@
     margin: 5%;
 }
 .title{
-    color: cadetblue;
+    color: goldenrod;
+}
+.btn-add{
+    background-color:lightseagreen;
 }
