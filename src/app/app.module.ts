@@ -16,9 +16,13 @@ import { IncomeReportComponent } from './componets/income-report/income-report.c
 import { ToolBarComponent } from './componets/tool-bar/tool-bar.component';
 import { NavigationBarComponent } from './componets/navigation-bar/navigation-bar.component';
 import { SalesComponent } from './componets/sales/sales.component';
+import { LoginComponent } from './componets/login/login.component';
+import { HomeComponent } from './componets/home/home.component';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
   {path: 'addInventory', component: AddInventoryComponent },
   {path: 'inventory', component: InventoryComponent },
   { path: 'updateInventory', component: UpdateInventoryComponent},
@@ -26,7 +30,7 @@ const appRoutes: Routes = [
   { path: 'salesReport', component: SalesReportComponent },
   { path: 'sales', component: SalesComponent },
   { path: 'incomeReport', component: IncomeReportComponent },
-  { path: '**', redirectTo: 'newUser' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
@@ -41,7 +45,9 @@ const appRoutes: Routes = [
     IncomeReportComponent,
     ToolBarComponent,
     NavigationBarComponent,
-    SalesComponent
+    SalesComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
