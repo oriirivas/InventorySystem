@@ -18,6 +18,7 @@ import { NavigationBarComponent } from './componets/navigation-bar/navigation-ba
 import { SalesComponent } from './componets/sales/sales.component';
 import { LoginComponent } from './componets/login/login.component';
 import { HomeComponent } from './componets/home/home.component';
+import { NavFilterComponent } from './componets/nav-filter/nav-filter.component';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     NavigationBarComponent,
     SalesComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavFilterComponent
   ],
   imports: [
     BrowserModule,
