@@ -1,6 +1,6 @@
 .card{
     margin-top: 1%;
-    background-color: deepskyblue;
+    background-color:black;
 }
 .row{
     height: 100%;
@@ -9,4 +9,10 @@
 }
 .colorbtn{
     background-color: goldenrod;
+}
+.title{
+    color:goldenrod;
+}
+.form-group{
+    color: white;
 }

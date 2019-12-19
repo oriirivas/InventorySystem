@@ -19,10 +19,12 @@ import { SalesComponent } from './componets/sales/sales.component';
 import { LoginComponent } from './componets/login/login.component';
 import { HomeComponent } from './componets/home/home.component';
 import { NavFilterComponent } from './componets/nav-filter/nav-filter.component';
+import { SelectProductComponent } from './componets/select-product/select-product.component';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'salesSelect', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },
   {path: 'addInventory', component: AddInventoryComponent },
   {path: 'inventory', component: InventoryComponent },
@@ -49,7 +51,8 @@ const appRoutes: Routes = [
     SalesComponent,
     LoginComponent,
     HomeComponent,
-    NavFilterComponent
+    NavFilterComponent,
+    SelectProductComponent
   ],
   imports: [
     BrowserModule,
