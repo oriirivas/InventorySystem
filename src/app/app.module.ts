@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'salesReport', component: SalesReportComponent },
   { path: 'sales', component: SalesComponent },
   { path: 'incomeReport', component: IncomeReportComponent },
+  { path: 'selectProduct', component: SelectProductComponent},
   { path: '**', redirectTo: 'home' }
 ];
 

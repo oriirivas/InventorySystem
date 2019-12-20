@@ -1,18 +1,28 @@
+
+
 .card{
     margin-top: 1%;
-    background-color:black;
+    background-color:rgb(58, 56, 56);
+    border: solid 2px rgb(15, 221, 221);
 }
 .row{
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+.exampleInputPassword1{
+    color: azure;
+}
 .colorbtn{
-    background-color: goldenrod;
+    background-color: rgb(46, 45, 45);
+    border: solid 1px rgb(15, 221, 221);
+    
 }
 .title{
-    color:goldenrod;
+    color:rgb(238, 238, 238);
 }
 .form-group{
     color: white;
+    
 }
