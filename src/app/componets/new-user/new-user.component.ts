@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-new-user',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+  add(){
+    alert('Nuevo vendedor creado')
+  } 
 
 }
