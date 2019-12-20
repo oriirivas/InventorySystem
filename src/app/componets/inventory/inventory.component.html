@@ -1,52 +1,63 @@
 <div class="col-12" align="center">
-  <h1 align="center">INVENTARIO</h1>
+   <h1 align="center">Lista Productos</h1>
+  <h3 align="center">Inventario</h3>
   
-  <div class="col-8 pag" align="center">
+    <div class="col-8 pag" align="left">
+    <form id="form-busca" action="buscar.php" method="post" align="left">
+      <input type="search" id="buscador" name="buscador" placeholder="Buscar...">
+      <input type="submit" value="Buscar">
+    </form>
+    </div>
 
+    <div class="col-10 pag" align="center">
     <table class="table table-bordered">
-      <thead style="background-color:rgb(13, 231, 184);" class="thead">
+      <thead style="background-color:rgb(155, 255, 223);" class="thead">
       
       <tr>
         <th scope="col">ID Producto</th>
         <th scope="col">Nombre</th>
         <th scope="col">Marca</th>
         <th scope="col">Categoria</th>
-        <th scope="col">Precio Compra</th>
-        <th scope="col">Precio Venta</th>
+        <th scope="col">Precio Compra(u)</th>                              
+        <th scope="col">Precio Venta(u)</th>
         <th scope="col">Stock</th>
-      </tr>
+        <th scope="col">Estado</th>
+      </tr> 
       </thead>
       <tbody>
         <tr>
           <th scope="row">001</th>
-          <td>XS</td>
-          <td>IPhone</td>
-          <td>Cell</td>
-          <td>200000</td>
-          <td>45000</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <th scope="row">002</th>
-          <td>A30</td>
-          <td>Samsung</td>
-          <td>Cell</td>
-          <td>280000</td>
-          <td>40000</td>
-          <td>35</td>
-        </tr>
-        <tr>
-          <th scope="row">003</th>
-          <td>P20</td>
-          <td>Huawei</td>
-          <td>Cell</td>
-          <td>300000</td>
-          <td>45000</td>
-          <td>38</td>
-        </tr>
+            <td>XS</td>
+            <td>IPhone</td>
+            <td>Cell</td>
+            <td>200.000</td>
+            <td>450.000</td>
+            <td>35</td>
+            <td style="background-color: rgb(186, 248, 186);">Disponible</td>
+          </tr>
+          <tr>
+            <th scope="row">002</th>
+            <td>A30</td>
+            <td>Samsung</td>
+            <td>Cell</td>
+            <td>280.000</td>
+            <td>400.000</td>
+            <td>27</td>
+            <td style="background-color: rgb(186, 248, 186);">Disponible</td>
+          </tr>
+          <tr>
+            <th scope="row">003</th>
+            <td>P20</td>
+            <td>Huawei</td>
+            <td>Cell</td>
+            <td>300.000</td>
+            <td>450.000</td>
+            <td>20</td>
+            <td style="background-color: rgb(186, 248, 186);">Disponible</td>
+          </tr>
       </tbody>
       <th scope="7">TOTAL</th>
-      <td colspan="6"></td>
+      <td colspan="7"></td>
     </table>
   
   </div>
