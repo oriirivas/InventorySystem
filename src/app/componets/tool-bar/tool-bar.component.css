@@ -146,6 +146,12 @@
     display: flex;
     align-items: center;
   }
+
+  .sidebar-brand
+  {
+    font-family: 'Orbitron', sans-serif;
+  }
+
   
   .sidebar-wrapper .sidebar-brand > a {
     text-transform: uppercase;
