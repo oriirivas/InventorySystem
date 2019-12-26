@@ -1,36 +1,47 @@
-<div class="form-group col-12" class="row" style="margin: 0%; padding: 5%;">
-    <div class="col-12 login-pane" align="center">
-        <div class="col-12"align="center">
-            <h2 style="color: blanchedalmond;">Bienvenido</h2>
-            &nbsp;&nbsp;<img src="assets\img\user.svg"  width="250" height="150" alt="...">
+<div id="wrapper">
+  
+    <div id="left">
+      <div id="signin">
+        <div class="logo">
+          <img src="..." alt="Sluralpright" />
         </div>
-    </div>  
-    <div class="col-12" align="center">
-        <div class="card" style="width: 24rem;" align="left">
-            <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Nombre de Usuario</label>
-                    <input class="form-control" id="exampleInputEmail1" (keyup)="emailKeyup($event.target.value)" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Contraseña</label>
-                    <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                    <button [routerLink]="['/home']" class="btn btn-primary">Iniciar Sesión</button>
-            </div>  
+        <form>
+          <div>
+            <label>Email</label>
+            <input type="text" class="text-input" />
+          </div>
+          <div>
+            <label>Contraseña</label>
+            <input type="password" class="text-input" />
+          </div>
+          <button type="submit" class="primary-btn">Entrar :$</button>
+        </form>
+        <div class="links">
+          <a href="#">Olvidaste tu contraseña?</a>
+          
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div class="or">
+          <hr class="bar" />
+          <span>O</span>
+          <hr class="bar" />
+        </div>
+        <a href="#" class="secondary-btn">Crear una cuenta</a>
+      </div>
+      <footer id="main-footer">
+        <p>Copyright &copy; 2020, BrainStorm</p>
+        <div>
+          <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
     </div>
-</div>  
-  
-  
-  
+    <div id="right">
+      <div id="showcase">
+        <div class="showcase-content">
+          <strong class="showcase-text">
+            BrainStorm <strong>TogetherStronger</strong>
+          </strong>
+          <a href="#" class="secondary-btn">Inventary System</a>
+        </div>
+      </div>
+    </div>
+  </div>
