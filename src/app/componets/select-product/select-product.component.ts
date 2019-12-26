@@ -11,5 +11,8 @@ export class SelectProductComponent implements OnInit {
 
   ngOnInit() {
   }
+  add(){
+    alert('Producto Vendido')
+  }
 
 }

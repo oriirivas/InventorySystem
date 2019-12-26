@@ -14,14 +14,14 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationServer01">Fecha</label>
-                            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                            <input type="text" class="form-control is-valid" id="validationServer01" value="12-12-12" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer02">N° de Factura</label>
-                            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                            <input type="text" class="form-control is-valid" id="validationServer02" value="12345" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -37,7 +37,7 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationServer02">Marca</label>
-                            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                            <input type="text" class="form-control is-valid" id="validationServer02" value="Samsung" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -60,7 +60,7 @@
                         </div>
                     
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer05">precio de compra</label>
+                            <label for="validationServer05">Precio de compra</label>
                             <input type="text" class="form-control is-invalid" id="validationServer05" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid.
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer05">precio de Venta</label>
+                            <label for="validationServer05">Precio de Venta</label>
                             <input type="text" class="form-control is-invalid" id="validationServer05" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid.
@@ -76,7 +76,7 @@
                                 
                         </div>
                     </div>
-                    <button class="btn btn-add btn-primary" type="submit" align="center">Agregar Producto</button>
+                    <button (click)="add()" class="btn btn-add btn-primary" type="submit" align="center">Agregar Producto</button>
                 </form>
             </div>
         </div>

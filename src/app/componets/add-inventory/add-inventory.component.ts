@@ -11,5 +11,7 @@ export class AddInventoryComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  add(){
+    alert('Debe llenar todos los datos para agregado')
+  }
 }
