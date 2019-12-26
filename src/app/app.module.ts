@@ -20,20 +20,22 @@ import { LoginComponent } from './componets/login/login.component';
 import { HomeComponent } from './componets/home/home.component';
 import { NavFilterComponent } from './componets/nav-filter/nav-filter.component';
 import { SelectProductComponent } from './componets/select-product/select-product.component';
+import { TryComponent } from './componets/try/try.component';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'try', component: TryComponent },
   { path: 'salesSelect', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },
-  {path: 'addInventory', component: AddInventoryComponent },
+  {path: 'add-inventory', component: AddInventoryComponent },
   {path: 'inventory', component: InventoryComponent },
-  { path: 'updateInventory', component: UpdateInventoryComponent},
+  { path: 'update-inventory', component: UpdateInventoryComponent},
   { path: 'stock', component: StockComponent },
-  { path: 'salesReport', component: SalesReportComponent },
+  { path: 'sales-report', component: SalesReportComponent },
   { path: 'sales', component: SalesComponent },
-  { path: 'incomeReport', component: IncomeReportComponent },
-  { path: 'selectProduct', component: SelectProductComponent},
+  { path: 'income-report', component: IncomeReportComponent },
+  { path: 'select-product', component: SelectProductComponent},
   { path: '**', redirectTo: 'home' }
 ];
 
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     NavFilterComponent,
-    SelectProductComponent
+    SelectProductComponent,
+    TryComponent
   ],
   imports: [
     BrowserModule,
