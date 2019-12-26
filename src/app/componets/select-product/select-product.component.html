@@ -44,8 +44,8 @@
                 </tbody>
                 </table>
             </div>
-            <button type="button" class="btn btn-primary btn-lg">Vender</button>
+            <button (click)="add()"  type="button" class="btn btn-primary btn-lg">Vender</button>
 
 
-            <button type="button" class="btn btn-secondary btn-lg">Regresar</button>
+            <button [routerLink]="['/sales']" type="button" class="btn btn-secondary btn-lg">Regresar</button>
 </div>
