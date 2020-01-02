@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./try.component.css']
 })
 export class TryComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
+
+  
