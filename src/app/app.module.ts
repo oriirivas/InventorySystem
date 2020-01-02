@@ -56,6 +56,7 @@ const appRoutes: Routes = [
     HomeComponent,
     NavFilterComponent,
     SelectProductComponent,
+    
     TryComponent
   ],
   imports: [

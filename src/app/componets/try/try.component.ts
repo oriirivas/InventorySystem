@@ -7,16 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TryComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  
-
 }
 
-
-
-
+  
