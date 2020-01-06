@@ -21,6 +21,16 @@ import { HomeComponent } from './componets/home/home.component';
 import { NavFilterComponent } from './componets/nav-filter/nav-filter.component';
 import { SelectProductComponent } from './componets/select-product/select-product.component';
 import { TryComponent } from './componets/try/try.component';
+import { IphoneComponent } from './componets/iphone/iphone.component';
+import { SamsungComponent } from './componets/samsung/samsung.component';
+import { HuaweiComponent } from './componets/huawei/huawei.component';
+import { XiaomiComponent } from './componets/xiaomi/xiaomi.component';
+import { SonyComponent } from './componets/sony/sony.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
+
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
@@ -57,10 +67,22 @@ const appRoutes: Routes = [
     NavFilterComponent,
     SelectProductComponent,
     
-    TryComponent
+    TryComponent,
+    
+    IphoneComponent,
+    
+    SamsungComponent,
+    
+    HuaweiComponent,
+    
+    XiaomiComponent,
+    
+    SonyComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
   
   
   RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })

@@ -17,8 +17,11 @@ export class ToolBarComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.name=this.loginInfo.getName();
+    this.nombre();
+  }
 
+  nombre(){
+    this.name=this.loginInfo.getName();
   }
 
   
