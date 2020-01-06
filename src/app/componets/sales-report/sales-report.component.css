@@ -1,7 +1,28 @@
-.fila{
-    background-color:rgb(243, 243, 243);
+h1{
+    margin-top: 10%;
 }
-.tb{
-    margin: 5;
-    padding: 5;
+
+.pag{
+    margin-top:3%;
+}
+table{
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border-spacing: 0;
+}
+
+table td, table th{
+    padding: 4xp;
+    text-align: center;
+
+}
+nav{
+    margin-top:3% ;
+    align-content: right;
+}
+
+select{
+    margin-top:3% ;
+    align-items: center;
 }
