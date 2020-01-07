@@ -7,14 +7,14 @@
         </div>
         <form>
           <div>
-            <label>Email</label>
-            <input type="text" class="text-input" />
+            <label>Nombre</label>
+            <input (keyup)="nameKeyup($event.target.value)" type="text" class="text-input" />
           </div>
           <div>
             <label>Contraseña</label>
-            <input type="password" class="text-input" />
+            <input (keyup)="passKeyup($event.target.value)" type="password" class="text-input" />
           </div>
-          <button type="submit" class="primary-btn">Entrar :$</button>
+          <button type="submit" (click)="login()" class="primary-btn">Entrar :$</button>
         </form>
         <div class="links">
           <a href="#">Olvidaste tu contraseña?</a>
