@@ -13,7 +13,16 @@ table{
 }
 
 table td, table th{
-    padding: 8xp;
+    padding: 4xp;
     text-align: center;
 
+}
+nav{
+    margin-top:3% ;
+    align-content: right;
+}
+
+select{
+    margin-top:3% ;
+    align-items: center;
 }
