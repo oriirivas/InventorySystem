@@ -10,6 +10,8 @@ export class NavFilterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
+
 
 }
