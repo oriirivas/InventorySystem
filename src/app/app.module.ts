@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { HttpClientModule } from '@angular/common/http';
+
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -33,6 +34,8 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+
+
 
 
 
@@ -91,6 +94,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
   
   
   RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' }),

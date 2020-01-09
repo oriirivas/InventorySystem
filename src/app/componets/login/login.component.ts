@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { LoginServiceService } from '../../componets/service/login-service.service';
+import { LoginService } from '../../componets/service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   name: string
 
   constructor(private router: Router,
-    private loginInfo: LoginServiceService) { }
+    private loginInfo: LoginService) { }
 
   ngOnInit() {    
   }
@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
   
 
   login() {
-    let aja =this.loginInfo.sendName(this.name)
     let validation =false;
     if(this.name == null || this.pass == null){
       alert('llene todas las casillas')
     }else{
+      let aja =this.loginInfo.showName(this.name)
       validation=true;
       if(validation) {
         this.router.navigate(['/home']);

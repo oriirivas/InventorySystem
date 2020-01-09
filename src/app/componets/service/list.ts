@@ -7,9 +7,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginServiceService {
+export class ListService {
   public name:string
-/*
+
   private headersOptions = {
     headers: {
         'Content-Type': 'application/json',
@@ -20,16 +20,9 @@ export class LoginServiceService {
     }
   };
 
-  //constructor(private http: HttpClient) { }
-*/
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  public sendName(name2:string){
-    this.name=name2;
-  };
+
+
   
-  public getName(){
-    return this.name
-  };
-
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginServiceService } from '../../componets/service/login-service.service';
 import { LoginComponent } from '../../componets/login/login.component';
+import { LoginService } from '../../componets/service/login.service';
 
 @Component({
   selector: 'app-tool-bar',
@@ -13,7 +13,7 @@ export class ToolBarComponent implements OnInit {
   private login: LoginComponent
 
   constructor(private router: Router,
-    private loginInfo: LoginServiceService
+    private loginInfo: LoginService
     ) { }
 
   ngOnInit() {
