@@ -3,6 +3,12 @@ html {
   min-height: 100%;
 }
 
+.plp-item-buybtn {
+  color: #fff;
+  background-color: #d20a2c;
+  
+}
+
 body {
   overflow-x: hidden;
 }
@@ -26,6 +32,24 @@ body.sticky-footer {
 
 .iphone8{
   width: 80px; height: 80px;
+}
+
+.huaweip30black{  
+  width: 150px; height: 180px;
+}
+
+.nova5tpurple{
+  width: 150px; height: 180px;
+
+}
+
+.mate30pro{
+  width: 150px; height: 180px;
+
+}
+
+.p30lite{
+  width: 150px; height: 180px;
 }
 
 body.sticky-footer .content-wrapper {

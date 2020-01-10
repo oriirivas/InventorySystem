@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../componets/service/products.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-add-inventory',
@@ -6,16 +10,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-inventory.component.css']
 })
 export class AddInventoryComponent implements OnInit {
-  public date: string
-  public number: string
+  public date: Date
+  public numberf: string
   public provider: string
   public tradeMark: string
   public model: string
-  public stock: string
-  public salePrice: string
-  public buyPrice: string
+  public stock: number
+  public category: string
+  public salePrice: number
+  public buyPrice: number
 
-  public aja="invalid-feedback";
+  public aja=1;
   
   public lockDate = 'ingrese fecha';
   public lockNumber = 'ingrese numero de factura';
@@ -25,6 +30,7 @@ export class AddInventoryComponent implements OnInit {
   public lockSalePrice = 'ingrese precio de venta';
   public lockBuyPrice = 'ingrese precio de compra';
   public lockStock = 'ingrese cantidad de productos';
+  public lockCategory = 'ingrese el sistema operativo';
 
   public validDate= "is-invalid";
   public validNumber= "is-invalid";
@@ -34,12 +40,17 @@ export class AddInventoryComponent implements OnInit {
   public validBuyPrice= "is-invalid";
   public validStock= "is-invalid";
   public validModel= "is-invalid";
+  public validCategory= "is-invalid";
   estadoPositivo: boolean = true;
-  constructor() { }
+
+  constructor(private router: Router,
+    private productServices: ProductsService) { }
 
   ngOnInit() {
   }
   add(){
+    console.log('llegueeeeee');
+    console.log( this.productServices.showProduct);
     alert('Debe llenar todos los datos para agregado')
   }
   //[ngClass]="{valid-feedback: estadoPositivo, invalid-feedback: !estadoPositivo }"
@@ -51,13 +62,13 @@ export class AddInventoryComponent implements OnInit {
     }
   }
 
-  dateKeyup(value: string) {
+  dateKeyup(value: Date) {
     this.date = value;
     this.lockDate = 'ingresado correctamente';
     this.validDate='is-valid';
   }
   numberKeyup(value: string) {
-    this.number = value;
+    this.numberf = value;
     this.lockNumber = 'ingresado correctamente';
     this.validNumber='is-valid';
   }
@@ -76,19 +87,38 @@ export class AddInventoryComponent implements OnInit {
     this.lockModel = 'ingresado correctamente';
     this.validModel='is-valid';
   }
-  stockKeyup(value: string) {
+  stockKeyup(value: number) {
     this.stock = value;
     this.lockStock = 'ingresado correctamente';
     this.validStock='is-valid';
   }
-  buyPriceKeyup(value: string) {
+  buyPriceKeyup(value: number) {
     this.buyPrice = value;
     this.lockBuyPrice = 'ingresado correctamente';
     this.validBuyPrice='is-valid';
   }
-  salePriceKeyup(value: string) {
+  salePriceKeyup(value: number) {
     this.salePrice = value;
     this.lockSalePrice = 'ingresado correctamente';
     this.validSalePrice='is-valid';
   }
-}
+  categoryKeyup(value: string) {
+    this.category = value;
+    this.lockCategory = 'ingresado correctamente';
+    this.validCategory='is-valid';
+  }
+
+  newProduct(){
+    console.log(this.date, this.numberf,this.category,this.provider,this.tradeMark,this.model,this.buyPrice,this.salePrice,this.stock)
+    if(this.date==null ||this.numberf==null || this.category == null ||this.provider == null || this.tradeMark == null || this.model==null || this.buyPrice == null || this.salePrice == null || this.stock == null){
+      alert('porfavor ingrese todo los datos')
+    }else{
+      this.productServices.addProducto(this.stock, this.aja, this.tradeMark, this.model, this.buyPrice, this.category, this.date).subscribe(res => {
+        alert("Guardado con exito")
+        this.router.navigate(['/home']);
+      });
+    }    
+  }
+} 
+
+

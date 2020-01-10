@@ -30,15 +30,17 @@ export class LoginComponent implements OnInit {
   login() {
     let validation =false;
     if(this.name == null || this.pass == null){
-      alert('llene todas las casillas')
+      alert('llene todas las casillas');
     }else{
-      let aja =this.loginInfo.showName(this.name)
-      validation=true;
+      let aja =this.loginInfo.showName(this.name);
+      let obs = this.loginInfo.login(this.name, this.pass);
+      obs.subscribe(validation  => {
       if(validation) {
         this.router.navigate(['/home']);
       }else {
         alert('usuario y pass inválidos');
       }
+    });
     }
   }
 

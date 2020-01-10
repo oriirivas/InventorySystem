@@ -24,17 +24,28 @@ export class LoginService {
     this.name=name2;
   };
 
-  public login(email: string, pass: string) {
+  public login(name: string, pass: string) {
     let body = {
-      "passwordDto": "pass",
-      "userNameDto": "userName"
+      "passwordDto": pass,
+      "userNameDto": name
     }
     return this.http.post('http://localhost:8090/api/v1/usuarios/sessions', body, this.headersOptions );
     
   }
+  public register(charge: string, date:Date, name: string, pass: string, userName: string) {
+    let body = {
+      "cargoDto": charge,
+      "fechaDto": date,
+      "nombreDto": userName,
+      "passwordDto": pass,
+      "userNameDto": name
+    }
+    return this.http.post('http://localhost:8090/api/v1/usuarios', body, this.headersOptions );
+    
+  }
 
   
-  
+
   public getName(){
     return this.name
   };

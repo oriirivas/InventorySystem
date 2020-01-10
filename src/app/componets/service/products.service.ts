@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -18,25 +19,23 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-/*
-  public showProduct(email: string, pass: string) {
+  public showProduct() {
   
-    return this.http.get('http://localhost:8090/api/v1/producto', this.headersOptions );
+    return this.http.get('http://localhost:8090/api/v1/producto/listar', this.headersOptions );
     
   }
   
 
-  public addProducto(count:number, tradeMark:number, model:string, price:number, category:string) {
+  public addProducto(stock:number, aja:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
     let body = {
-      "cantidadDto": count,
-      "fechaProductoDto": "2020-01-08T16:27:44.123Z",
-      "idProductoDto": 0,
+      "cantidadDto": stock,
+      "fechaProductoDto": date,
       "marcaDto": {
-      "idMarca": tradeMark,
-      "nombreMarca": "string"
-    },
+        "idMarca": aja,
+        "nombreMarca": tradeMark
+      },
       "modeloDto": model,
-      "precioDto": price,
+      "precioDto": buyPrice,
       "sistemaOperativoDto": category
     }
     let aux = this.http.post('http://localhost:8090/api/v1/producto', body, this.headersOptions );
@@ -60,7 +59,7 @@ export class ProductsService {
     }
     let aux = this.http.post('http://localhost:8090/api/v1/producto/', body, this.headersOptions );
     return aux; 
-  } /**/
+  } 
 }
 
 

@@ -35,18 +35,25 @@
                         </div>
                     </div>
                     <div class="form-row">  
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="validationServer03">Marca</label>
                             <input (keyup)="tradeMarkKeyup($event.target.value)" type="text" class="form-control {{validTradeMark}}" id="validationServer03" required>
                                 <div class="invalid-feedback">
                                     {{lockTradeMark}}
                                 </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="validationServer03">Modelo</label>
                             <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer04" required>
                                 <div class="invalid-feedback">
                                     {{lockModel}}
+                                </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServer03">Categoria</label>
+                            <input (keyup)="categoryKeyup($event.target.value)" type="text" class="form-control {{validCategory}}" id="validationServer04" required>
+                                <div class="invalid-feedback">
+                                    {{lockCategory}}
                                 </div>
                         </div>
                     </div>
@@ -76,7 +83,7 @@
                                 
                         </div>
                     </div>
-                    <button (click)="add()" class="btn btn-add btn-primary" type="submit" align="center">Agregar Producto</button>
+                    <button (click)="add()" (click)="newProduct()" class="btn btn-add btn-primary" type="submit" align="center">Agregar Producto</button>
                 </form>
             </div>
         </div>
