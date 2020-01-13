@@ -494,3 +494,10 @@
   .chiller-theme .sidebar-footer>a:last-child {
       border-right: none;
   }
+  img{
+    float: right;
+  }
+  .icons8-gmail{
+    float: left;
+  }
+ 
