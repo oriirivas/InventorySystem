@@ -165,7 +165,6 @@ body.fixed-nav {
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
   float: right;
   width: auto;
-  content: '\f105';
   border: none;
   font-family: 'FontAwesome';
 }
