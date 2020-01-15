@@ -44,7 +44,7 @@
                 </tbody>
                 </table>
             </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin: 10px">
                 Vender
               </button>
               
@@ -53,17 +53,139 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Detalle de Compra</h5>
+                      <div class="row">
+                        <address>
+                         <strong class="">BrainStorm</strong><br class="">
+                         Irarrázaval 3665, Ñuñoa, Región Metropolitana<br class="">                        
+                         </address>
+                 </div> <!-- row -->
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <div class="container">
+    <div class="text">
+         <h4 style="margin-right: 500px">Factura</h4>
+    </div>
+    
+     <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!-- <h3 class="panel-title">Cabecera</h3> -->
+					<hr>
+                    
+                        
+                        <div class="col-md-6" style="background-color:white;">
+                            <div class="form-group">
+                                <label for="gmail" class="col-sm-2 control-label" style="margin-right: 500px" >Enviar a:</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="gmail" placeholder="ej@ej.com" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="background-color:white;">
+                            <div class="form-group">
+                              
+                                <label for="nombre" class="col-sm-5 control-label">Facturar a:</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="nombre" placeholder="nombre" type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 target" style="background-color:white;">
+                            <div class="form-group">
+                                
+                                <div class="col-sm-9">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                    <br>
+                    
+				</div> <!-- panel heading -->
+				<div class="panel-body">
+				  <h3 class="panel-title">Detalle</h3>
+				  
+				  <table class="table table-condensed">
+					<thead>
+					  <tr>
+						<th class="">Producto</th>
+						<th class="">Descripción</th>
+						<th class="">cantidad</th>
+						<th class="">precio</th>
+						<th class="">tipo impuesto</th>
+						<th class="">importe</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td class="">001</td>
+						<td class="">Doe moe</td>
+						<td class="">12.00</td>
+						<td class="">100.00</td>
+						<td class="">Reducido 7%</td>
+						<td class="">1200.00</td>
+					  </tr>
+					  <tr>
+						<td class="">002</td>
+						<td class="">Doe moe TURURU</td>
+						<td class="">10.00</td>
+						<td class="">1000.00</td>
+						<td class="">Normal 18%</td>
+						<td class="">10000.00</td>
+					  </tr>
+					</tbody>
+				  </table>
+				</div> <!-- panel body -->
+				<div class="panel-footer">Piefactura
+				</div>
+             </div> <!-- panel -->
+        </div> <!-- col -->
+    </div> <!-- row -->
+    <div class="row text-center">
+       <p class="">peu pagina</p>
+    </div>
+  <!-- container -->
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Ver Factura</button>
+                      <button type="button" class="btn btn-primary">Imprimir</button>
                     </div>
                   </div>
                 </div>
@@ -71,5 +193,11 @@
             
 
 
-            <button [routerLink]="['/sales']" type="button" class="btn btn-secondary btn-lg">Regresar</button>
+            <button [routerLink]="['/sales']" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Regresar</button>
+            <br>
+            <br>
+            <h5 style="margin-right: 500px" >Tipo Pago:</h5>
+            <button type="button" class="btn btn-success" style="margin: 10px">Efectivo</button>
+            <button type="button" class="btn btn-success">Crédito</button>
+    
 </div>
