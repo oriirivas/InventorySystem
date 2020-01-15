@@ -20,7 +20,7 @@ export class AddInventoryComponent implements OnInit {
   public salePrice: number
   public buyPrice: number
 
-  public aja=1;
+  public idMark=1;
   
   public lockDate = 'ingrese fecha';
   public lockNumber = 'ingrese numero de factura';
@@ -113,7 +113,8 @@ export class AddInventoryComponent implements OnInit {
     if(this.date==null ||this.numberf==null || this.category == null ||this.provider == null || this.tradeMark == null || this.model==null || this.buyPrice == null || this.salePrice == null || this.stock == null){
       alert('porfavor ingrese todo los datos')
     }else{
-      this.productServices.addProducto(this.stock, this.aja, this.tradeMark, this.model, this.buyPrice, this.category, this.date).subscribe(res => {
+      let obs =this.productServices.addProducto(this.stock, this.idMark, this.tradeMark, this.model, this.buyPrice, this.category, this.date)
+      obs.subscribe(res => {
         alert("Guardado con exito")
         this.router.navigate(['/home']);
       });

@@ -3,10 +3,11 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import {InventoryComponent} from '../inventory/inventory.component'
 
 // TODO: Replace this with your own data model type
 export interface InventoryTableItem {
-  id: number;
+  idProductoDto: number;
   tradeMark:string;
   model:string;
   category:string;
@@ -16,7 +17,7 @@ export interface InventoryTableItem {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: InventoryTableItem[] = [
+/*[
   {id: 1, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
   {id: 2, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
   {id: 3, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
@@ -27,7 +28,7 @@ const EXAMPLE_DATA: InventoryTableItem[] = [
   {id: 8, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
   {id: 9, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
   {id: 10, tradeMark:'iphone', model:'xyz', category:'ios', buyPrice: 540, salePrice: 750, stock: 19},
-];
+];*/
 
 /**
  * Data source for the DataTable view. This class should
@@ -35,12 +36,18 @@ const EXAMPLE_DATA: InventoryTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class DataTableDataSource extends DataSource<InventoryTableItem> {
-  data: InventoryTableItem[] = EXAMPLE_DATA;
+
+  data: InventoryTableItem[] = [];
   paginator: MatPaginator;
   sort: MatSort;
 
   constructor() {
     super();
+  }
+
+  addList( obj ){
+    this.data = obj;
+
   }
 
   /**
@@ -89,7 +96,7 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'idProductoDto': return compare(+a.idProductoDto, +b.idProductoDto, isAsc);
         case 'tradeMark': return compare(+a.tradeMark, +b.tradeMark, isAsc);
         case 'model': return compare(+a.model, +b.model, isAsc);
         case 'category': return compare(+a.category, +b.category, isAsc);

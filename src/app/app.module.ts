@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+ 
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -29,11 +29,12 @@ import { XiaomiComponent } from './componets/xiaomi/xiaomi.component';
 import { SonyComponent } from './componets/sony/sony.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { DataTableComponent } from './data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+
 
 
 

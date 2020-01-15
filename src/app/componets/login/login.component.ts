@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
     if(this.name == null || this.pass == null){
       alert('llene todas las casillas');
     }else{
+
+      localStorage.setItem( "user", this.name );
       let aja =this.loginInfo.showName(this.name);
       let obs = this.loginInfo.login(this.name, this.pass);
       obs.subscribe(validation  => {

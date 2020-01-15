@@ -20,18 +20,17 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   public showProduct() {
-  
-    return this.http.get('http://localhost:8090/api/v1/producto/listar', this.headersOptions );
-    
+    localStorage.getItem("user");
+    return this.http.get('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
   }
   
 
-  public addProducto(stock:number, aja:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
+  public addProducto(stock:number, idMark:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
     let body = {
       "cantidadDto": stock,
       "fechaProductoDto": date,
       "marcaDto": {
-        "idMarca": aja,
+        "idMarca": idMark,
         "nombreMarca": tradeMark
       },
       "modeloDto": model,
@@ -44,20 +43,20 @@ export class ProductsService {
 
   
 
-  public modifyProduct(email:string, pass:string, nombre: string, segundoNombre: string, apellido: string, segundoApellido: string, rut: string, rol: string) {
+  public modifyProduct(optionId:number, stock:number, idMark:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
+    let id = optionId;
     let body = {
-      "cantidadDto": 0,
-      "fechaProductoDto": "2020-01-08T17:03:50.538Z",
-      "idProductoDto": 0,
+      "cantidadDto": stock,
+      "fechaProductoDto": date,
       "marcaDto": {
-      "idMarca": 0,
-      "nombreMarca": "string"
-    },
-      "modeloDto": "string",
-      "precioDto": 0,
-      "sistemaOperativoDto": "string"
+        "idMarca": idMark,
+        "nombreMarca": tradeMark
+      },
+      "modeloDto": model,
+      "precioDto": buyPrice,
+      "sistemaOperativoDto": category
     }
-    let aux = this.http.post('http://localhost:8090/api/v1/producto/', body, this.headersOptions );
+    let aux = this.http.put('http://localhost:8090/api/v1/producto/'+id, body, this.headersOptions );
     return aux; 
   } 
 }
