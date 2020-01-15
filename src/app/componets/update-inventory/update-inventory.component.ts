@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { DataTableDataSource, InventoryTableItem } from './update-invenotry-table-datasource';
+import { DataTableDataSource, UpdateInventoryTableItem } from './update-invenotry-table-datasource';
 import {ProductsService} from '../service/products.service'
 
 @Component({
@@ -10,12 +10,12 @@ import {ProductsService} from '../service/products.service'
   templateUrl: './update-inventory.component.html',
   styleUrls: ['./update-inventory.component.css']
 })
-export class UpdateInventoryComponent implements OnInit {
+export class UpdateInventoryComponent implements AfterViewInit, OnInit {
 
   public tableInfo;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<InventoryTableItem>;
+  @ViewChild(MatTable, {static: false}) table: MatTable<UpdateInventoryTableItem>;
   dataSource: DataTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
@@ -45,6 +45,11 @@ export class UpdateInventoryComponent implements OnInit {
   ngAfterViewInit() {
   
   }
+  tableInfomation(){
+     
+    this.tableInfo=this.productService.showProduct().subscribe;  
+   
+}
 
 }
 

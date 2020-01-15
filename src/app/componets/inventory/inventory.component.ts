@@ -20,7 +20,8 @@ export class InventoryComponent implements AfterViewInit, OnInit {
   dataSource: DataTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'tradeMark', 'model', 'category', 'buyPrice', 'salePrice', 'stock'];
+  displayedColumns = ['idProductoDto', 'tradeMark', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto'];
+
 
   constructor(private productService:ProductsService) { }
 
@@ -51,12 +52,7 @@ export class InventoryComponent implements AfterViewInit, OnInit {
   tableInfomation(){
      
       this.tableInfo=this.productService.showProduct().subscribe;  
-      /*
-      .subscribe(res=>{
-        this.productService.showProduct()
-        console.log(res);
-  
-       })*/
+     
   }
 
 }

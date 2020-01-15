@@ -6,20 +6,21 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 import {UpdateInventoryComponent} from './update-inventory.component'
 
 // TODO: Replace this with your own data model type
-export interface InventoryTableItem {
-  idProductoDto: number;
-  tradeMark:string;
-  model:string;
-  category:string;
-  buyPrice:number;
-  salePrice:number;
-  stock:number;
+export interface UpdateInventoryTableItem {
+    idProductoDto: number;
+    tradeMark:string;
+    modeloDto:string;
+    sistemaOperativoDto:string;
+    precioDto:number;
+    salePrice:number;
+    cantidadDto:number;
+    edit:object;
 }
 
 
-export class DataTableDataSource extends DataSource<InventoryTableItem> {
+export class DataTableDataSource extends DataSource<UpdateInventoryTableItem> {
 
-  data: InventoryTableItem[] = [];
+  data: UpdateInventoryTableItem[] = [];
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -37,7 +38,7 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<InventoryTableItem[]> {
+  connect(): Observable<UpdateInventoryTableItem[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -61,7 +62,7 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: InventoryTableItem[]) {
+  private getPagedData(data: UpdateInventoryTableItem[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -70,7 +71,7 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: InventoryTableItem[]) {
+  private getSortedData(data: UpdateInventoryTableItem[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -80,12 +81,12 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
       switch (this.sort.active) {
         case 'idProductoDto': return compare(+a.idProductoDto, +b.idProductoDto, isAsc);
         case 'tradeMark': return compare(+a.tradeMark, +b.tradeMark, isAsc);
-        case 'model': return compare(+a.model, +b.model, isAsc);
-        case 'category': return compare(+a.category, +b.category, isAsc);
-        case 'buyPrice': return compare(+a.buyPrice, +b.buyPrice, isAsc);
+        case 'modeloDto': return compare(+a.modeloDto, +b.modeloDto, isAsc);
+        case 'sistemaOperativoDto': return compare(+a.sistemaOperativoDto, +b.sistemaOperativoDto, isAsc);
+        case 'precioDto': return compare(+a.precioDto, +b.precioDto, isAsc);
         case 'salePrice': return compare(+a.salePrice, +b.salePrice, isAsc);
-        case 'stock': return compare(+a.stock, +b.stock, isAsc);
-        case 'edit': return compare(+a.stock, +b.stock, isAsc);
+        case 'cantidadDto': return compare(+a.cantidadDto, +b.cantidadDto, isAsc);
+        case 'edit': return compare(+a.edit, +b.edit, isAsc);
         default: return 0;
       }
     });

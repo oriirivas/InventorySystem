@@ -17,7 +17,9 @@ import { IncomeReportComponent } from './componets/income-report/income-report.c
 import { ToolBarComponent } from './componets/tool-bar/tool-bar.component';
 import { NavigationBarComponent } from './componets/navigation-bar/navigation-bar.component';
 import { SalesComponent } from './componets/sales/sales.component';
+
 import { LoginComponent } from './componets/login/login.component';
+
 import { HomeComponent } from './componets/home/home.component';
 import { NavFilterComponent } from './componets/nav-filter/nav-filter.component';
 import { SelectProductComponent } from './componets/select-product/select-product.component';
@@ -42,7 +44,9 @@ import { MatSortModule } from '@angular/material/sort';
 
 const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
+
   { path: 'login', component: LoginComponent },
+  
   { path: 'try', component: TryComponent },
   { path: 'sales-select', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },

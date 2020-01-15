@@ -5,17 +5,12 @@
   </div>
   <div class="card mb-3">
     <div class="card-header">
-      <i class="fa fa-area-chart" aling="center"></i>Modificar Inventario</div>
+      <i class="fa fa-area-chart" aling="center"></i>Productos diponibles en Inventario</div>
     <div class="card-body">
       <canvas id="myAreaChart" width="100%" height="30"></canvas>
   <div class="row">
-  <div class="col-10" align="center" style="float: right;">
-   
-    {{tableInfo}}
-    
-    <h1 align="center">Lista Productos</h1>
-    <h3 align="center">Inventario</h3>
-      <div class="col-10 pag" align="center">
+  <div class="col-10" align="center" style="float: right;"> 
+    <div class="col-10 pag" align="center">
         <div class="col-12">
           <navfilter></navfilter>
         </div>
@@ -37,22 +32,22 @@
                     <td mat-cell *matCellDef="let row">{{row.tradeMark}}</td>
                   </ng-container>
 
-                  <!-- category Column -->
-                  <ng-container matColumnDef="model">
+                  <!-- model Column -->
+                  <ng-container matColumnDef="modeloDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Modelo</th>
-                    <td mat-cell *matCellDef="let row">{{row.model}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.modeloDto}}</td>
                   </ng-container>
 
                   <!-- category Column -->
-                  <ng-container matColumnDef="category">
+                  <ng-container matColumnDef="sistemaOperativoDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</th>
-                    <td mat-cell *matCellDef="let row">{{row.category}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.sistemaOperativoDto}}</td>
                   </ng-container>
 
                   <!-- buyPrice Column -->
-                  <ng-container matColumnDef="buyPrice">
+                  <ng-container matColumnDef="precioDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Precio de Compra</th>
-                    <td mat-cell *matCellDef="let row">{{row.buyPrice}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.precioDto}}</td>
                   </ng-container>
                   <!-- salePrice Column -->
                   <ng-container matColumnDef="salePrice">
@@ -60,23 +55,23 @@
                     <td mat-cell *matCellDef="let row">{{row.salePrice}}</td>
                   </ng-container>
                   <!-- stock Column -->
-                  <ng-container matColumnDef="stock">
+                  <ng-container matColumnDef="cantidadDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Stock</th>
-                    <td mat-cell *matCellDef="let row">{{row.stock}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.cantidadDto}}</td>
                   </ng-container>
-                  <!-- stock Edit -->
+
+                  <!-- edit -->
                   <ng-container matColumnDef="edit">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Editar</th>
-                    <td mat-cell *matCellDef="let row">{{row.edit}}</td>
-                    <td>
+                    <td mat-cell *matCellDef="let row">{{row.edit}}
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                      Launch demo modal
+                         Editar
                       </button>
                     
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                        <div class="modal-c ontent">
                           <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -93,17 +88,18 @@
                         </div>
                       </div>
                     </div>
-                    </td>
-                  </ng-container>
+                  </td>
+                </ng-container>
             
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+
                 <mat-paginator #paginator
                         [length]="dataSource?.data.length"
                         [pageIndex]="0"
                         [pageSize]="10"
-                        [pageSizeOptions]="[1,25, 50, 100, 250]">
+                        [pageSizeOptions]="[1,25, 50, 100]">
                 </mat-paginator>
               </div>
              </table>

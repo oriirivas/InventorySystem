@@ -9,11 +9,11 @@ import {InventoryComponent} from '../inventory/inventory.component'
 export interface InventoryTableItem {
   idProductoDto: number;
   tradeMark:string;
-  model:string;
-  category:string;
-  buyPrice:number;
+  modeloDto:string;
+  sistemaOperativoDto:string;
+  precioDto:number;
   salePrice:number;
-  stock:number;
+  cantidadDto:number;
 }
 
 // TODO: replace this with real data from your application
@@ -98,11 +98,11 @@ export class DataTableDataSource extends DataSource<InventoryTableItem> {
       switch (this.sort.active) {
         case 'idProductoDto': return compare(+a.idProductoDto, +b.idProductoDto, isAsc);
         case 'tradeMark': return compare(+a.tradeMark, +b.tradeMark, isAsc);
-        case 'model': return compare(+a.model, +b.model, isAsc);
-        case 'category': return compare(+a.category, +b.category, isAsc);
-        case 'buyPrice': return compare(+a.buyPrice, +b.buyPrice, isAsc);
+        case 'modeloDto': return compare(+a.modeloDto, +b.modeloDto, isAsc);
+        case 'sistemaOperativoDto': return compare(+a.sistemaOperativoDto, +b.sistemaOperativoDto, isAsc);
+        case 'precioDto': return compare(+a.precioDto, +b.precioDto, isAsc);
         case 'salePrice': return compare(+a.salePrice, +b.salePrice, isAsc);
-        case 'stock': return compare(+a.stock, +b.stock, isAsc);
+        case 'cantidadDto': return compare(+a.cantidadDto, +b.cantidadDto, isAsc);
         default: return 0;
       }
     });
