@@ -44,7 +44,7 @@ const appRoutes: Routes = [
   { path: 'newUser', component: NewUserComponent },
   { path: 'login', component: LoginComponent },
   { path: 'try', component: TryComponent },
-  { path: 'salesSelect', component: SelectProductComponent },
+  { path: 'sales-select', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },
   {path: 'add-inventory', component: AddInventoryComponent },
   {path: 'inventory', component: InventoryComponent },
