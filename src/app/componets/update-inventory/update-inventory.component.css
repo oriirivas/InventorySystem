@@ -5,20 +5,23 @@ h1{
 .pag{
     margin-top:3%;
 }
+
 table{
-    width: 100%;
+    width: 10%;
     margin: 0;
     padding: 5px;
-    border-spacing: 0;
+    border-spacing: 100%;
 }
 
 table td, table th{
     padding: 4xp;
-    text-align: center;
+    text-align: right;
 }
+
 .title{
     font-family: Cantarell;
 }
+
 nav{
     margin-top:3% ;
     align-content: right;
