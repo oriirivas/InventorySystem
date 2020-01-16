@@ -49,15 +49,15 @@
               </button>
               
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="exampleModal" tabindex="-6" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Detalle de Compra</h5>
+                      <h6 class="modal-title" id="exampleModalLabel">Detalle de Compra</h6>
                       <div class="row">
                         <address>
-                         <strong class="">BrainStorm</strong><br class="">
-                         Irarrázaval 3665, Ñuñoa, Región Metropolitana<br class="">                        
+                         <strong class="" style="margin-left: 135px">BRAINSTORM</strong>
+                         <h6 class="modal-title" id="exampleModalLabel" style="margin-left: 150px">Irarrázaval 3665, Ñuñoa</h6>                     
                          </address>
                  </div> <!-- row -->
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -66,39 +66,38 @@
                     </div>
                     <div class="modal-body">
                       <div class="container">
-    <div class="text">
-         <h4 style="margin-right: 500px">Factura</h4>
+    <div class="row">
+         <h2 class="modal-title" id="exampleModalLabel">Factura</h2>
+         <h4 class="modal-title" id="exampleModalLabel" style="margin-left: 150px">logo</h4>
+         <h6 style="margin-right: 500px"> #245</h6>
     </div>
-    
-     <div class="row">
+  
+     <div class="row m-12">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading ">
                     <!-- <h3 class="panel-title">Cabecera</h3> -->
 					<hr>
-                    
-                        
-                        <div class="col-md-6" style="background-color:white;">
+                        <div class="col-m-6" style="background-color:white;">
                             <div class="form-group">
-                                <label for="gmail" class="col-sm-2 control-label" style="margin-right: 500px" >Enviar a:</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="gmail" placeholder="ej@ej.com" type="text">
+                                <label for="gmail" class="col-m-6" style="margin-right: 500px">Enviar a:</label>
+                                <div class="col-m-6" style="margin-right: 80px">
+                                    <input class="form-control" id="gmail" placeholder="eje@ejemplo.com" type="gmail">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6" style="background-color:white;">
+                        <div class="col-m-6" style="background-color:white;">
                             <div class="form-group">
-                              
-                                <label for="nombre" class="col-sm-5 control-label">Facturar a:</label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="nombre" placeholder="nombre" type="date">
+                                <label for="nombre" class="col-m-6" style="margin-right: 500px">Facturar a:</label>
+                                <div class="col-m-6" style="margin-right: 80px">
+                                    <input class="form-control" id="nombre" placeholder="nombre cliente" type="nombre">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 target" style="background-color:white;">
+                        <div class="col-m-6 target" style="background-color:white;">
                             <div class="form-group">
                                 
-                                <div class="col-sm-9">
+                                <div class="col-m-9">
                                     
                                 </div>
                             </div>
@@ -110,82 +109,41 @@
 				<div class="panel-body">
 				  <h3 class="panel-title">Detalle</h3>
 				  
-				  <table class="table table-condensed">
+				  <table class="table table-bordered">
 					<thead>
 					  <tr>
-						<th class="">Producto</th>
+						<th class="">Cantidad</th>
 						<th class="">Descripción</th>
-						<th class="">cantidad</th>
-						<th class="">precio</th>
-						<th class="">tipo impuesto</th>
-						<th class="">importe</th>
+						<th class="">Total</th>
 					  </tr>
 					</thead>
 					<tbody>
 					  <tr>
 						<td class="">001</td>
-						<td class="">Doe moe</td>
-						<td class="">12.00</td>
-						<td class="">100.00</td>
-						<td class="">Reducido 7%</td>
-						<td class="">1200.00</td>
+						<td class="">Galaxy J2 Pro (Black) Samsung</td>
+						<td class="">76.990</td>
 					  </tr>
 					  <tr>
-						<td class="">002</td>
-						<td class="">Doe moe TURURU</td>
-						<td class="">10.00</td>
-						<td class="">1000.00</td>
-						<td class="">Normal 18%</td>
-						<td class="">10000.00</td>
-					  </tr>
 					</tbody>
 				  </table>
 				</div> <!-- panel body -->
-				<div class="panel-footer">Piefactura
-				</div>
+				 <strong class="modal-title" id="exampleModalLabel" style="margin-left: 279px">Total Pago: 76.990</strong>
+			
              </div> <!-- panel -->
         </div> <!-- col -->
     </div> <!-- row -->
     <div class="row text-center">
-       <p class="">peu pagina</p>
+      <strong>(*)Estimado Cliente</strong> 
+       <h6>Para obtener más información referente al pago, devolución, y/o reembolso, dirijase al centro de Atención a Cliente más cercano o llame al 2 346532</h6>
     </div>
   <!-- container -->
 
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                   
 
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Ver Factura</button>
-                      <button type="button" class="btn btn-primary">Imprimir</button>
+                      <button type="button" class="btn btn-success" data-dismiss="modal">Enviar a Correo</button>
+                      <button type="button" class="btn btn-info">Imprimir</button>
                     </div>
                   </div>
                 </div>
