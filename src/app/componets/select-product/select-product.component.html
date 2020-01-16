@@ -49,7 +49,7 @@
               </button>
               
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-6" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -66,76 +66,98 @@
                     </div>
                     <div class="modal-body">
                       <div class="container">
-    <div class="row">
-         <h2 class="modal-title" id="exampleModalLabel">Factura</h2>
-         <h4 class="modal-title" id="exampleModalLabel" style="margin-left: 150px">logo</h4>
-         <h6 style="margin-right: 500px"> #245</h6>
-    </div>
+                    <div class="row">
+                        <ul class="list-inline">
+                            <li class="list-inline-item" style="margin: 0px">Factura</li>
+                            <li class="list-inline-item" style="margin-left: 350px">Logo</li>
+                          </ul>
+                          
+                        <!--h2 class="modal-title" id="exampleModalLabel">Factura</h2>
+                        <h4 class="modal-title" id="exampleModalLabel" style="margin-left: 150px">logo</h4>
+
+                        <h6 style="margin-right: 500px"> #245</h6> 
+                        <h6 class="modal-title" id="exampleModalLabel" style="margin-left: 350px">Fecha</h6-->
+                        
+                    </div>
   
-     <div class="row m-12">
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading ">
-                    <!-- <h3 class="panel-title">Cabecera</h3> -->
-					<hr>
-                        <div class="col-m-6" style="background-color:white;">
-                            <div class="form-group">
-                                <label for="gmail" class="col-m-6" style="margin-right: 500px">Enviar a:</label>
-                                <div class="col-m-6" style="margin-right: 80px">
-                                    <input class="form-control" id="gmail" placeholder="eje@ejemplo.com" type="gmail">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-m-6" style="background-color:white;">
-                            <div class="form-group">
-                                <label for="nombre" class="col-m-6" style="margin-right: 500px">Facturar a:</label>
-                                <div class="col-m-6" style="margin-right: 80px">
-                                    <input class="form-control" id="nombre" placeholder="nombre cliente" type="nombre">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-m-6 target" style="background-color:white;">
-                            <div class="form-group">
-                                
-                                <div class="col-m-9">
+                    <div class="row m-12">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading ">
+                                    <!-- <h3 class="panel-title">Cabecera</h3> -->
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item" style="margin: 40px">Vendedor:</li>
+                                        <li class="list-inline-item" style="margin: 40px">Cliente:</li>
+                                        <li class="list-inline-item" style="margin: 40px">Enviar a:</li>
+                                      </ul>
                                     
-                                </div>
-                            </div>
-                        </div>
+                                        <!--div class="col-m-6" style="background-color:white;">
+                                            <div class="form-group">
+                                                <label for="gmail" class="col-m-6" style="margin-right: 500px">Enviar a:</label>
+                                                <div class="col-m-6" style="margin-right: 80px">
+                                                    <input class="form-control" id="gmail" placeholder="eje@ejemplo.com" type="gmail">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-m-6" style="background-color:white;">
+                                            <div class="form-group">
+                                                <label for="nombre" class="col-m-6" style="margin-right: 500px">Facturar a:</label>
+                                                <div class="col-m-6" style="margin-right: 80px">
+                                                    <input class="form-control" id="nombre" placeholder="nombre cliente" type="nombre">
+                                                </div>
+                                            </div>
+                                        </div-->
+                                        <div class="col-m-6 target" style="background-color:white;">
+                                            <div class="form-group">
+                                                
+                                                <div class="col-m-9">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- row -->
+                                    <br>
+                                    
+                        </div> <!-- panel heading -->
+                        
+                        <table>
+                          <caption>Detalle</caption>
+                          <thead>
+                            <tr>
+                              <th>Código</th>
+                              <th>Cantidad</th>
+                              <th>Descripción</th>
+                              <th>Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>001</td>
+                              <td>1</td>
+                              <td>Galaxy J2 Pro (Black) Samsung</td>
+                              <td>$76.990</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>1</td>
+                                <td>Galaxy J2 Pro (Black) Samsung</td>
+                                <td>$76.990</td>
+                              </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <th colspan="3">Total Monto</th>
+                              <th>$76.990</th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                            </div> <!-- panel -->
+                        </div> <!-- col -->
                     </div> <!-- row -->
-                    <br>
-                    
-				</div> <!-- panel heading -->
-				<div class="panel-body">
-				  <h3 class="panel-title">Detalle</h3>
-				  
-				  <table class="table table-bordered">
-					<thead>
-					  <tr>
-						<th class="">Cantidad</th>
-						<th class="">Descripción</th>
-						<th class="">Total</th>
-					  </tr>
-					</thead>
-					<tbody>
-					  <tr>
-						<td class="">001</td>
-						<td class="">Galaxy J2 Pro (Black) Samsung</td>
-						<td class="">76.990</td>
-					  </tr>
-					  <tr>
-					</tbody>
-				  </table>
-				</div> <!-- panel body -->
-				 <strong class="modal-title" id="exampleModalLabel" style="margin-left: 279px">Total Pago: 76.990</strong>
-			
-             </div> <!-- panel -->
-        </div> <!-- col -->
-    </div> <!-- row -->
-    <div class="row text-center">
-      <strong>(*)Estimado Cliente</strong> 
-       <h6>Para obtener más información referente al pago, devolución, y/o reembolso, dirijase al centro de Atención a Cliente más cercano o llame al 2 346532</h6>
-    </div>
+                    <div class="row text-center">
+                      <strong style="margin-left: 10px">(*)Estimado Cliente</strong> 
+                      <small class="text-muted">Para obtener más información referente al pago, devolución, y/o reembolso, dirijase al centro de Atención a Cliente más cercano o llame al 2-346532</small>
+                    </div>
   <!-- container -->
 
                    
