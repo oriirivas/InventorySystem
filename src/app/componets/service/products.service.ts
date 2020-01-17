@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HAMMER_LOADER } from '@angular/platform-browser';
+import { InventoryTableItem } from '../inventory/inventory-table-datasource';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class ProductsService {
 
   public showProduct() {
     localStorage.getItem("user");
-    return this.http.get('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
+    return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
   }
   
 
@@ -43,18 +44,11 @@ export class ProductsService {
 
   
 
-  public modifyProduct(optionId:number, stock:number, idMark:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
+  public modifyProduct(optionId:number, stock:number, buyPrice:number) {
     let id = optionId;
     let body = {
       "cantidadDto": stock,
-      "fechaProductoDto": date,
-      "marcaDto": {
-        "idMarca": idMark,
-        "nombreMarca": tradeMark
-      },
-      "modeloDto": model,
-      "precioDto": buyPrice,
-      "sistemaOperativoDto": category
+      "precioDto": buyPrice
     }
     let aux = this.http.put('http://localhost:8090/api/v1/producto/'+id, body, this.headersOptions );
     return aux; 

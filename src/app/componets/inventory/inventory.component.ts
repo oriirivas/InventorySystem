@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { DataTableDataSource, InventoryTableItem } from './inventory-table-datasource';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { InventoryTableItem } from './inventory-table-datasource';
 import {ProductsService} from '../service/products.service'
 
 @Component({
@@ -13,11 +13,13 @@ import {ProductsService} from '../service/products.service'
 
 export class InventoryComponent implements AfterViewInit, OnInit {
 
-  public tableInfo;
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<InventoryTableItem>;
-  dataSource: DataTableDataSource;
+  
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
+
+  //@ViewChild(MatTable, {static: false}) table: MatTable<InventoryTableItem>;
+  //dataSource: DataTableDataSource;
+  dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['idProductoDto', 'tradeMark', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto'];
@@ -30,33 +32,26 @@ export class InventoryComponent implements AfterViewInit, OnInit {
     
     this.productService.showProduct().subscribe(res=>{
 
-      this.dataSource = new DataTableDataSource();
-      this.dataSource.addList( res );
-      
+      this.dataSourcex = new MatTableDataSource<InventoryTableItem>( res );
+      this.dataSourcex.paginator = this.paginator;
+      this.dataSourcex.sort = this.sort;
 
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
-      this.table.dataSource = this.dataSource;
+     
       
-      this.dataSource.connect();
+      //this.dataSource.connect();
       console.log(res);
-      this.tableInfo=res;
-    }); 
-    
-    
-  }
-  ngAfterViewInit() {
-    
+      //this.tableInfo=res;
+    });  
   }
 
-  tableInfomation(){
-     
-      this.tableInfo=this.productService.showProduct().subscribe;  
-     
-  }
+  ngAfterViewInit(){
 
+  }
+ 
+  applyFilter(filterValue: string) {
+      this.dataSourcex.filter = filterValue.trim().toLowerCase();    
+  }
 }
-
 
 
 

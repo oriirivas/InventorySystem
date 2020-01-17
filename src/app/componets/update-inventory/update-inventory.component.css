@@ -5,23 +5,18 @@ h1{
 .pag{
     margin-top:3%;
 }
-
 table{
-    width: 10%;
+    width: 100%;
     margin: 0;
     padding: 5px;
-    border-spacing: 100%;
+    border-spacing: 0;
 }
 
 table td, table th{
     padding: 4xp;
-    text-align: right;
-}
+    text-align: center;
 
-.title{
-    font-family: Cantarell;
 }
-
 nav{
     margin-top:3% ;
     align-content: right;
@@ -30,4 +25,13 @@ nav{
 select{
     margin-top:3% ;
     align-items: center;
+}
+
+.th,td {
+    padding: 0.4rem !important;
+  }
+  body>div {
+    box-shadow: 5px 5px 5px rgb(0, 158, 116);
+    border: 2px solid rgb(17, 204, 157);
+    border-radius: 10px;
 }
