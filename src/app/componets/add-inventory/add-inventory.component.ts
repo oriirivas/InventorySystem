@@ -113,7 +113,7 @@ export class AddInventoryComponent implements OnInit {
     if(this.date==null ||this.numberf==null || this.category == null ||this.provider == null || this.tradeMark == null || this.model==null || this.buyPrice == null || this.salePrice == null || this.stock == null){
       alert('porfavor ingrese todo los datos')
     }else{
-      let obs =this.productServices.addProducto(this.stock, this.idMark, this.tradeMark, this.model, this.buyPrice, this.category, this.date)
+      let obs =this.productServices.addProducto(this.stock, this.tradeMark, this.model, this.buyPrice, this.category, this.date)
       obs.subscribe(res => {
         alert("Guardado con exito")
         this.router.navigate(['/home']);

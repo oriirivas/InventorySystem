@@ -26,14 +26,11 @@ export class ProductsService {
   }
   
 
-  public addProducto(stock:number, idMark:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
+  public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
     let body = {
       "cantidadDto": stock,
       "fechaProductoDto": date,
-      "marcaDto": {
-        "idMarca": idMark,
-        "nombreMarca": tradeMark
-      },
+      "marcaDto": tradeMark,
       "modeloDto": model,
       "precioDto": buyPrice,
       "sistemaOperativoDto": category
@@ -41,8 +38,7 @@ export class ProductsService {
     let aux = this.http.post('http://localhost:8090/api/v1/producto', body, this.headersOptions );
     return aux; 
   }
-
-  
+   
 
   public modifyProduct(optionId:number, stock:number, buyPrice:number) {
     let id = optionId;
