@@ -15,7 +15,13 @@ import { Router } from '@angular/router';
 export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   public newStock: number
   public idProducto: number
+  public idProducto1: number
   public newPrice: number
+
+  public validId = "is-invalid";
+  public validId1 = "is-invalid";
+  public validStock = "is-invalid";
+  public validPrice = "is-invalid";
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -54,20 +60,30 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
 
   newPriceKeyup(value:number){
     this.newPrice=value;
+    this.validPrice="is-valid";
+    
 
   }
   newStockKeyup(value:number){
     this.newStock=value;
+    this.validStock="is-valid";
 
   }
   IdProductKeyup(value:number){
     this.idProducto=value;
+    this.validId="is-valid";
+  }
+
+  IdProduct1Keyup(value:number){
+    this.idProducto1=value;
+    this.validId1="is-valid";
   }
 
   modifyProduct(){
     if(this.idProducto == null || this.newStock == null ||this.newPrice == null){
       alert('Debe llenar todo los campos, si hay uno que no desea modificar, copielo como es encuentra en la tabla');
     }else{
+      debugger
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
         alert("Actualizado con exito")
@@ -79,10 +95,10 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     }
   }
   deleteProduct(){
-    if(this.idProducto == null){
+    if(this.idProducto1 == null){
       alert('Debe llenar todo los campos');
     }else{
-      let obs =this.productService.deleteProduct(this.idProducto);
+      let obs =this.productService.deleteProduct(this.idProducto1);
       obs.subscribe(res => {
         alert("Eliminado con exito")
         this.router.navigate(['/update-inventory']);

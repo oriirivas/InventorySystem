@@ -9,7 +9,7 @@ import { LoginService } from '../../componets/service/login.service';
   styleUrls: ['./new-user.component.css']
 })
 export class NewUserComponent implements OnInit {
-  public charge="vendedor";
+  public charge="admi";
   public name: string;
   public pass: string;
   public userName: string;

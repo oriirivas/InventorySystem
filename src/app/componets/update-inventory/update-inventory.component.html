@@ -86,7 +86,7 @@
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
                                 <label for="validationServer01">Ingrese Id del Producto</label>
-                                <input (keyup)="IdProductKeyup($event.target.value)" type="number" class="form-control is-valid" id="validationServer01" value="1" required>
+                                <input (keyup)="IdProductKeyup($event.target.value)" type="number" class="form-control {{validId}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -95,7 +95,7 @@
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
                                 <label for="validationServer03">Nuevo Stock</label>
-                                <input (keyup)="newStockKeyup($event.target.value)"type="text" class="form-control is-invalid" id="validationServer03" required>
+                                <input (keyup)="newStockKeyup($event.target.value)"type="text" class="form-control {{validStock}}" id="validationServer03" required>
                                 <div class="invalid-feedback">
                                   Please provide a valid city.
                                 </div>
@@ -104,7 +104,7 @@
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12"align="center">
                                 <label for="validationServer01">Nuevo Precio</label>
-                                <input (keyup)="newPriceKeyup($event.target.value)" type="number" class="form-control is-valid" id="validationServer01" value="01" required>
+                                <input (keyup)="newPriceKeyup($event.target.value)" type="number" class="form-control {{validPrice}}" id="validationServer01" value="01" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -145,7 +145,7 @@
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
                                 <label for="validationServer01">Ingrese Id del Producto</label>
-                                <input (keyup)="IdProductKeyup($event.target.value)" type="number" class="form-control is-valid" id="validationServer01" value="1" required>
+                                <input (keyup)="IdProduct1Keyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>

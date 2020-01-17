@@ -46,7 +46,8 @@ export class ProductsService {
       "cantidadDto": stock,
       "precioDto": buyPrice
     }
-    let aux = this.http.put('http://localhost:8090/api/v1/producto/'+id, body, this.headersOptions );
+    debugger
+    let aux = this.http.put('http://localhost:8090/api/v1/producto/modify/'+id, body, this.headersOptions );
     return aux; 
   } 
 
