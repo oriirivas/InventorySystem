@@ -15,6 +15,7 @@ export interface InventoryTableItem {
   salePrice:number;
   cantidadDto:number;
   edit:object;
+  delate:object;
 }
 
 

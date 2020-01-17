@@ -23,7 +23,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'tradeMark', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto','edit'];
+  displayedColumns = ['idProductoDto', 'tradeMark', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto','edit','delate'];
 
 
   constructor(private router: Router, private productService:ProductsService) { }
@@ -66,7 +66,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
 
   modifyProduct(){
     if(this.idProducto == null || this.newStock == null ||this.newPrice == null){
-      alert('Debe llenar todo los campos, si hay uno queno modifica copielo como es encuentra en la tabla');
+      alert('Debe llenar todo los campos, si hay uno que no desea modificar, copielo como es encuentra en la tabla');
     }else{
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
@@ -77,6 +77,21 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
 
       
     }
+  }
+  deleteProduct(){
+    if(this.idProducto == null){
+      alert('Debe llenar todo los campos');
+    }else{
+      let obs =this.productService.deleteProduct(this.idProducto);
+      obs.subscribe(res => {
+        alert("Eliminado con exito")
+        this.router.navigate(['/update-inventory']);
+      });
+
+
+      
+    }
+
   }
 
 }

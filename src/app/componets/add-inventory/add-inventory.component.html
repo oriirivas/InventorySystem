@@ -27,7 +27,7 @@
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer08">provedor</label>
+                            <label for="validationServer08">proveedor</label>
                             <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer08" required>
                                 <div class="invalid-feedback">
                                     {{lockProvider}}
@@ -36,16 +36,6 @@
                     </div>
                     <div class="form-row">  
                         <div class="col-md-4 mb-3">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
                             <label for="validationServer03">Marca</label>
                             <input (keyup)="tradeMarkKeyup($event.target.value)" type="text" class="form-control {{validTradeMark}}" id="validationServer03" required>
                                 <div class="invalid-feedback">

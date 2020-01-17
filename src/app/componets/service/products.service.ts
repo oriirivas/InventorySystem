@@ -53,6 +53,12 @@ export class ProductsService {
     let aux = this.http.put('http://localhost:8090/api/v1/producto/'+id, body, this.headersOptions );
     return aux; 
   } 
+
+  public deleteProduct(optionId:number) {
+    let id = optionId;
+    let aux = this.http.delete('http://localhost:8090/api/v1/producto/delete/'+id, this.headersOptions );
+    return aux; 
+  } 
 }
 
 
