@@ -14,7 +14,7 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationServer01">Fecha</label>
-                            <input (keyup)="dateKeyup($event.target.value)" type="text" class="form-control {{validDate}}" id="validationServer01" value="12-12-12" required>
+                            <input (keyup)="dateKeyup($event.target.value)" type="datetime-local" class="form-control {{validDate}}" id="validationServer01" value="12-12-12" required>
                                 <div class="invalid-feedback">
                                     {{lockDate}}
                                 </div>
