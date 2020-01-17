@@ -4,7 +4,7 @@ table {
   
   caption {
     text-align: left;
-    color: silver;
+    color: rgb(168, 167, 167);
     font-weight: bold;
     text-transform: uppercase;
     padding: 5px;
@@ -19,10 +19,11 @@ table {
   td {
     padding: 5px 10px;
     text-align:center;
+
   }
   
-  tbody tr:nth-child(even) {
-    background: WhiteSmoke;
+  tbody tr,td:nth-child(even) {
+    background: White;
   }
   
   tbody tr td:nth-child(2) {
@@ -45,3 +46,15 @@ table {
   tfoot tr th:last-child {
     font-family: monospace;
   }
+  
+  .table{
+    background: rgb(255, 255, 255);
+  }
+  .th,td{
+    background: white;
+    text-align: left;
+  }
+  tr{
+    text-align: right;
+  }
+ 
