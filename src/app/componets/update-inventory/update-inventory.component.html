@@ -8,8 +8,8 @@
       <i class="fa fa-area-chart" aling="center"></i>&nbsp;&nbsp;&nbsp;Modificar Productos diponibles en Inventario</div>
     <div class="card-body">
   <div class="row">
-  <div class="col-10" align="center" style="float: right;">
-      <div class="col-10 pag" align="center">
+  <div class="col-12" align="center" style="float: right;">
+      <div class="col-12 pag" align="center">
         <div class="col-12">
         </div>
          <body>
@@ -18,7 +18,7 @@
 
               <hr/>
               
-              <h4>Buscar</h4>
+              <h4 class="title">Buscar</h4>
              <input  (keyup)="applyFilter($event.target.value)" >
 
              <table mat-table [dataSource]="dataSourcex" class="full-width-table data-table" matSort aria-label="Elements">
@@ -67,7 +67,7 @@
               <ng-container matColumnDef="edit">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Editar</th>
                 <td mat-cell *matCellDef="let row">{{row.edit}}
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
                     Editar
                   </button>
                   

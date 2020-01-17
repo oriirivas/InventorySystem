@@ -1,14 +1,21 @@
 
-
+.tf{
+    background-color: lightseagreen;
+}
 .card{
     margin-top: 1%;
-    background: url('https://i.ibb.co/V9byH7L/dddd.jpg');
-    border: solid 2px rgb(15, 221, 221);
+    background: lightseagreen;
+    border: solid 2px white;
 }
 .row{
     height: 100%;
     margin: 0;
     padding: 0;
+}
+.card-img-top{
+    margin-top: 10px;
+    width: 120px;
+    
 }
 
 .exampleInputPassword1{
@@ -20,7 +27,7 @@
     
 }
 .title{
-    color:rgb(238, 238, 238);
+    color:rgb(255, 183, 0);
 }
 .form-group{
     color: white;

@@ -31,10 +31,24 @@ select{
     padding: 0.4rem !important;
   }
   body>div {
-    box-shadow: 5px 5px 5px rgb(0, 158, 116);
-    border: 2px solid rgb(17, 204, 157);
+    box-shadow: 5px 5px 5px rgb(51, 222, 140);
+    border: 2px solid rgb(51, 222, 140);
     border-radius: 10px;
 }
 .btn-delete{
-    background-color: red;
+    background-color: white;
+    border-color: red;
+    color: red;
+}
+.btn-edit{
+    background-color: white;
+    border-color: rgb(11, 165, 155);
+    color: rgb(11, 165, 155);
+}
+.title{
+    color: black;
+}
+
+.card-header{
+    background-color:  rgb(51, 222, 140);
 }

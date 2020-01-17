@@ -9,8 +9,8 @@
     <div class="card-body">
       <!--<canvas id="myAreaChart" width="100%" height="30"></canvas>-->
   <div class="row">
-  <div class="col-10" align="center" style="float: right;">
-      <div class="col-10 pag" align="center">
+  <div class="col-12" align="center" style="float: right;">
+      <div class="col-12 pag" align="center">
         <div class="col-12">
         </div>
          <body>
@@ -19,7 +19,7 @@
               <hr/>
               <h4>Buscar</h4>
 
-             <input (keyup)="applyFilter($event.target.value)" >
+              <input (keyup)="applyFilter($event.target.value)" >
 
              <table mat-table [dataSource]="dataSourcex" class="full-width-table data-table" matSort aria-label="Elements">
 
