@@ -54,7 +54,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   {path: 'add-inventory', component: AddInventoryComponent },
   {path: 'inventory', component: InventoryComponent },
-  {path: 'inventory5', component: Inventory5Component },
+  {path: 'inventory-sales', component: Inventory5Component },
   { path: 'update-inventory', component: UpdateInventoryComponent},
   { path: 'stock', component: StockComponent },
   { path: 'sales-report', component: SalesReportComponent },
