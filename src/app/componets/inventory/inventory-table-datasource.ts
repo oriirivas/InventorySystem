@@ -18,4 +18,8 @@ export interface InventoryTableItem {
   delate:object;
 }
 
-
+export interface ResponseDtoUsuario{
+  nombreUsuarioDto: string,
+  userNameDto: string,
+  tipoRolDto: string
+}

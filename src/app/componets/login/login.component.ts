@@ -35,32 +35,22 @@ export class LoginComponent implements OnInit {
 
       localStorage.setItem( "user", this.name );
       let aja =this.loginInfo.showName(this.name);
+
+
       let obs = this.loginInfo.login(this.name, this.pass);
-      obs.subscribe(validation  => {
-      if(validation) {
+      obs.subscribe(user  => {
+      if(user.tipoRolDto == "admi") {
         this.router.navigate(['/home']);
       }else {
-        alert('usuario y pass inválidos');
+        this.router.navigate(['/sales']);
+       
       }
+    }, error =>{
+      alert('usuario y/o contraseña inválidos');
     });
     }
   }
 
-/** 
-  login() {
-    if(this.email == null || this.pass == null){
-      alert('llene todas las casillas')
-    }else{
-      let obs = this.loginService.login(this.email, this.pass);
-      obs.subscribe(validation  => {
-      if(validation) {
-        this.router.navigate(['/home']);
-      }else {
-        alert('usuario y pass inválidos');
-      }
-    });
-    }
-  }
-*/
+
 
 }

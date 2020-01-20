@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {ResponseDtoUsuario } from '../inventory/inventory-table-datasource'
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -26,12 +26,11 @@ export class LoginService {
   };
 
   public login(name: string, pass: string) {
-    debugger
     let body = {
       "passwordDto": pass,
       "userNameDto": name
     }
-    return this.http.post('http://localhost:8090/api/v1/usuarios/sessions', body, this.headersOptions );
+    return this.http.post<ResponseDtoUsuario>('http://localhost:8090/api/v1/usuarios/sessions', body, this.headersOptions );
     
   }
   public register(charge: string, date:Date, name: string, pass: string, userName: string) {
