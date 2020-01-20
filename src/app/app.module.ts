@@ -26,7 +26,7 @@ import { SelectProductComponent } from './componets/select-product/select-produc
 import { TryComponent } from './componets/try/try.component';
 import { OperationComponent } from './componets/operation/operation.component';
 import { Inventory5Component } from './componets/inventory5/inventory5.component';
-import { HuaweiComponent } from './componets/huawei/huawei.component';
+import { CreditNoteComponent } from './componets/credit-note/credit-note.component';
 import { XiaomiComponent } from './componets/xiaomi/xiaomi.component';
 import { DebitNoteComponent } from './componets/debit-note/debit-note.component';
 
@@ -49,6 +49,7 @@ const appRoutes: Routes = [
   
   { path: 'try', component: TryComponent },
   { path: 'debit-note', component: DebitNoteComponent },
+  { path: 'credit-note', component: CreditNoteComponent },
   { path: 'sales-select', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },
   {path: 'add-inventory', component: AddInventoryComponent },
@@ -88,7 +89,7 @@ const appRoutes: Routes = [
     
     Inventory5Component,
     
-    HuaweiComponent,
+    CreditNoteComponent,
     
     XiaomiComponent,
     
