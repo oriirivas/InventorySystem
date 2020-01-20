@@ -28,7 +28,7 @@ import { OperationComponent } from './componets/operation/operation.component';
 import { Inventory5Component } from './componets/inventory5/inventory5.component';
 import { HuaweiComponent } from './componets/huawei/huawei.component';
 import { XiaomiComponent } from './componets/xiaomi/xiaomi.component';
-import { SonyComponent } from './componets/sony/sony.component';
+import { DebitNoteComponent } from './componets/debit-note/debit-note.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule} from '@angular/forms';
@@ -48,6 +48,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   
   { path: 'try', component: TryComponent },
+  { path: 'debit-note', component: DebitNoteComponent },
   { path: 'sales-select', component: SelectProductComponent },
   { path: 'home', component: HomeComponent },
   {path: 'add-inventory', component: AddInventoryComponent },
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
   { path: 'operation', component: OperationComponent },
   { path: 'income-report', component: IncomeReportComponent },
   { path: 'select-product', component: SelectProductComponent},
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
@@ -91,7 +92,7 @@ const appRoutes: Routes = [
     
     XiaomiComponent,
     
-    SonyComponent,
+    DebitNoteComponent,
     
     DataTableComponent
   ],
