@@ -42,18 +42,23 @@ export class AddInventoryComponent implements OnInit {
   public validModel= "is-invalid";
   public validCategory= "is-invalid";
   estadoPositivo: boolean = true;
+  lista:string[]=[];
 
   constructor(private router: Router,
     private productServices: ProductsService) { }
 
   ngOnInit() {
+    
+
   }
   add(){
     console.log('llegueeeeee');
     console.log( this.productServices.showProduct);
     alert('Debe llenar todos los datos para agregado')
   }
-  //[ngClass]="{valid-feedback: estadoPositivo, invalid-feedback: !estadoPositivo }"
+
+ 
+
   validate(){
     let somethingn = true;
     if(somethingn){
@@ -120,6 +125,28 @@ export class AddInventoryComponent implements OnInit {
       });
     }    
   }
+  
+  
+  markList(){
+    let aja =this.productServices.showMark();
+    
+  }
 } 
 
+export class SelectOverviewExample {
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+}
+
+export interface Food {
+  value: string;
+  viewValue: string;
+}
+
+export interface marklist {
+  "marcaDto":string;
+}
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HAMMER_LOADER } from '@angular/platform-browser';
 import { InventoryTableItem } from '../inventory/inventory-table-datasource';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +22,7 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   public showProduct() {
-    localStorage.getItem("user");
+    //localStorage.getItem("user");
     return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
   }
   
@@ -37,6 +38,10 @@ export class ProductsService {
     }
     let aux = this.http.post('http://localhost:8090/api/v1/producto', body, this.headersOptions );
     return aux; 
+  }
+
+  public showMark(){
+    return this.http.get('http://localhost:8090/api/v1/marcas/listar', this.headersOptions)
   }
    
 
