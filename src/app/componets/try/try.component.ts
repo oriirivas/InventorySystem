@@ -12,6 +12,13 @@ import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
 
 export class TryComponent implements OnInit {
   public lista: ResponseDtoMarca[];
+  //marca:ResponseDtoMarca;
+  marca:ResponseDtoMarca;
+  marcaLocal: ResponseDtoMarca;
+
+
+
+  
 
   constructor(private productServices: ProductsService) { }
 
@@ -19,6 +26,7 @@ export class TryComponent implements OnInit {
     this.listarMarca();
       
   }
+ 
   listarMarca(){
    let obs= this.productServices.listMark();
    obs.subscribe(res=> {
@@ -26,5 +34,13 @@ export class TryComponent implements OnInit {
      console.log(this.lista);
    });
    
+  }
+
+  
+
+  
+  getMarca(){
+    debugger
+    console.log(this.marcaLocal,this.marca)
   }
 }

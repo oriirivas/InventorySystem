@@ -9,8 +9,9 @@
   <div class="form-grup">
     <select [(ngModel)]="marcaLocal" class="custom.select mr-sm-2" id="inlineFormCustomSelec">
       <option selected>jajjaja</option>
-      <option  *ngFor = "let marca of lista" [ngValue]="marca" >{{marca.marcaDto}}</option>
+      <option  *ngFor = "let marca of lista" [ngValue]="marca" (ngModelChange)="cambiaLado($event)" >{{marca.marcaDto}}</option>
     </select>
 
   </div>
+  <button type="button" (clic)="getMarca()">jaja</button>
   

@@ -21,7 +21,9 @@ export class AddInventoryComponent implements OnInit {
   public salePrice: number
   public buyPrice: number
 
-  public idMark=1;
+  
+  public marcaLocal: string;
+  public marca:string;
   
   public lockDate = 'ingrese fecha';
   public lockNumber = 'ingrese numero de factura';
@@ -115,13 +117,15 @@ export class AddInventoryComponent implements OnInit {
     this.lockCategory = 'ingresado correctamente';
     this.validCategory='is-valid';
   }
+  
+  
 
   newProduct(){
-    console.log(this.date, this.numberf,this.category,this.provider,this.tradeMark,this.model,this.buyPrice,this.salePrice,this.stock)
-    if(this.date==null ||this.numberf==null || this.category == null ||this.provider == null || this.tradeMark == null || this.model==null || this.buyPrice == null || this.salePrice == null || this.stock == null){
+    console.log(this.marcaLocal,this.marca)
+    if(this.date== undefined ||this.numberf==undefined || this.category == undefined ||this.provider == undefined || this.marcaLocal == undefined || this.model== undefined || this.buyPrice == undefined || this.salePrice == undefined || this.stock == undefined){
       alert('porfavor ingrese todo los datos')
     }else{
-      let obs =this.productServices.addProducto(this.stock, this.tradeMark, this.model, this.buyPrice, this.category, this.date)
+      let obs =this.productServices.addProducto(this.stock, this.marcaLocal, this.model, this.buyPrice, this.category, this.date)
       obs.subscribe(res => {
         alert("Guardado con exito")
         this.router.navigate(['/home']);
@@ -137,7 +141,6 @@ export class AddInventoryComponent implements OnInit {
     });
     
    }
-  
   
  
 } 

@@ -67,6 +67,7 @@
               <ng-container matColumnDef="edit">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Editar</th>
                 <td mat-cell *matCellDef="let row">{{row.edit}}
+                  {{row.idProductoDto}}
                   <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
                     Editar
                   </button>
