@@ -29,6 +29,7 @@ export interface ResponseDtoUsuario{
 export interface ResponseDtoMarca{
   marcaDto: string
 }
+
 export interface ResponseProducto {
   id: number,
   marca: string,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../componets/service/products.service';
 import { Router } from '@angular/router';
+import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
 
 
 
@@ -42,14 +43,14 @@ export class AddInventoryComponent implements OnInit {
   public validModel= "is-invalid";
   public validCategory= "is-invalid";
   estadoPositivo: boolean = true;
-  public lista:any;
+  public lista:ResponseDtoMarca[];
 
   constructor(private router: Router,
     private productServices: ProductsService) { }
 
   ngOnInit() {
 
-    this.lista=this.productServices.listMark();
+    this.listarMarca();
     
 
   }
@@ -127,12 +128,18 @@ export class AddInventoryComponent implements OnInit {
       });
     }    
   }
-  
-  
-  markList(){
-    let aja =this.productServices.listMark();
+
+  listarMarca(){
+    let obs= this.productServices.listMark();
+    obs.subscribe(res=> {
+      this.lista=res;
+      console.log(this.lista);
+    });
     
-  }
+   }
+  
+  
+ 
 } 
 
 

@@ -109,4 +109,33 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       });   
     }
   }
+
+  /*addProduct(){
+    if(this.idProducto1 == undefined || this.numberOperation == undefined){
+      alert('Debe llenar todo los campos');
+    }else{
+      let obs =this.productService.getProduct(this.idProducto1);
+      obs.subscribe(user => {
+        user.precioDto
+        alert("Operacion realizada con exito")
+      });   
+    }
+    
+    let obs = this.loginInfo.login(this.name, this.pass);
+      obs.subscribe(user  => {
+      if(user.tipoRolDto == "admi") {
+        this.router.navigate(['/home']);
+      }else {
+        this.router.navigate(['/sales']);
+       
+      }
+
+  }
+
+  }*/
 }
+
+
+
+
+

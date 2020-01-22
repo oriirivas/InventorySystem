@@ -10,8 +10,11 @@ import { InventoryTableItem, ResponseDtoMarca, ResponseProducto } from '../inven
 export class ProductsService {
   private producto: ResponseProducto = {} as any;
 
+  //private marca: ResponseDtoMarca = {} as any;
+
   listaSale: Array<ResponseProducto> = [] as any;
-  listS= [];
+
+  //listaMarca: Array<ResponseDtoMarca> = [] as any;
 
   private headersOptions = {
     headers: {
@@ -43,17 +46,16 @@ export class ProductsService {
       model:  "jJJ",
       stock:  1,
       total:  7
-  }
-  debugger;
-
-    //this.listaSale.push(this.producto);
+  }   
     this.listaSale.push(product);
-    console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
-    console.log(this.listaSale);
-    //console.log(this.listaSale);
-    debugger;
     return this.listaSale;
   }
+
+  public listMark(){
+    return this.http.get<ResponseDtoMarca[]>('http://localhost:8090/api/v1/marcas/listar', this.headersOptions);
+    
+  }
+   
 
   public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
     let body = {
@@ -67,11 +69,6 @@ export class ProductsService {
     let aux = this.http.post('http://localhost:8090/api/v1/producto', body, this.headersOptions );
     return aux; 
   }
-
-  public listMark(){
-    return this.http.get<Array<ResponseDtoMarca>>('http://localhost:8090/api/v1/marcas/listar', this.headersOptions)
-  }
-   
 
   public modifyProduct(optionId:number, stock:number, buyPrice:number) {
     let id = optionId;
