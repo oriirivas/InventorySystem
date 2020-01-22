@@ -17,6 +17,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   public idProducto: number
   public idProducto1: number
   public newPrice: number
+  public numberOperation: number
 
   public validId = "is-invalid";
   public validId1 = "is-invalid";
@@ -29,7 +30,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'tradeMark', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto','edit','delate'];
+  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto','edit','delate', 'plus'];
 
 
   constructor(private router: Router, private productService:ProductsService) { }
@@ -58,6 +59,10 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     this.dataSourcex.filter = filterValue.trim().toLowerCase();    
   }
 
+  plusProductKeyup(value:number){
+    this.numberOperation=value;
+  }
+
   newPriceKeyup(value:number){
     this.newPrice=value;
     this.validPrice="is-valid";
@@ -83,10 +88,9 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     if(this.idProducto == null || this.newStock == null ||this.newPrice == null){
       alert('Debe llenar todo los campos, si hay uno que no desea modificar, copielo como es encuentra en la tabla');
     }else{
-      debugger
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
-        alert("Actualizado con exito")
+        //alert("Actualizado con exito")
         this.router.navigate(['/update-inventory']);
       });
 
@@ -102,19 +106,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       obs.subscribe(res => {
         alert("Eliminado con exito")
         this.router.navigate(['/update-inventory']);
-      });
-
-
-      
+      });   
     }
-
   }
-
 }
-
-
-
-
-
-
-

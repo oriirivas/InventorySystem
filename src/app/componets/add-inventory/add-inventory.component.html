@@ -36,6 +36,21 @@
                     </div>
                     <div class="form-row">  
                         <div class="col-md-4 mb-3">
+
+                            
+                            <div class="dropdown">
+                                
+                                <select class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                                  <option class="dropdown-item" *ngFor = "let marca of lista" >{{marca.marcaDto}}</option>
+                                </select>
+                              </div>
+
+                              <select>
+
+                              </select>
+
+                                                  
+
                             <label for="validationServer03">Marca</label>
                             <input (keyup)="tradeMarkKeyup($event.target.value)" type="text" class="form-control {{validTradeMark}}" id="validationServer03" required>
                                 <div class="invalid-feedback">
@@ -44,7 +59,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer03">Modelo</label>
-                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer04" required>
+                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer09" required>
                                 <div class="invalid-feedback">
                                     {{lockModel}}
                                 </div>
@@ -59,7 +74,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-md-3 mb-3">
-                            <label for="validationServer03">Stock</label>
+                            <label for="validationServer09">Stock</label>
                             <input (keyup)="stockKeyup($event.target.value)" type="text" class="form-control {{validStock}}" id="validationServer05" required>
                                 <div class="invalid-feedback">
                                     {{lockStock}}

@@ -22,25 +22,25 @@
         <div class="col-12" align="center">
         
             <div class="col-6 pag" align="center">
-            <table class="table table-striped">
+            <table class="table table-striped">             
                 <thead style="background-color:rgb(116, 117, 117);" class="thead">
-                
-                    <tr>
+                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Modelo</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Stock</th>
                     <th scope="col">Valor</th>
                     </tr>
-                </thead>
+                </thead>               
                 <tbody>
-                    <tr>
-                    <th scope="row">15498</th>
-                    <td>Galaxy J2 Pro (Black)</td>
-                    <td>Samsung</td>
-                    <td>56</td>
-                    <td>$79.990</td>
-                    </tr>
+                  <tr *ngFor = "let product of listProducts">
+                    <td>{{product.id}}</td>
+                    <td>{{product.model}}</td>
+                    <td>{{product.marca}}</td>
+                    <td>{{product.stock}}</td>
+                    <td>{{product.total}}</td>
+                  </tr>
+                  
                 </tbody>
                 </table>
             </div>

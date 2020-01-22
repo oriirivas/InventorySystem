@@ -42,12 +42,14 @@ export class AddInventoryComponent implements OnInit {
   public validModel= "is-invalid";
   public validCategory= "is-invalid";
   estadoPositivo: boolean = true;
-  lista:string[]=[];
+  public lista:any;
 
   constructor(private router: Router,
     private productServices: ProductsService) { }
 
   ngOnInit() {
+
+    this.lista=this.productServices.listMark();
     
 
   }
@@ -128,25 +130,9 @@ export class AddInventoryComponent implements OnInit {
   
   
   markList(){
-    let aja =this.productServices.showMark();
+    let aja =this.productServices.listMark();
     
   }
 } 
 
-export class SelectOverviewExample {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
-}
-
-export interface Food {
-  value: string;
-  viewValue: string;
-}
-
-export interface marklist {
-  "marcaDto":string;
-}
 

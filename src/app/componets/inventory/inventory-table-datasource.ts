@@ -8,7 +8,7 @@ import {InventoryComponent} from '../inventory/inventory.component'
 // TODO: Replace this with your own data model type
 export interface InventoryTableItem {
   idProductoDto: number;
-  tradeMark:string;
+  marcaDto:string;
   modeloDto:string;
   sistemaOperativoDto:string;
   precioDto:number;
@@ -16,10 +16,23 @@ export interface InventoryTableItem {
   cantidadDto:number;
   edit:object;
   delate:object;
+  sale:object;
+  plus:object;
 }
 
 export interface ResponseDtoUsuario{
   nombreUsuarioDto: string,
   userNameDto: string,
   tipoRolDto: string
+}
+
+export interface ResponseDtoMarca{
+  marcaDto: string
+}
+export interface ResponseProducto {
+  id: number,
+  marca: string,
+  model: string,
+  stock: number,
+  total: number 
 }

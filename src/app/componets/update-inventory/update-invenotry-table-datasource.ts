@@ -8,7 +8,7 @@ import {UpdateInventoryComponent} from './update-inventory.component'
 // TODO: Replace this with your own data model type
 export interface UpdateInventoryTableItem {
     idProductoDto: number;
-    tradeMark:string;
+    marcaDto:string;
     modeloDto:string;
     sistemaOperativoDto:string;
     precioDto:number;

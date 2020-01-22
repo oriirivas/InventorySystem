@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HAMMER_LOADER } from '@angular/platform-browser';
-import { InventoryTableItem } from '../inventory/inventory-table-datasource';
+import { InventoryTableItem, ResponseDtoMarca, ResponseProducto } from '../inventory/inventory-table-datasource';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  private producto: ResponseProducto = {} as any;
+
+  listaSale: Array<ResponseProducto> = [] as any;
+  listS= [];
 
   private headersOptions = {
     headers: {
@@ -25,7 +29,31 @@ export class ProductsService {
     //localStorage.getItem("user");
     return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
   }
-  
+
+  public getProduct(n:number) {
+    let id=n;
+    //localStorage.getItem("user");
+    return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar'+id, this.headersOptions );   
+  }
+
+  public listProducts(id2:number) {
+    let product: ResponseProducto = {
+      id: id2,
+      marca: "kaka",
+      model:  "jJJ",
+      stock:  1,
+      total:  7
+  }
+  debugger;
+
+    //this.listaSale.push(this.producto);
+    this.listaSale.push(product);
+    console.log("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+    console.log(this.listaSale);
+    //console.log(this.listaSale);
+    debugger;
+    return this.listaSale;
+  }
 
   public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
     let body = {
@@ -40,8 +68,8 @@ export class ProductsService {
     return aux; 
   }
 
-  public showMark(){
-    return this.http.get('http://localhost:8090/api/v1/marcas/listar', this.headersOptions)
+  public listMark(){
+    return this.http.get<Array<ResponseDtoMarca>>('http://localhost:8090/api/v1/marcas/listar', this.headersOptions)
   }
    
 

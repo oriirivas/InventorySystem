@@ -1,1 +1,149 @@
-<p>xiaomi works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">BrainStorm</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+
+            
+  <div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a href="#">BrainStorm</a>
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+            
+          </div>
+        </div>
+        <div class="sidebar-header">
+          <div class="user-pic">
+            <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+              alt="User picture">
+          </div>
+          <div class="user-info">
+            <span class="user-name">{{name}}
+              <strong>{{name}}</strong>
+            </span>
+            <span class="user-role">Vendedor/a</span>
+            <span class="user-status">
+              <i class="fa fa-circle"></i>
+              <span class="badge badge-pill badge-warning">Online</span>
+            </span>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Buscar...">
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        
+        
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Panel</span>
+            </li>
+           <!-- sidebar-search  -->
+             
+           
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-sitemap"></i>
+              <span class="nav-link-text" [routerLink]="['/sales']">Venta SmartPhone</span>
+              <span><img src="https://img.icons8.com/color/30/000000/checkout.png"></span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseMulti">
+              <li>
+                <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" >Marcas</a>
+                <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                  <div class="container">
+                    <div class="row">
+                       <div class="col-sm-12">
+                  </div>
+                  <ul class="nav nav-pills" role="tablist">
+                   <li role="presentation" class>
+                       <a title="Huawei" href="#tab-description" aria-controls="tab-description" 
+                       role="tab" data-toggle="tab" aria-expanded="false">Huawei</a>
+                   </li>
+                   <li role="presentation" class>
+                        <a title="Ficha tecnica" href="#tab-technical_details" 
+                        aria-controls="tab-technical_details" role="tab" data-toggle="tab" aria-expanded="false">Samsung</a>
+                   </li>
+                   <li role="presentation" class>
+                        <a title="Garantía" href="#tab-warranty" aria-controls="tab-warranty" 
+                       role="tab" data-toggle="tab" aria-expanded="false">Iphone</a>
+                       
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+  
+                    <div role="tabpanel" class="tab-pane fade" id="tab-description" data-hook="tab-description">
+  
+                    </div>
+                    
+  
+                    <div role="tabpanel" class="tab-pane fade" id="tab-technical_details" data-hook="product_properties">
+                    <!--lalalalaal para el otro lado-->
+                      </div>
+                      
+                        <div role="tabpanel" class="tab-pane fade" id="tab-warranty" data-hook="tab-warranty">
+                         
+                         <!--lalalalal-->
+           
+           
+                          </div>
+                </div>
+             </div>
+           </div>
+         </ul>
+       </li>
+     </ul>
+   </li>
+   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+      <i class="fa fa-fw fa-file"></i>
+      <span class="nav-link-text">Otros Movimientos</span>
+      <span><img src="https://img.icons8.com/color/30/000000/virtual-machine2.png"></span>
+    </a>
+    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+      <li>
+        <a [routerLink]="['/credit-note']">Nota de crédito</a> 
+       
+      </li>
+      <li>
+        <a [routerLink]="['/debit-note']">Nota de débito</a>
+        
+      </li>
+      <li>
+        <a [routerLink]="['/inventory-sales']">Inventario</a>
+       
+      </li>
+     
+    </ul>
+  </li>
+  <li class="nav-item" data-toggle="tooltip" data-placement="right">
+    <a class="nav-link" href="#">
+      <i class="fa fa-fw fa-link"></i>
+      <span class="nav-link-text">Logout</span>
+    </a>
+  </li>
+  </ul>
