@@ -65,9 +65,8 @@ add(){
   if(this.id ==null || this.stock == undefined){
     alert("debe llenar todo los campos")
   }else{    
-    this.productService.listProducts(this.id);
+    this.productService.getProduct(this.id);
     console.log(this.listaSale);
-    //this.router.navigate(['/sales-selec']);
 
   }
 }

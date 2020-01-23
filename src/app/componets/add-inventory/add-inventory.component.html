@@ -38,17 +38,13 @@
                         <div class="col-md-4 mb-3">
                             
                             <div class="form-grup">
-                                <select [(ngModel)]="marcaLocal" class="custom-select mr-sm-2" id="inlineFormCustomSelec">
-                                  <option selected>seleciona</option>
-                                  <option  *ngFor = "let marca of lista" [ngValue]="marca.marcaDto" >{{marca.marcaDto}}</option>
+                                <select [(ngModel)]="marcaLocal" name="marcaName" class="custom-select mr-sm-2 {{validTradeMark}}" (click)="tradeMarkKeyup()" id="inlineFormCustomSelec" required>
+                                  <option  *ngFor = "let marca of lista" [ngValue]="marca" >{{marca.marcaDto}}</option>
                                 </select>
-                            </div>                               
-
-                            <label for="validationServer03">Marca</label>
-                            <input (keyup)="tradeMarkKeyup($event.target.value)" type="text" class="form-control {{validTradeMark}}" id="validationServer03" required>
                                 <div class="invalid-feedback">
                                     {{lockTradeMark}}
                                 </div>
+                            </div>                                    
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer03">Modelo</label>

@@ -31,9 +31,19 @@ export interface ResponseDtoMarca{
 }
 
 export interface ResponseProducto {
-  id: number,
+  idProductoDto: number,
+  modeloDto:string,
+  sistemaOperativoDto: string,
+  marcaDto: string,
+  precioCompraDto: number,
+  precioVentaDto: number,
+  fechaProductoDto: Date,
+  cantidadDto: number
+  
+
+  /*id: number,
   marca: string,
   model: string,
   stock: number,
-  total: number 
+  total: number */
 }

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
       let obs = this.loginInfo.login(this.name, this.pass);
       obs.subscribe(user  => {
-      if(user.tipoRolDto == "admi") {
+      if(user.tipoRolDto == "administrador") {
         this.router.navigate(['/home']);
       }else {
         this.router.navigate(['/sales']);

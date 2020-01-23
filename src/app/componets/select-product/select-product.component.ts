@@ -8,19 +8,29 @@ import { ResponseProducto } from '../inventory/inventory-table-datasource';
   styleUrls: ['./select-product.component.css']
 })
 export class SelectProductComponent implements OnInit {
-  listProducts: any;
+  listProducts: Array<ResponseProducto>;
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
-    this.listProducts = this.productService.listaSale;
-    console.log("QQQQQQQQQQQ" + this.productService.listaSale)
+    this.prductSale();
+    console.log("QQQQQQQQQQQ" + this.productService.saleProduct())
   }
   add(){
     alert('Producto Vendido')
   }
 
-  headers = ["ID", "Marca", "Modelo", "Stock", "Total"];
+  prductSale(){
+    let obs= this.productService.saleProduct();
+    obs.subscribe(res=> {
+      console.log(res);
+      this.listProducts=res;
+      console.log(this.listProducts);
+    });
+     
+  }
+
+  //headers = ["idProductoDto", "marcaDto", "modeloDto", "cantidadDto", "Total"];
 
 }
 

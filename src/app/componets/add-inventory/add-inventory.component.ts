@@ -22,9 +22,8 @@ export class AddInventoryComponent implements OnInit {
   public buyPrice: number
 
   
-  public marcaLocal: string;
-  public marca:string;
-  
+  public marcaLocal: ResponseDtoMarca;
+ 
   public lockDate = 'ingrese fecha';
   public lockNumber = 'ingrese numero de factura';
   public lockProvider = 'ingrese proveedor';
@@ -44,7 +43,6 @@ export class AddInventoryComponent implements OnInit {
   public validStock= "is-invalid";
   public validModel= "is-invalid";
   public validCategory= "is-invalid";
-  estadoPositivo: boolean = true;
   public lista:ResponseDtoMarca[];
 
   constructor(private router: Router,
@@ -56,21 +54,7 @@ export class AddInventoryComponent implements OnInit {
     
 
   }
-  add(){
-    console.log('llegueeeeee');
-    console.log( this.productServices.showProduct);
-    alert('Debe llenar todos los datos para agregado')
-  }
-
  
-
-  validate(){
-    let somethingn = true;
-    if(somethingn){
-      this.lockDate = 'guardado';
-      this.validDate="valid-feedback";
-    }
-  }
 
   dateKeyup(value: Date) {
     this.date = value;
@@ -87,8 +71,7 @@ export class AddInventoryComponent implements OnInit {
     this.lockProvider = 'ingresado correctamente';
     this.validProvider='is-valid';
   }
-  tradeMarkKeyup(value: string) {
-    this.tradeMark = value;
+  tradeMarkKeyup() {
     this.lockTradeMark = 'ingresado correctamente';
     this.validTradeMark='is-valid';
   }
@@ -121,16 +104,18 @@ export class AddInventoryComponent implements OnInit {
   
 
   newProduct(){
-    console.log(this.marcaLocal,this.marca)
-    if(this.date== undefined ||this.numberf==undefined || this.category == undefined ||this.provider == undefined || this.marcaLocal == undefined || this.model== undefined || this.buyPrice == undefined || this.salePrice == undefined || this.stock == undefined){
+    console.log(this.marcaLocal.marcaDto, this.stock, this.marcaLocal.marcaDto, this.model, this.buyPrice, this.salePrice,  this.category, this.date)
+    if(this.date== undefined ||this.numberf==undefined || this.category == undefined ||this.provider == undefined || this.marcaLocal.marcaDto == undefined || this.model == undefined || this.buyPrice == undefined || this.salePrice == undefined || this.stock == undefined){
       alert('porfavor ingrese todo los datos')
     }else{
-      let obs =this.productServices.addProducto(this.stock, this.marcaLocal, this.model, this.buyPrice, this.category, this.date)
+      let obs =this.productServices.addProducto(this.stock, this.marcaLocal.marcaDto, this.model, this.buyPrice, this.salePrice,  this.category, this.date)
       obs.subscribe(res => {
         alert("Guardado con exito")
         this.router.navigate(['/home']);
+      }, error => {
+        alert('Disculpe tenemos problemas con el sistema, reintente mas tarde');
       });
-    }    
+    }  
   }
 
   listarMarca(){

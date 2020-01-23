@@ -30,7 +30,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioDto', 'salePrice', 'cantidadDto','edit','delate', 'plus'];
+  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioCompraDto', 'precioVentaDto', 'cantidadDto','edit','delate', 'plus'];
 
 
   constructor(private router: Router, private productService:ProductsService) { }

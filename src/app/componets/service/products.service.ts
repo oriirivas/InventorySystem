@@ -9,6 +9,7 @@ import { InventoryTableItem, ResponseDtoMarca, ResponseProducto } from '../inven
 })
 export class ProductsService {
   private producto: ResponseProducto = {} as any;
+  private idSuprema:number;
 
   //private marca: ResponseDtoMarca = {} as any;
 
@@ -34,12 +35,15 @@ export class ProductsService {
   }
 
   public getProduct(n:number) {
-    let id=n;
-    //localStorage.getItem("user");
-    return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar'+id, this.headersOptions );   
-  }
+    this.idSuprema= n;
+    return this.idSuprema;
+    }
 
-  public listProducts(id2:number) {
+    public saleProduct(){
+      return this.http.get<ResponseProducto[]>('http://localhost:8090/api/v1/producto/'+this.idSuprema, this.headersOptions );
+    }
+
+  /*public listProducts(id2:number) {
     let product: ResponseProducto = {
       id: id2,
       marca: "kaka",
@@ -49,7 +53,7 @@ export class ProductsService {
   }   
     this.listaSale.push(product);
     return this.listaSale;
-  }
+  }*/
 
   public listMark(){
     return this.http.get<ResponseDtoMarca[]>('http://localhost:8090/api/v1/marcas/listar', this.headersOptions);
@@ -57,13 +61,14 @@ export class ProductsService {
   }
    
 
-  public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, category:string, date: Date) {
+  public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, salePrice:number, category:string, date: Date) {
     let body = {
       "cantidadDto": stock,
       "fechaProductoDto": date,
       "marcaDto": tradeMark,
       "modeloDto": model,
-      "precioDto": buyPrice,
+      "precioCompraDto": buyPrice,
+      "precioVentaDto": salePrice,
       "sistemaOperativoDto": category
     }
     let aux = this.http.post('http://localhost:8090/api/v1/producto', body, this.headersOptions );
@@ -76,7 +81,6 @@ export class ProductsService {
       "cantidadDto": stock,
       "precioDto": buyPrice
     }
-    debugger
     let aux = this.http.put('http://localhost:8090/api/v1/producto/modify/'+id, body, this.headersOptions );
     return aux; 
   } 
