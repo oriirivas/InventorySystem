@@ -6,21 +6,85 @@
   <div class="row">
       <div class="col-sm-5">
         <div class="card-body text-primary">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h5 class="card-title">Agregar o eliminar marca</h5>
-          <a href="#" class="btn btn-primary">Agregar marca</a>
-          <br>
-          <br>
-          <a href="#" class="btn btn-primary">Eliminar marca</a>
+
+          <!-- add mark-->         
+              <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
+                Agregar marca
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Agregar Marca</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-row col-md-12 mb-12">
+                          <div class="col-md-12 mb-12" align="center">
+                            <label for="validationServer01">Ingrese el nombre de la marca</label>
+                            <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="submit" (click)="addMark()" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <!-- /add mark-->
+
+           <!-- delete mark-->         
+           <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
+            Eliminar marca
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar Marca</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row col-md-12 mb-12">
+                      <div class="col-md-12 mb-12" align="center">
+                        <label for="validationServer01">Ingrese el nombre de la marca</label>
+                        <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="submit" (click)="addMark()" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- /delete mark-->
+          
         </div>
       </div>
+
+      
     <div class="col-sm-6">
       <div class="card-body text-primary">
           <br>

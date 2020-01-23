@@ -59,6 +59,15 @@ export class ProductsService {
     return this.http.get<ResponseDtoMarca[]>('http://localhost:8090/api/v1/marcas/listar', this.headersOptions);
     
   }
+
+  public addMark(markName : string){
+    let body =  {
+  
+      "nombreMarcaDto": markName
+    }
+    return this.http.post('http://localhost:8090/api/v1/marcas', body, this.headersOptions );
+     
+  }
    
 
   public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, salePrice:number, category:string, date: Date) {
@@ -79,15 +88,16 @@ export class ProductsService {
     let id = optionId;
     let body = {
       "cantidadDto": stock,
-      "precioDto": buyPrice
+      "precioVentaDto": buyPrice
     }
-    let aux = this.http.put('http://localhost:8090/api/v1/producto/modify/'+id, body, this.headersOptions );
+
+    let aux = this.http.put('http://localhost:8090/api/v1/producto/'+id, body, this.headersOptions );
     return aux; 
   } 
 
   public deleteProduct(optionId:number) {
     let id = optionId;
-    let aux = this.http.delete('http://localhost:8090/api/v1/producto/delete/'+id, this.headersOptions );
+    let aux = this.http.delete('http://localhost:8090/api/v1/producto/'+id, this.headersOptions );
     return aux; 
   } 
 }

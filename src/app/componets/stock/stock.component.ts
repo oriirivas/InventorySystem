@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../service/products.service';
 
 @Component({
   selector: 'app-stock',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StockComponent implements OnInit {
 
-  constructor() { }
+  private markName:string
+  constructor(private productService:ProductsService) { }
 
   ngOnInit() {
+  }
+
+  markNameKeyup(value: string){
+    this.markName= value;
+  }
+
+  addMark(){
+    if(this.markName == undefined){
+      alert('porfavor ingrese el nombre de la marca')
+    }else{
+      let obs =this.productService.addMark(this.markName).subscribe(res => {
+        alert("Guardado con exito");
+      }, error => {
+        alert('Disculpe tenemos problemas con el sistema, reintente mas tarde');
+      });   
+    }  
   }
 
 }
