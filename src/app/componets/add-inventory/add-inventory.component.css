@@ -1,0 +1,31 @@
+.btn-primary{
+    background-color: rgb(31, 128, 95);
+    border: 2px solid rgb(8, 232, 248);
+    border-radius: 20px;
+    padding: 0 40px;
+    cursor: pointer;
+    height:42px;
+    font-size:18px;
+    transition: all 0.2s ease-in-out;
+      }
+      
+      .btn-primary:hover {
+        background:#018f7c radial-gradient(circle, transparent 1%, #009b74 1%) center/15000%;
+      color: rgb(255, 255, 255);
+      border-radius: 50%;
+      }
+      .btn-primary:active {
+      background-color:#007255;
+      background-size: 100%;
+      transition: background 0s;
+      }
+
+      .card-header{
+    
+        color: aliceblue;
+        background: #00C3C0;  /* fallback for old browsers */ 
+        background: -moz-radial-gradient(circle, #00C3C0, #000000);  /* Firefox 3.6-15, Firefox 16-60 */ 
+        background: -webkit-radial-gradient(circle, #00C3C0, #000000);  /* Chrome 10-25, Safari 5.1-6 */ 
+        background: radial-gradient(circle, #00C3C0, #000000); /* IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+

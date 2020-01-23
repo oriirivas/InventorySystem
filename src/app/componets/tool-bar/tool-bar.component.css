@@ -340,15 +340,7 @@
     top: 0;
   }
   
-  .badge-sonar {
-    display: inline-block;
-    background: #980303;
-    border-radius: 50%;
-    height: 8px;
-    width: 8px;
-    position: absolute;
-    top: 0;
-  }
+ 
   
   .badge-sonar:after {
     content: "";
@@ -499,4 +491,67 @@
   .icons8-gmail{
     float: left;
   }
- 
+  
+  .sidebar-dropdown{
+color: #1D9AF2;
+background-color: #30333a;
+border: 0px solid #3a3f48;
+border-radius: 0px;
+padding: 0px;
+cursor: pointer;
+height:42px;
+font-size:14px;
+transition: all 0.2s ease-in-out;
+  }
+
+  .sidebar-dropdown:hover{
+    box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+    transform: translateX(-3px);
+  }
+
+
+
+
+
+  .fa-book{
+    color: #1D9AF2;
+    background-color: #30333a;
+    border: 0px solid #3a3f48;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    height:42px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;}
+  .fa-book:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+    transform: translateX(-3px);}
+  
+
+
+  .fa-calendar{color: #1D9AF2;
+    background-color: #30333a;
+    border: 0px solid #3a3f48;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    height:42px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;}
+  .fa-calendar:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+    transform: translateX(-3px);}
+  
+    
+
+
+  .fa-folder{color: #1D9AF2;
+    background-color: #30333a;
+    border: 0px solid #3a3f48;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    height:42px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;}
+  .fa-folder:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+    transform: translateX(-3px);}
+  
