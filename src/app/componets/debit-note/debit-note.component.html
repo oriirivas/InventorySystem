@@ -1,100 +1,143 @@
-<p>sony works!</p>
-<div id="wrapper">
-    <div class="background">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+<div class="form-group col-12" class="row"></div>
+        <nav class="navbar navbar-dark bg-dark">
+            .
+            <a class="navbar-brand" align="center center" href="#">Sistema de inventario BS </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" align="center" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" align="center" href="#">Ajustes</a>
+                <a class="nav-item nav-link" align="center" href="#">Ayuda</a>
+                <a class="nav-item nav-link disabled" align="center" href="#">Cerrar sesión</a>
+            </div>
+            </div>
+        </nav>
+
+                  
+        <div class="container">
+          <div class="text-center">
+               <h1 style="margin: 15px;">Nota de Débito</h1> 
+          </div>
+      
+           <div class="row">
+              <div class="col-md-12">
+                  <div class="panel panel-default">
+                      <div class="panel-heading" >
+                            
+                           <h3 class="panel-title" class="text-primary">Fundación Forge S.A</h3> <h4 class="panel-title" class="text-primary">R.U.T: 78.613050-6</h4>
+                           <strong><h6 class="panel-title" class="text-secondary">Irarrázaval 3665, Ñuñoa, Región Metropolitana</h6></strong>
+                           <strong><h6 class="panel-title" class="text-secondary">teléf: 9 5799 9343</h6></strong>
+                <hr>
+                          <div class="row">
+                              
+                              <div class="col-sm-4">
+                                  <div class="form-group" >
+                                <strong><label for="cliente" class="col-sm-4 control-label">Cliente</label></strong>
+                                      <div class="col-sm-10">
+                                          <input class="form-control" id="cliente" placeholder="cliente" type="text">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-4">
+                                  <div class="form-group">
+                                <strong><label for="id" class="col-sm-4 control-label">Rut</label></strong>
+                                      <div class="col-sm-10">
+                                          <input class="form-control" id="rut" placeholder="12345678-9" type="text">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                <strong><label for="fecha" class="col-sm-6 control-label">Fecha factura</label></strong>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="fecha" placeholder="fecha factura" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-sm-4">
+                                <div class="form-group">
+                                <strong><label for="direccion" class="col-sm-2 control-label">Dirección</label></strong>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="direccion" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                            <strong><label for="comuna" class="col-sm-2 control-label">Comuna</label></strong>
+                                  <div class="col-sm-10">
+                                      <input class="form-control" id="text" type="text">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="form-group">
+                            <strong><label for="telefono" class="col-sm-2 control-label">Teléfono</label></strong>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="telefono" type="text">
+                                </div>
+                            </div>
+                        </div>
+                          <hr>
+              </div> <!-- panel heading -->
+              <div class="panel-body">
+                <table class="table table-bordered" >
+                <thead>
+                  <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Precio Unitario</th>
+                  <th scope="col">Total $</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">421</th>
+                    <td >1</td>
+                    <td >Galaxy J2 Pro (Black) Samsung</td>
+                    <td >79.990</td>
+                    <td >79.990</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right"><strong>Sub Total $:</strong></td>
+                        <td class="text-right"><strong>79.990</strong></td>
+                        </tr>
+                        <tr>
+                        <td colspan="4" class="text-right"><strong>19% I.V.A $:</strong></td>
+                        <td class="text-right"><strong>15.200</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-right"><strong>Total $:</strong></td>
+                        <td class="text-right"><strong>95.188</strong></td>
+                    </tr>
+                </tfoot>    
+            </table>
+                </div>
+              </div> <!-- panel body -->
+            </div> <!-- panel -->
+        </div> <!-- col -->
    
-      <div id="left">
-        <div id="signin">
-          <div class="logo">
-            <a img src="https://i.ibb.co/0V4JFwH/logo-cerebroo.png" alt="logo-cerebroo" border="0"></a>
-          </div>
-          <form>
-            <div>
-              <label>Nombre</label>
-              <input (keyup)="nameKeyup($event.target.value)" type="text" class="text-input" />
-            </div>
-            <div>
-              <label>Contraseña</label>
-              <input (keyup)="passKeyup($event.target.value)" type="password" class="text-input" />
-            </div>
-            <button type="submit" (click)="login()" class="primary-btn">Iniciar </button>
-          </form>
-          <div class="links">
-            <a href="#">Olvidaste tu contraseña?</a>
+
+            <div class="center"> 
+                <strong><h6>Razón para el Débito:</h6></strong>
+                <textarea name="comentrios" id="text" cols="150" rows="3"></textarea>
+             </div>
             
-          </div>
-          <div class="or">
-            <hr class="bar" />
-            <span>O</span>
-            <hr class="bar" />
-          </div>
-          <a href="#" class="secondary-btn">Crear una cuenta</a>
-        </div>
-        <footer id="main-footer">
-          <p>Copyright &copy; 2020, BrainStorm</p>
-          <div>
-            <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
-          </div>
-        </footer>
+             <div class="right">
+                <strong><label for="firma" class="col-sm-4 control-label">Firma</label></strong>
+                <div class="col-sm-12">
+                    <input class="form-control" id="direccion" type="text">
+                </div>
+             </div>
+               
+        </div> <!-- row -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Enviar a Correo</button>
+                <button type="button" class="btn btn-info">Imprimir</button>
+              </div>
       </div>
-      <div id="right">
-        <div id="showcase">
-          <div class="showcase-content">
-            <strong class="showcase-text">
-              BrainStorm <strong>TogetherStronger</strong>
-            </strong>
-            <a href="#" class="secondary-btn">Inventary System</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>

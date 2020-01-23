@@ -1,0 +1,50 @@
+body {
+    padding-top: 50px;
+    
+}
+  
+label{
+    
+    float: center;
+    font-family: monospace;
+    size: 10px;
+}
+  
+table{
+    float: left; 
+    text-align: center;
+    border: lightskyblue;
+    font-family: monospace;
+    size: 10px;
+}
+  
+center{
+   float: center;
+   font-family: monospace;
+   width: 400px;
+}
+
+.right{
+    float: right;
+}
+
+h6{
+  text-align: left;
+  margin-left: 0px;
+  margin: 10px;
+  font-family: monospace;
+}
+   
+tfoot, tr, td{
+    text-align: center;
+
+}
+
+thead{
+    background: rgb(121, 247, 175);
+    
+}
+
+textarea{
+    margin-left: 30px;
+}
