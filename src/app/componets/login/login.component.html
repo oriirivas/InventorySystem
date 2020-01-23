@@ -1,46 +1,48 @@
 <div id="wrapper">
   
-    <div id="left">
-      <div id="signin">
-        <div class="logo">
-          <img src="..." alt="Sluralpright" />
-        </div>
-        <form>
-          <div>
-            <label>Nombre</label>
-            <input (keyup)="nameKeyup($event.target.value)" type="text" class="text-input" />
-          </div>
-          <div>
-            <label>Contraseña</label>
-            <input (keyup)="passKeyup($event.target.value)" type="password" class="text-input" />
-          </div>
-          <button type="submit" (click)="login()"  class="primary-btn">Entrar</button>
-        </form>
-        <div class="links">
-          <a href="#">Olvidaste tu contraseña?</a>
-          
-        </div>
-        <div class="or">
-          <hr class="bar" />
-          <span>O</span>
-          <hr class="bar" />
-        </div>
+  <div id="left">
+    <div id="signin">
+      <div class="logo">
+        <img src="https://i.ibb.co/GPjCLCn/sin-fondo.png" alt="sin-fondo" border="0">
       </div>
-      <footer id="main-footer">
-        <p>Copyright &copy; 2020, BrainStorm</p>
+
+      <form>
         <div>
-          <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
+          <label>Nombre</label>
+          <input (keyup)="nameKeyup($event.target.value)" type="text" class="text-input" />
         </div>
-      </footer>
+        
+        <div>
+          <label>Contraseña</label>
+          <input (keyup)="passKeyup($event.target.value)" type="password" class="text-input" />
+        </div>
+        <button type="submit" (click)="login()"  class="primary-btn">Entrar</button>>
+      </form>
+      <div class="links">
+        <a href="#">Olvidaste tu contraseña?</a>
+        
+      </div>
+      <div class="or">
+        <hr class="bar" />
+        <span>O</span>
+        <hr class="bar" />
+      </div>
     </div>
-    <div id="right">
-      <div id="showcase">
-        <div class="showcase-content">
-          <strong class="showcase-text">
-            BrainStorm <strong>TogetherStronger</strong>
-          </strong>
-          <a href="#" class="secondary-btn">Inventary System</a>
-        </div>
+    <footer id="main-footer">
+      <p>Copyright &copy; 2020, BrainStorm</p>
+      <div>
+        <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+  <div id="right">
+    <div id="showcase">
+      <div class="showcase-content">
+        <strong class="showcase-text">
+          BrainStorm <strong>TogetherStronger</strong>
+        </strong>
+        <a href="#" class="secondary-btn">Inventary System</a>
       </div>
     </div>
   </div>
+</div>

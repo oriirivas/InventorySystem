@@ -35,3 +35,12 @@ select{
     border: 2px solid rgb(17, 204, 157);
     border-radius: 10px;
 }
+
+.card-header{
+    
+    color: aliceblue;
+    background: #00C3C0;  /* fallback for old browsers */ 
+    background: -moz-radial-gradient(circle, #00C3C0, #000000);  /* Firefox 3.6-15, Firefox 16-60 */ 
+    background: -webkit-radial-gradient(circle, #00C3C0, #000000);  /* Chrome 10-25, Safari 5.1-6 */ 
+    background: radial-gradient(circle, #00C3C0, #000000); /* IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
