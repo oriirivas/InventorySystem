@@ -29,7 +29,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioCompraDto', 'precioVentaDto', 'cantidadDto','edit','delate', 'plus'];
+  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioCompraDto', 'precioVentaDto', 'cantidadDto','edit','delate', 'plus', 'sud'];
 
 
   constructor(private router: Router, private productService:ProductsService) { }
@@ -118,6 +118,23 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       let obs = this.productService.getProduct(this.idProducto);
       obs.subscribe(res => {
         let totalStock=(+res.cantidadDto+ +this.numberOperation);
+        console.log(totalStock)
+        this.newStock = totalStock;
+        this.newPrice = res.precioVentaDto;
+        this.modifyProduct();
+        alert("Operacion realizada con exito")
+      });   
+    }
+    return this.newStock
+  }
+  sudProduct(){
+    console.log()
+   if(this.idProducto == undefined || this.numberOperation == undefined){
+      alert('Debe llenar todo los campos');
+    }else{
+      let obs = this.productService.getProduct(this.idProducto);
+      obs.subscribe(res => {
+        let totalStock=(res.cantidadDto - this.numberOperation);
         console.log(totalStock)
         this.newStock = totalStock;
         this.newPrice = res.precioVentaDto;

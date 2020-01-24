@@ -18,6 +18,7 @@ export interface InventoryTableItem {
   delate:object;
   sale:object;
   plus:object;
+  sud:object;
 }
 
 export interface ResponseDtoUsuario{
