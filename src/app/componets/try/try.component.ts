@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ProductsService } from '../../componets/service/products.service';
 import { observable } from 'rxjs';
-import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
+import { ResponseDtoMarca, ResponseProducto, InventoryTableItem } from '../inventory/inventory-table-datasource';
 
 @Component({
   selector: 'app-try',
@@ -11,11 +11,15 @@ import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
 })
 
 export class TryComponent implements OnInit {
+  id=1;
   public lista: ResponseDtoMarca[];
   //marca:ResponseDtoMarca;
   marca:ResponseDtoMarca;
   marcaLocal: ResponseDtoMarca;
 
+  //listProducts: Array<ResponseProducto>[];
+  listProducts: ResponseProducto;
+  //listProducts: InventoryTableItem[];
 
 
   
@@ -24,7 +28,7 @@ export class TryComponent implements OnInit {
 
   ngOnInit() {
     this.listarMarca();
-      
+    this.mostrarProducto();
   }
  
   listarMarca(){
@@ -34,13 +38,14 @@ export class TryComponent implements OnInit {
      console.log(this.lista);
    });
    
-  }
+  } 
 
-  
-
-  
-  getMarca(){
-    debugger
-    console.log(this.marcaLocal,this.marca)
+  mostrarProducto(){
+    let obs = this.productServices.getProduct(this.id);
+    //obs.subscribe(res => {
+      //this.listProducts.push(res);
+      console.log(this.listProducts);
+   // })
   }
+  
 }

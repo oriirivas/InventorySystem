@@ -15,3 +15,24 @@
   </div>
   <button type="button" (clic)="getMarca()">jaja</button>
   
+  <table class="table table-striped">             
+    <thead style="background-color:rgb(116, 117, 117);" class="thead">
+       <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Valor</th>
+        </tr>
+    </thead>               
+    <tbody>
+      <tr *ngFor = "let product of listProducts">
+        <td>{{product.idProductoDto}}</td>
+        <td>{{product.modeloDto}}</td>
+        <td>{{product.marcaDto}}</td>
+        <td>{{product.cantidadDto}}</td>
+        <td>{{product.total}}</td>
+      </tr>
+      
+    </tbody>
+    </table>

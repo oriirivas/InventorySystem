@@ -12,9 +12,14 @@ export class ProductsService {
   private idSuprema:number;
 
   //private marca: ResponseDtoMarca = {} as any;
+  //listaCarrito: ResponseProducto[];
 
-  listaSale: Array<ResponseProducto> = [] as any;
 
+  listaCarrito: Array<ResponseProducto> = [] as any;
+
+  private listaSale: Array<ResponseProducto> = [] as any;
+  //listaSale: ResponseProducto[];
+  //private listaSale: Array<ResponseProducto>;
   //listaMarca: Array<ResponseDtoMarca> = [] as any;
 
   private headersOptions = {
@@ -29,6 +34,14 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
+  public carritoGetInfo(producto : ResponseProducto){
+    this.listaCarrito.push(producto);
+    return this.listaCarrito;
+  }
+  public carritoSendInfo(){
+    return this.listaCarrito
+  }
+
   public showProduct() {
     //localStorage.getItem("user");
     return this.http.get<InventoryTableItem[]>('http://localhost:8090/api/v1/producto/listar', this.headersOptions );   
@@ -36,8 +49,13 @@ export class ProductsService {
 
   public getProduct(n:number) {
     this.idSuprema= n;
-    return this.idSuprema;
-    }
+    /*let aja = this.http.get<ResponseProducto>('http://localhost:8090/api/v1/producto/'+this.idSuprema, this.headersOptions )
+    aja.subscribe(res =>{
+      this.listaSale.push(aja);
+    })
+    */
+    return this.http.get<ResponseProducto>('http://localhost:8090/api/v1/producto/'+this.idSuprema, this.headersOptions );
+  }
 
     public saleProduct(){
       return this.http.get<ResponseProducto[]>('http://localhost:8090/api/v1/producto/'+this.idSuprema, this.headersOptions );

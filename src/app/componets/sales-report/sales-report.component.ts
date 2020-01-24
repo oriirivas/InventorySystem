@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponseProducto } from '../inventory/inventory-table-datasource';
+import { ProductsService } from '../service/products.service';
 
 @Component({
   selector: 'app-sales-report',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sales-report.component.css']
 })
 export class SalesReportComponent implements OnInit {
-
-  constructor() { }
+private listProducts: Array<ResponseProducto>;
+  constructor(private productService: ProductsService) { }
 
   ngOnInit() {
+    this.prductSale();
+    console.log("QQQQQQQQQQQ" + this.productService.carritoSendInfo())
+  }
+
+  prductSale(){
+    this.listProducts=this.productService.carritoSendInfo()
+    /*let obs= this.productService.carritoSendInfo();
+    obs.subscribe(res=> {
+      console.log(res);
+      this.listProducts=res;
+      console.log(this.listProducts);
+    });*/
+     
   }
 
 }

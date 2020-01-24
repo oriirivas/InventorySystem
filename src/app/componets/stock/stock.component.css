@@ -26,3 +26,15 @@ select{
     margin-top:3% ;
     align-items: center;
 }
+.row{
+    margin-top: 5%;
+}
+.titleMark{
+    color: red;
+}
+.btn{
+    margin-top: 2%;
+    background-color: white;
+    color: darkcyan;
+    border-color: blanchedalmond;
+}

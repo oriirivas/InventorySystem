@@ -31,6 +31,7 @@ export interface ResponseDtoMarca{
 }
 
 export interface ResponseProducto {
+  subscribe(arg0: (res: any) => void);
   idProductoDto: number,
   modeloDto:string,
   sistemaOperativoDto: string,
@@ -38,7 +39,10 @@ export interface ResponseProducto {
   precioCompraDto: number,
   precioVentaDto: number,
   fechaProductoDto: Date,
-  cantidadDto: number
+  cantidadDto: number,
+
+  total:number;
+  cantidad:number;
   
 
   /*id: number,

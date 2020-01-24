@@ -14,23 +14,24 @@ export class SelectProductComponent implements OnInit {
 
   ngOnInit() {
     this.prductSale();
-    console.log("QQQQQQQQQQQ" + this.productService.saleProduct())
+    console.log("QQQQQQQQQQQ" + this.productService.carritoSendInfo())
   }
   add(){
     alert('Producto Vendido')
   }
 
   prductSale(){
-    let obs= this.productService.saleProduct();
+    this.listProducts=this.productService.carritoSendInfo()
+    /*let obs= this.productService.carritoSendInfo();
     obs.subscribe(res=> {
       console.log(res);
       this.listProducts=res;
       console.log(this.listProducts);
-    });
+    });*/
      
   }
 
-  //headers = ["idProductoDto", "marcaDto", "modeloDto", "cantidadDto", "Total"];
+ 
 
 }
 
