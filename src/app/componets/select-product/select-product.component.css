@@ -1,60 +1,64 @@
 table {
-    font-family: "Helvetica Neue", Helvetica, sans-serif
-  }
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+}
   
-  caption {
-    text-align: left;
-    color: rgb(168, 167, 167);
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 5px;
-  }
+caption {
+  text-align: left;
+  color: rgb(168, 167, 167);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px;
+}
   
-  thead {
-    background: rgb(99, 177, 241);
-    color: white;
-  }
+thead {
+  background: rgb(99, 177, 241);
+  color: white;
+}
   
-  th,
-  td {
-    padding: 5px 10px;
-    text-align:center;
+th,
+td {
+  padding: 5px 10px;
+  text-align:center;
 
-  }
+}
   
-  tbody tr,td:nth-child(even) {
+tbody tr,td:nth-child(even) {
     background: White;
-  }
+}
   
-  tbody tr td:nth-child(2) {
-    text-align:center;
+tbody tr td:nth-child(2) {
+  text-align:center;
 
-  }
+}
   
-  tbody tr td:nth-child(3),
-  tbody tr td:nth-child(4) {
-    text-align: right;
-    font-family: monospace;
-  }
-  
-  tfoot {
-    background: rgb(4, 180, 80);
-    color: white;
-    text-align: right;
-  }
-  
-  tfoot tr th:last-child {
-    font-family: monospace;
-  }
-  
-  .table{
-    background: rgb(255, 255, 255);
-  }
-  .th,td{
-    background: white;
-    text-align: left;
-  }
-  tr{
-    text-align: right;
-  }
- 
+tbody tr td:nth-child(3),
+tbody tr td:nth-child(4) {
+  text-align: right;
+  font-family: monospace;
+}
+
+tfoot {
+  background: rgb(16, 160, 153);
+  color: white;
+  text-align: right;
+}
+
+tfoot tr th:last-child {
+  font-family: monospace;
+}
+
+.table{
+  background: rgb(255, 255, 255);
+}
+.th,td{
+  background: white;
+  text-align: left;
+}
+tr{
+  text-align: right;
+}
+
+.strong{
+  text-align: center;
+  float: center;
+}
