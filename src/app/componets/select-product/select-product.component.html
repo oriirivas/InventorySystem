@@ -59,8 +59,8 @@
                       
                       <div class="row">
                         
-                         <strong class="" style="margin-left: 150px">BRAINSTORM</strong>
-                         <h6 class="" id="exampleModalLabel" style="margin-left: 120px">Irarrázaval 3665, Ñuñoa</h6>                     
+                         <strong class="" style="margin-left: 140px">Fundación Forge S.A</strong>
+                         <h6 class="" id="exampleModalLabel" style="margin-left: 120px">Irarrázaval 3665, Ñuñoa, Región Metropolitana</h6>                     
                          
                  </div> <!-- row -->
                  
@@ -70,68 +70,46 @@
                     </div>
                     <div class="modal-body">
                       <div class="container">
-                        
-                       
-                        
-                        
-                        
-                          
-                        <!--h2 class="modal-title" id="exampleModalLabel">Factura</h2>
-                        <h4 class="modal-title" id="exampleModalLabel" style="margin-left: 150px">logo</h4>
-
-                        <h6 style="margin-right: 500px"> #245</h6> 
-                        <h6 class="modal-title" id="exampleModalLabel" style="margin-left: 350px">Fecha</h6-->
-                        
                     
-  
                     <div class="row">
                         <div class="col-m-6">
                             <div class="panel panel-default">
                                 <div class="panel-heading ">
                                     <!-- <h3 class="panel-title">Cabecera</h3> -->
-                                    <th style="background-color: rgb(226, 224, 224);">17/01/2019</th>
-                                        <tr>
-                                          <th style="text-align: left;">Vendedor</th>
-                                          <th style="text-align: left;">Cliente:</th>
-                                          <th style="text-align: left;">Enviar a:</th>
-                                        </tr>
-                                      
-                                      <tbody>
-                                        <tr>
-                                          <td>Pepito</td>
-                                          <td style="text-align: left;">Oriana Rivas</td>
-                                          <input type="gmail" class="form-control-" name="gmail" placeholder="ori@gmail.com" size="10"><button><img src="https://img.icons8.com/color/20/000000/send-mass-email.png"></button>
-                                          <td></td>
-                                        </tr>
-                                        <tr>
-                                          <td>24.662.453-1</td>
-                                          <td  style="text-align: left;">22.334.553-5</td>
-                                        </tr>
-                                         <tr>
-                                           <td></td>
-                                           <td>ori@gmail.com</td>
-                                         </tr>
+                                    <div class="form-group row">
+                                      <strong><label for="date" class="col-sm-1 col-form-label">Fecha</label></strong>
+                                      <div class="col-sm-4">
+                                        <input type="date" class="form-control" id="date">
+                                      </div>
+                                      <div class="row">
                                         
-                                      </tbody>
-                                            
-                              
-                                   
-                                        <!--div class="col-m-6" style="background-color:white;">
-                                            <div class="form-group">
-                                                <label for="gmail" class="col-m-6" style="margin-right: 500px">Enviar a:</label>
-                                                <div class="col-m-6" style="margin-right: 80px">
-                                                    <input class="form-control" id="gmail" placeholder="eje@ejemplo.com" type="gmail">
+                                            <div class="form-group" >
+                                                <strong><label for="cliente" class="col-sm-2 control-label">Sr(a)</label></strong>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" id="cliente"  type="text">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-m-6" style="background-color:white;">
+                                        
+                                        
                                             <div class="form-group">
-                                                <label for="nombre" class="col-m-6" style="margin-right: 500px">Facturar a:</label>
-                                                <div class="col-m-6" style="margin-right: 80px">
-                                                    <input class="form-control" id="nombre" placeholder="nombre cliente" type="nombre">
+                                                <strong><label for="id" class="col-sm-2 control-label">Rut</label></strong>
+                                                <div class="col-sm-8">
+                                                    <input class="form-control" id="rut" placeholder="12345678-9" type="text">
                                                 </div>
                                             </div>
-                                        </div-->
+                                        
+                                        
+                                          <div class="form-group">
+                                              <strong><label for="gmail" class="col-sm-2 control-label">Correo:</label></strong>
+                                              <div class="col-sm-8">
+                                                  <input class="form-control" id="gmail" placeholder="ori@gmail.com" type="text">
+                                              </div>
+                                          </div>
+                                      
+                                      
+                                    </div>
+                                        
+                                  
                                         <div class="col-m-6 target" style="background-color:white;">
                                             <div class="form-group">
                                                 
@@ -160,21 +138,23 @@
                               <td>421</td>
                               <td>01</td>
                               <td>Galaxy J2 Pro (Black) Samsung</td>
-                              <td>$76.990</td>
+                              <td>$79.990</td>
                             </tr>
-                            <tr>
-                              <td>421</td>
-                              <td>01</td>
-                              <td>Galaxy J2 Pro (Black) Samsung</td>
-                              <td>$76.990</td>
-                            </tr>
-                            
                           </tbody>
                           <tfoot>
                             <tr>
-                              <th colspan="3">Total Monto</th>
-                              <th>$153.980</th>
+                              <th colspan="3" class="text-right"><strong>Sub Total $:</strong></th>
+                              <th class="text-right"><strong>79.990</strong></th>
                             </tr>
+                            <tr>
+                              <th colspan="3" class="text-right"><strong>19% I.V.A $:</strong></th>
+                              <th class="text-right"><strong>15.198</strong></th>
+                            </tr>
+                            <tr>
+                              <th colspan="3" class="text-right"><strong>Total $:</strong></th>
+                              <th class="text-right"><strong>95.188</strong></th>
+                            </tr>
+
                           </tfoot>
                         </table>
                             </div> <!-- panel -->
