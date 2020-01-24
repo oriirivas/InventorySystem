@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       if(user.tipoRolDto == "administrador") {
         this.router.navigate(['/home']);
       }else {
-        this.router.navigate(['/sales']);
+        this.router.navigate(['/inventory-sales']);
        
       }
     }, error =>{

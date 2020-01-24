@@ -114,7 +114,7 @@ sendIfonCarrito(){
   
   this.productService.carritoGetInfo(this.productoActual);
   console.log(this.productoActual);
- 
+  alert('agregado al carrito');
   
   
 }
