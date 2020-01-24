@@ -78,7 +78,10 @@
   }
   
   .page-wrapper .theme.chiller-theme {
-    background: #1e2229;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   /*----------------toggeled sidebar----------------*/
@@ -219,7 +222,7 @@
 
   .navbar-brand{
     font-weight: bold;
-    color: #818896;     
+    color: #f8f9fc;     
   }
 
   .sidebar-wrapper .sidebar-menu {
@@ -383,15 +386,24 @@
     height: 0px;
   }
   ::-webkit-scrollbar-thumb {
-    background: #525965;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 0px none #ffffff;
     border-radius: 0px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #525965;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   ::-webkit-scrollbar-thumb:active {
-    background: #525965;
+    background: #123B28;  /* fallback for old browsers */ 
+    background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+    background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+    background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   ::-webkit-scrollbar-track {
     background: transparent;
@@ -412,13 +424,16 @@
   /*-----------------------------chiller-theme-------------------------------------------------*/
   
   .chiller-theme .sidebar-wrapper {
-      background: #31353D;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-header,
   .chiller-theme .sidebar-wrapper .sidebar-search,
   .chiller-theme .sidebar-wrapper .sidebar-menu {
-      border-top: 1px solid #3a3f48;
+      border-top: 0px solid #00412d;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
@@ -434,7 +449,7 @@
   .chiller-theme .sidebar-wrapper .sidebar-brand>a,
   .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
   .chiller-theme .sidebar-footer>a {
-      color: #818896;
+      color: #fcf9f9;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover>a,
@@ -442,11 +457,11 @@
   .chiller-theme .sidebar-wrapper .sidebar-header .user-info,
   .chiller-theme .sidebar-wrapper .sidebar-brand>a:hover,
   .chiller-theme .sidebar-footer>a:hover i {
-      color: #b8bfce;
+      color: #f4f5f7;
   }
   
   .page-wrapper.chiller-theme.toggled #close-sidebar {
-      color: #bdbdbd;
+      color: #fdfbfb;
   }
   
   .page-wrapper.chiller-theme.toggled #close-sidebar:hover {
@@ -465,17 +480,17 @@
   .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
   .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-      background: #3a3f48;
+      background: #4cd4b2b6;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
-      color: #6c7b88;
+      color: #fcf9f9;
   }
   
   .chiller-theme .sidebar-footer {
       background: #3a3f48;
       box-shadow: 0px -1px 5px #282c33;
-      border-top: 1px solid #464a52;
+      border-top: 1px solid #05f0a9;
   }
   
   .chiller-theme .sidebar-footer>a:first-child {
@@ -494,7 +509,10 @@
   
   .sidebar-dropdown{
 color: #1D9AF2;
-background-color: #30333a;
+background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 border: 0px solid #3a3f48;
 border-radius: 0px;
 padding: 0px;
@@ -515,7 +533,10 @@ transition: all 0.2s ease-in-out;
 
   .fa-book{
     color: #1D9AF2;
-    background-color: #30333a;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 0px solid #3a3f48;
     border-radius: 0px;
     padding: 0px;
@@ -529,7 +550,10 @@ transition: all 0.2s ease-in-out;
 
 
   .fa-calendar{color: #1D9AF2;
-    background-color: #30333a;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 0px solid #3a3f48;
     border-radius: 0px;
     padding: 0px;
@@ -544,7 +568,10 @@ transition: all 0.2s ease-in-out;
 
 
   .fa-folder{color: #1D9AF2;
-    background-color: #30333a;
+    background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 0px solid #3a3f48;
     border-radius: 0px;
     padding: 0px;

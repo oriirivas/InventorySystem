@@ -25,133 +25,32 @@
         </div>
          <body>
             <div class="container" style="margin-top: 25px;padding: 10px"> 
-             <table class="table table-striped table-bordered" style="width: 100%">
-              <thead>
-                <th>ID</th>
-                <th>Nombe Vendedor</th>
-                <th>Producto Vendido</th>
-                <th>Cantidad Productos Vendidos</th>
-                <th>Venta Total</th>
-                <th>Sucursal</th>
-                <th>Fecha</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>001</td>
-                  <td>nn</td>
-                  <td>Apple 11 Pro Max</td>
-                  <td>10</td>
-                  <td>19.999.990</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>002</td>
-                  <td>nn</td>
-                  <td>Sansumg Galaxy Note 10</td>
-                  <td>15</td>
-                  <td>14.549.985</td>
-                  <td>Providencia</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>003</td>
-                  <td>nn</td>
-                  <td>Huawei P20 Pro</td>
-                  <td>13</td>
-                  <td>4.939.870</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                  
-                </tr>
-                <tr>
-                  <td>004</td>
-                  <td>nn</td>
-                  <td>Nokia 3.1 Plus</td>
-                  <td>6</td>
-                  <td>899.940</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>005</td>
-                  <td>nn</td>
-                  <td>Motorola One Acion</td>
-                  <td>9</td>
-                  <td>1.754.910</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>006</td>
-                  <td>nn</td>
-                  <td>Alcatel One Touch A2 XL</td>
-                  <td>6</td>
-                  <td>503.088</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>007</td>
-                  <td>nn</td>
-                  <td>Lenovo Z5</td>
-                  <td>8</td>
-                  <td>1.304.544</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-                <tr>
-                  <td>008</td>
-                  <td>nn</td>
-                  <td>LG G8S</td>
-                  <td>7</td>
-                  <td>2.799.930</td>
-                  <td>Ñuñoa</td>
-                  <td><input type="date" id="start" name="trip-start"
-                    value="aa-mm-dd"
-                    min="2020-01-01" max="2020-12-31"></td>
-                </tr>
-              </tbody>
-             </table>
+              <div class="col-6 pag" align="center">
+                <table class="table table-striped">             
+                    <thead style="background-color:rgb(116, 117, 117);" class="thead">
+                       <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Valor</th>
+                        </tr>
+                    </thead>               
+                    <tbody>
+                      <tr *ngFor = "let product of listProducts">
+                        <td>{{product.idProductoDto}}</td>
+                        <td>{{product.modeloDto}}</td>
+                        <td>{{product.marcaDto}}</td>
+                        <td>{{product.cantidadDto}}</td>
+                        <td>{{product.total}}</td>
+                      </tr>
+                      
+                    </tbody>
+                    </table>
+                </div>            
              </div>
           </body>
-          <select class="custom-select justify-content-left" style="width: auto" align="left">
-            <option [value]="5">5 items por página</option>
-            <option [value]="10">10 items por página</option>
-            <option [value]="20">20 items por página</option>
-            <option [value]="35">35 items por página</option>
-          </select>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          
      </div>  
    </div>
  </div>

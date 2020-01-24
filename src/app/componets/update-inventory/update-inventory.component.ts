@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
 export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   public newStock: number
   public idProducto: number
-  public idProducto1: number
   public newPrice: number
   public numberOperation: number
 
@@ -30,7 +29,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   dataSourcex:MatTableDataSource<InventoryTableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioCompraDto', 'precioVentaDto', 'cantidadDto','edit','delate', 'plus'];
+  displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioCompraDto', 'precioVentaDto', 'cantidadDto','edit','delate', 'plus', 'sud'];
 
 
   constructor(private router: Router, private productService:ProductsService) { }
@@ -79,18 +78,19 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     this.validId="is-valid";
   }
 
-  IdProduct1Keyup(value:number){
-    this.idProducto1=value;
-    this.validId1="is-valid";
+  
+
+  getId(value : number){
+    this.idProducto=value;
   }
 
   modifyProduct(){
-    if(this.idProducto == null || this.newStock == null ||this.newPrice == null){
+    if(this.newStock == null ||this.newPrice == null){
       alert('Debe llenar todo los campos, si hay uno que no desea modificar, copielo como es encuentra en la tabla');
     }else{
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
-        //alert("Actualizado con exito")
+        alert("Actualizado con exito")
         this.router.navigate(['/update-inventory']);
       });
 
@@ -99,10 +99,10 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     }
   }
   deleteProduct(){
-    if(this.idProducto1 == null){
-      alert('Debe llenar todo los campos');
+    if(this.idProducto == undefined){
+      alert('error');
     }else{
-      let obs =this.productService.deleteProduct(this.idProducto1);
+      let obs =this.productService.deleteProduct(this.idProducto);
       obs.subscribe(res => {
         alert("Eliminado con exito")
         this.router.navigate(['/update-inventory']);
@@ -110,29 +110,40 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     }
   }
 
-  /*addProduct(){
-    if(this.idProducto1 == undefined || this.numberOperation == undefined){
+  addProduct(){
+    console.log()
+   if(this.idProducto == undefined || this.numberOperation == undefined){
       alert('Debe llenar todo los campos');
     }else{
-      let obs =this.productService.getProduct(this.idProducto1);
-      obs.subscribe(user => {
-        user.precioDto
+      let obs = this.productService.getProduct(this.idProducto);
+      obs.subscribe(res => {
+        let totalStock=(+res.cantidadDto+ +this.numberOperation);
+        console.log(totalStock)
+        this.newStock = totalStock;
+        this.newPrice = res.precioVentaDto;
+        this.modifyProduct();
         alert("Operacion realizada con exito")
       });   
     }
-    
-    let obs = this.loginInfo.login(this.name, this.pass);
-      obs.subscribe(user  => {
-      if(user.tipoRolDto == "admi") {
-        this.router.navigate(['/home']);
-      }else {
-        this.router.navigate(['/sales']);
-       
-      }
-
+    return this.newStock
   }
-
-  }*/
+  sudProduct(){
+    console.log()
+   if(this.idProducto == undefined || this.numberOperation == undefined){
+      alert('Debe llenar todo los campos');
+    }else{
+      let obs = this.productService.getProduct(this.idProducto);
+      obs.subscribe(res => {
+        let totalStock=(res.cantidadDto - this.numberOperation);
+        console.log(totalStock)
+        this.newStock = totalStock;
+        this.newPrice = res.precioVentaDto;
+        this.modifyProduct();
+        alert("Operacion realizada con exito")
+      });   
+    }
+    return this.newStock
+  }
 }
 
 

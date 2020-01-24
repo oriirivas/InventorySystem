@@ -3,11 +3,15 @@
   <div class="col-2"style="float: left;">
     <app-tool-bar></app-tool-bar>
   </div>
-  <div class="row">
-      <div class="col-sm-5">
-        <div class="card-body text-primary">
+  <div class="col-10">
 
-          <!-- add mark-->         
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Marca</h5>
+            <div class="card-text">
+              <!-- add mark-->         
               <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
                 Agregar marca
               </button>
@@ -17,7 +21,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Agregar Marca</h5>
+                      <h5 class="modal-title titleMark" id="exampleModalLabel">Agregar Marca</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -41,10 +45,109 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
+            <br>
           <!-- /add mark-->
 
-           <!-- delete mark-->         
+          <!-- Delete mark-->         
+          <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModalDelete">
+            Eliminar Marca
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDelete" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title titleMark " id="exampleModalLabelDelete"> Borrar Marca</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row col-md-12 mb-12">
+                      <div class="col-md-12 mb-12" align="center">
+                        <label for="validationServer01">Selecione la marca</label>
+                        <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="submit" (click)="deleMark()" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      <!-- /delete mark-->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-5">
+        
+      </div>
+    </div>
+      <div class="col-sm-4">
+        
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Usuario</h5>
+                <!-- delete mark-->         
+             <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
+              Eliminar Usuario
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-row col-md-12 mb-12">
+                        <div class="col-md-12 mb-12" align="center">
+                          <label for="validationServer01">Ingrese el nombre de la marca</label>
+                          <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" (click)="addMark()" class="btn btn-primary">Guardar Cambios</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <!-- /delete mark-->
+            
+          </div>
+          
+
+           
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Sucursal</h5>
+              <!-- delete mark-->         
            <button type="button" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
             Eliminar marca
           </button>
@@ -54,7 +157,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Agregar Marca</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar Sucursal</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -82,22 +185,10 @@
       <!-- /delete mark-->
           
         </div>
-      </div>
+        
 
-      
-    <div class="col-sm-6">
-      <div class="card-body text-primary">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        <div class="card-body">
-          <h5 class="card-title">Eliminar usuario</h5>
-          <a href="#" class="btn btn-primary">Eliminar usuario</a>
-        </div>
+         
+        
       </div>
     </div>
   </div>
