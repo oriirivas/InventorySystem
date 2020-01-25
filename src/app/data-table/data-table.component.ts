@@ -19,7 +19,7 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   
   public listaSale:Array<ResponseProducto>;
   productoActual:ResponseProducto;
-  stock:number;
+  stock:number=1;
   id:number;
   totalVenta:number;
   
