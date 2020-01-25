@@ -11,5 +11,7 @@ export class NavigationBarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  deleteLocalName(){
+    localStorage.clear();
+  }
 }

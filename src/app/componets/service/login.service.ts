@@ -19,12 +19,6 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  public name:string;
-
-  public showName(name2:string){
-    this.name=name2;
-  };
-
   public login(name: string, pass: string) {
     let body = {
       "passwordDto": pass,
@@ -49,12 +43,6 @@ export class LoginService {
     return this.http.delete(''+id,this.headersOptions);
   }
 
-
-  
-
-  public getName(){
-    return this.name
-  };
 }
 
 

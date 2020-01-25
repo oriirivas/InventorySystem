@@ -10,7 +10,7 @@ import {ProductsService} from '../service/products.service'
   styleUrls: ['./tool-bar.component.css']
 })
 export class ToolBarComponent implements OnInit {
-  public name= "Developer" 
+  private name:string 
   private login: LoginComponent
 
   constructor(private router: Router,
@@ -24,11 +24,8 @@ export class ToolBarComponent implements OnInit {
   nombre(){
     this.name=localStorage.getItem("user");
   }
-  showInfo(){
-    let printTable=this.pruductService.showProduct().subscribe;
-    console.log(printTable);
 
-  };
+  
 
   
   

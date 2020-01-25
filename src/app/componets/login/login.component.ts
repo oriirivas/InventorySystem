@@ -9,8 +9,8 @@ import { LoginService } from '../../componets/service/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  pass: string
-  name: string
+  private pass: string
+  private name: string
 
   constructor(private router: Router,
     private loginInfo: LoginService) { }
@@ -29,19 +29,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     let validation =false;
-    if(this.name == null || this.pass == null){
+    if(this.name == undefined || this.pass == undefined){
       alert('llene todas las casillas');
     }else{
-      localStorage.setItem( "user", this.name );
-      let aja =this.loginInfo.showName(this.name);
-
+      
       let obs = this.loginInfo.login(this.name, this.pass);
       obs.subscribe(user  => {
       if(user.tipoRolDto == "administrador") {
         this.router.navigate(['/home']);
+        localStorage.setItem( "user", this.name );
+      
       }else {
         this.router.navigate(['/inventory-sales']);
-       
+        localStorage.setItem( "user", this.name );
       }
     }, error =>{
       alert('usuario y/o contraseña inválidos');

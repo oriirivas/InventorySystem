@@ -11,39 +11,39 @@ import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
   styleUrls: ['./add-inventory.component.css']
 })
 export class AddInventoryComponent implements OnInit {
-  public date: Date
-  public numberf: string
-  public provider: string
-  public tradeMark: string
-  public model: string
-  public stock: number
-  public category: string
-  public salePrice: number
-  public buyPrice: number
+  private date: Date
+  private numberf: string
+  private provider: string
+  private tradeMark: string
+  private model: string
+  private stock: number
+  private category: string
+  private salePrice: number
+  private buyPrice: number
 
   
-  public marcaLocal: ResponseDtoMarca;
+  private marcaLocal: ResponseDtoMarca;
  
-  public lockDate = 'ingrese fecha';
-  public lockNumber = 'ingrese numero de factura';
-  public lockProvider = 'ingrese proveedor';
-  public lockTradeMark = 'ingrese marca';
-  public lockModel = 'ingrese modelo';
-  public lockSalePrice = 'ingrese precio de venta';
-  public lockBuyPrice = 'ingrese precio de compra';
-  public lockStock = 'ingrese cantidad de productos';
-  public lockCategory = 'ingrese el sistema operativo';
+  private lockDate = 'ingrese fecha';
+  private lockNumber = 'ingrese numero de factura';
+  private lockProvider = 'ingrese proveedor';
+  private lockTradeMark = 'ingrese marca';
+  private lockModel = 'ingrese modelo';
+  private lockSalePrice = 'ingrese precio de venta';
+  private lockBuyPrice = 'ingrese precio de compra';
+  private lockStock = 'ingrese cantidad de productos';
+  private lockCategory = 'ingrese el sistema operativo';
 
-  public validDate= "is-invalid";
-  public validNumber= "is-invalid";
-  public validProvider= "is-invalid";
-  public validTradeMark= "is-invalid";
-  public validSalePrice= "is-invalid";
-  public validBuyPrice= "is-invalid";
-  public validStock= "is-invalid";
-  public validModel= "is-invalid";
-  public validCategory= "is-invalid";
-  public lista:ResponseDtoMarca[];
+  private validDate= "is-invalid";
+  private validNumber= "is-invalid";
+  private validProvider= "is-invalid";
+  private validTradeMark= "is-invalid";
+  private validSalePrice= "is-invalid";
+  private validBuyPrice= "is-invalid";
+  private validStock= "is-invalid";
+  private validModel= "is-invalid";
+  private validCategory= "is-invalid";
+  private lista:ResponseDtoMarca[];
 
   constructor(private router: Router,
     private productServices: ProductsService) { }
@@ -51,10 +51,17 @@ export class AddInventoryComponent implements OnInit {
   ngOnInit() {
 
     this.listarMarca();
+    //this.validate(); // si no tienes el back corriendo comentar esta linea
     
 
   }
- 
+  /** metodo que valida si hay una sesion abierta, de no ser asi no te deja entrar */
+  validate(){
+    let open = localStorage.getItem("user");
+    if(open== undefined){
+      this.router.navigate(['/login']);
+    }
+  }
 
   dateKeyup(value: Date) {
     this.date = value;
