@@ -19,12 +19,6 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  public name:string;
-
-  public showName(name2:string){
-    this.name=name2;
-  };
-
   public login(name: string, pass: string) {
     let body = {
       "passwordDto": pass,
@@ -44,13 +38,11 @@ export class LoginService {
     return this.http.post('http://localhost:8090/api/v1/usuarios', body, this.headersOptions );
     
   }
+  public deleteUser(idUser: number){
+    let id = idUser
+    return this.http.delete(''+id,this.headersOptions);
+  }
 
-
-  
-
-  public getName(){
-    return this.name
-  };
 }
 
 

@@ -19,7 +19,7 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   
   public listaSale:Array<ResponseProducto>;
   productoActual:ResponseProducto;
-  stock:number;
+  stock:number=1;
   id:number;
   totalVenta:number;
   
@@ -114,7 +114,7 @@ sendIfonCarrito(){
   
   this.productService.carritoGetInfo(this.productoActual);
   console.log(this.productoActual);
- 
+  alert('agregado al carrito');
   
   
 }

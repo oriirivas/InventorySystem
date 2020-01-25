@@ -86,6 +86,12 @@ export class ProductsService {
     return this.http.post('http://localhost:8090/api/v1/marcas', body, this.headersOptions );
      
   }
+
+  public deleteMark(markid : number){
+    let id = markid;
+    return this.http.delete('http://localhost:8090/api/v1/marcas/'+id,  this.headersOptions );
+     
+  }
    
 
   public addProducto(stock:number, tradeMark:string, model:string, buyPrice:number, salePrice:number, category:string, date: Date) {

@@ -8,12 +8,13 @@ import { ResponseProducto } from '../inventory/inventory-table-datasource';
   styleUrls: ['./select-product.component.css']
 })
 export class SelectProductComponent implements OnInit {
-  listProducts: Array<ResponseProducto>;
-
+  private listProducts: Array<ResponseProducto>;
+  private name: string;
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
     this.prductSale();
+    this.sellerName();
     console.log("QQQQQQQQQQQ" + this.productService.carritoSendInfo())
   }
   add(){
@@ -22,13 +23,10 @@ export class SelectProductComponent implements OnInit {
 
   prductSale(){
     this.listProducts=this.productService.carritoSendInfo()
-    /*let obs= this.productService.carritoSendInfo();
-    obs.subscribe(res=> {
-      console.log(res);
-      this.listProducts=res;
-      console.log(this.listProducts);
-    });*/
-     
+         
+  }
+  sellerName(){
+    this.name=localStorage.getItem("user");
   }
 
  
