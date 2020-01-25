@@ -42,6 +42,11 @@ tfoot {
   color: white;
   text-align: right;
 }
+.modal-content{
+  width: 800px;
+  height: 680px;
+  float: center;
+}
 
 tfoot tr th:last-child {
   font-family: monospace;

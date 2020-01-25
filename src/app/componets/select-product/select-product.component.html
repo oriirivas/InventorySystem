@@ -44,10 +44,16 @@
                 </tbody>
                 </table>
             </div>
+            <!--h5>Tipo Pago:</!--h5>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin: 10px">Efectivo</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin: 10px">Crédito</button-->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin: 10px">
                 Vender
               </button>
+              <button [routerLink]="['/sales']" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Regresar</button>
               
+              
+
               <!-- Modal -->
               <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -59,7 +65,7 @@
                       
                       <div class="row">
                         
-                         <strong class="" style="margin-left: 140px">Fundación Forge S.A</strong>
+                         <strong class="" style="margin-left: 140px">Brainstorm</strong>
                          <h6 class="" id="exampleModalLabel" style="margin-left: 120px">Irarrázaval 3665, Ñuñoa, Región Metropolitana</h6>                     
                          
                  </div> <!-- row -->
@@ -181,11 +187,9 @@
             
 
 
-            <button [routerLink]="['/sales']" type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Regresar</button>
+            
             <br>
             <br>
-            <h5 style="margin-right: 500px" >Tipo Pago:</h5>
-            <button type="button" class="btn btn-success" style="margin: 10px">Efectivo</button>
-            <button type="button" class="btn btn-success">Crédito</button>
+            
     
 </div>
