@@ -10,10 +10,10 @@ export class XiaomiComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.nombre();
+    this.sellerName();
   }
   /** metodo que trae el nombre de vendedor desde el localStores */
-  nombre(){
+  sellerName(){
     this.name=localStorage.getItem("user");
   }
   /** metodo que borra todos los datos del localStore, lo estamos usando, al cerrar sesion */

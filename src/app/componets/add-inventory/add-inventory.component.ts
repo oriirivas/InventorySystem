@@ -11,15 +11,15 @@ import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
   styleUrls: ['./add-inventory.component.css']
 })
 export class AddInventoryComponent implements OnInit {
-  private date: Date
-  private numberf: string
-  private provider: string
-  private tradeMark: string
-  private model: string
-  private stock: number
-  private category: string
-  private salePrice: number
-  private buyPrice: number
+  private date: Date;
+  private numberf: string;
+  private provider: string;
+  private percentage: number=0;
+  private model: string;
+  private stock: number;
+  private category: string;
+  private salePrice: number;
+  private buyPrice: number;
 
   
   private marcaLocal: ResponseDtoMarca;
@@ -33,7 +33,8 @@ export class AddInventoryComponent implements OnInit {
   private lockBuyPrice = 'ingrese precio de compra';
   private lockStock = 'ingrese cantidad de productos';
   private lockCategory = 'ingrese el sistema operativo';
-
+  private lockPercentage= 'ingrese el % de ganancia';
+  private validPercentage= "is-invalid";
   private validDate= "is-invalid";
   private validNumber= "is-invalid";
   private validProvider= "is-invalid";
@@ -63,9 +64,23 @@ export class AddInventoryComponent implements OnInit {
     }
   }
 
+  percentageKeyup(value: number){
+    this.percentage=value;
+    this.validPercentage='is-valid';
+    this.operation();
+  }
+  operation(){
+    let operation1= ((this.buyPrice*this.percentage)/100)
+    this.salePrice = (+operation1+ +this.buyPrice);
+    let oneNumber=Math.floor(this.salePrice)
+    this.salePrice= oneNumber;
+    console.log(this.salePrice);
+  }
+  
+
   dateKeyup(value: Date) {
     this.date = value;
-    this.lockDate = 'ingresado correctamente';
+    this.lockDate = "ingresado correctamente";
     this.validDate='is-valid';
   }
   numberKeyup(value: string) {
@@ -96,6 +111,7 @@ export class AddInventoryComponent implements OnInit {
     this.buyPrice = value;
     this.lockBuyPrice = 'ingresado correctamente';
     this.validBuyPrice='is-valid';
+    this.operation();
   }
   salePriceKeyup(value: number) {
     this.salePrice = value;
