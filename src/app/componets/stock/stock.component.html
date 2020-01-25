@@ -69,17 +69,17 @@
                     <div class="form-row col-md-12 mb-12">
                       <div class="col-md-12 mb-12" align="center">
                         <label for="validationServer01">Selecione la marca</label>
-                        <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
+                          
+                        <select [(ngModel)]="marcaLocal" name="marcaName" class="custom-select mr-sm-2 {{validTradeMark}}" (click)="tradeMarkKeyup()" id="inlineFormCustomSelec" required>
+                          <option  *ngFor = "let marca of lista" [ngValue]="marca"  >{{marca.marcaDto}}</option>
+                        </select>
                       </div>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  <button type="submit" (click)="deleMark()" class="btn btn-primary">Guardar Cambios</button>
+                  <button type="submit" (click)="deleteMark()" class="btn btn-primary">Eliminar Marca</button>
                 </div>
               </div>
             </div>
@@ -167,6 +167,9 @@
                     <div class="form-row col-md-12 mb-12">
                       <div class="col-md-12 mb-12" align="center">
                         <label for="validationServer01">Ingrese el nombre de la marca</label>
+                        
+                        
+
                         <input (keyup)="markNameKeyup($event.target.value)" type="text" class="form-control {{validId}}" id="validationServer01" value="1" required>
                         <div class="valid-feedback">
                           Looks good!

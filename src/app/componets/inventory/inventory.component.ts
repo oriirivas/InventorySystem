@@ -31,9 +31,7 @@ export class InventoryComponent implements AfterViewInit, OnInit {
     
     
     this.productService.showProduct().subscribe(res=>{
-
       this.dataSourcex = new MatTableDataSource<InventoryTableItem>( res );
-      
       this.dataSourcex.paginator = this.paginator;
       this.dataSourcex.sort = this.sort;
 

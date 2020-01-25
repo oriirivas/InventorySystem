@@ -61,7 +61,7 @@
                   <!-- stock Column -->
                   <ng-container matColumnDef="cantidadDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Stock</th>
-                    <td mat-cell *matCellDef="let row">{{row.cantidadDto}}</td>
+                    <strong><td class="colorRow" mat-cell *matCellDef="let row"  [ngStyle]="{'background' :  row.cantidadDto > 5 ? 'greenyellow' : 'rgb(221, 115, 115)'}" >{{row.cantidadDto}}</td></strong>
                   </ng-container>
     
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

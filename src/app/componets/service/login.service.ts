@@ -44,6 +44,10 @@ export class LoginService {
     return this.http.post('http://localhost:8090/api/v1/usuarios', body, this.headersOptions );
     
   }
+  public deleteUser(idUser: number){
+    let id = idUser
+    return this.http.delete(''+id,this.headersOptions);
+  }
 
 
   
