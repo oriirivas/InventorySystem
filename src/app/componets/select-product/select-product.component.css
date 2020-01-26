@@ -39,22 +39,25 @@ tbody tr td:nth-child(4) {
 }
 
 tfoot {
-  background: rgb(77, 197, 191);
+  background: rgb(74, 182, 141);
   color: white;
   text-align: right;
 }
 .modal-content{
-  width: 800px;
-  height: 680px;
+  width: 900px;
+  height: 795px;
   float: center;
+  
 }
 
 tfoot tr th:last-child {
   font-family: monospace;
 }
 
-.table{
+.borderless{
   background: rgb(255, 255, 255);
+  margin-left: 0px;
+  margin-top: 0px;
 }
 .th,td{
   background: white;
@@ -64,7 +67,13 @@ tr{
   text-align: right;
 }
 
-.strong{
-  text-align: center;
+.row{
   float: center;
+  margin-left: 0px;
+  margin-top: 15px;
 }
+
+.h5{
+  margin-right: 500px;
+}
+

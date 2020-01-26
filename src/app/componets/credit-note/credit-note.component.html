@@ -3,19 +3,19 @@
         <app-xiaomi></app-xiaomi>
     </div>
     <div class="col-10" style="float: right;">              
-        <div class="container col-12">
+        <div class="container">
             <div class="text-center">
-               <h1>Nota de Crédito</h1> 
+               <h1 style="margin-top: 80px;">Nota de Crédito</h1> 
             </div>
-            <div class="col-sm-12">
-                <div class="container col-sm-4 col-xl-6 mb-2">
+            <div class="row">
+                <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading" >
-                           <h3 class="panel-title" class="text-primary">Fundación Forge S.A</h3> <h4 class="panel-title" class="text-primary">R.U.T: 78.613050-6</h4>
-                           <strong><h6 class="panel-title" class="text-secondary">Irarrázaval 3665, Ñuñoa, Región Metropolitana</h6></strong>
-                           <strong><h6 class="panel-title" class="text-secondary">teléf: 9 5799 9343</h6></strong>
-                           <strong><label for="direccion" class="col-sm-5 control-label">N° Nota de Crédito</label></strong>
-                           <div class="col-sm-3">
+                            <h3 class="panel-title" class="text-primary">Fundación Forge S.A</h3> <h4 class="panel-title" class="text-primary">R.U.T: 78.613050-6</h4>
+                            <strong><h6 class="panel-title" class="text-secondary">Irarrázaval 3665, Ñuñoa, Región Metropolitana</h6></strong>
+                            <strong><h6 class="panel-title" class="text-secondary">teléf: 9 5799 9343</h6></strong>
+                            <strong><label for="direccion" class="col-sm-5 control-label">N° Nota de Crédito</label></strong>
+                            <div class="col-sm-3">
                                 <input class="form-control" id="direccion" type="text">
                             </div>
                             <hr>
@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xl-6 mb-2">
                                     <div class="form-group">
-                                        <strong><label for="id" class="col-sm-1 control-label">Rut</label></strong>
+                                        <strong><label for="id" class="col-sm-1 control-label">Run</label></strong>
                                         <div class="col-sm-11">
                                             <input class="form-control" id="rut" placeholder="12345678-9" type="text">
                                         </div>
@@ -52,57 +52,55 @@
                                         </div>
                                     </div>
                                 </div>  
-                     </div> <!-- panel heading -->
-                    <div class="panel-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">N° Factura</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Cantidad</th>
-                                    <th scope="col">Precio Unitario</th>
-                                    <th scope="col">Total $</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">421</th>
-                                        <td >Galaxy J2 Pro (Black) Samsung</td>
-                                        <td >1</td>
-                                        <td >79.990</td>
-                                        <td >79.990</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="4" class="text-right"><strong>Total $:</strong></td>
-                                        <td class="text-right"><strong>79.990</strong></td>
-                                    </tr>
-                                </tfoot>    
-                            </table>
-                        </div>
+                            </div> <!-- panel heading -->
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">N° Factura</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio Unitario</th>
+                                        <th scope="col">Total $</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">421</th>
+                                            <td >Galaxy J2 Pro (Black) Samsung</td>
+                                            <td >1</td>
+                                            <td >79.990</td>
+                                            <td >79.990</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" class="text-right"><strong>Total $:</strong></td>
+                                            <td class="text-right"><strong>79.990</strong></td>
+                                        </tr>
+                                    </tfoot>    
+                                </table>
+                            </div>
                     </div> <!-- panel body -->
                 </div> <!-- panel -->
             </div> <!-- col -->
-        
-
             <div class="center col-sm-4 col-xl-6 mb-2"> 
                 <strong><h6 class="text-secondary">Razón para el Crédito:</h6></strong>
                 <textarea name="comentrios" id="text" cols="70" rows="3"></textarea>
-             </div>
+            </div>
             
-             <div class="center col-sm-4 col-xl-6 mb-2">
+            <div class="center col-sm-4 col-xl-6 mb-2">
                 <strong><label for="firma" class="col-sm-4 control-label">Firma</label></strong>
                 <div class="col-sm-4 col-xl-6 mb-2">
                     <input class="form-control" id="direccion" type="text">
                 </div>
-             </div>
-             <div class="modal-footer col-sm-2 col-xl-8 mb-2">
+            </div>
+            <div class="modal-footer col-sm-2 col-xl-8 mb-2">
                 <button type="button" class="btn btn-info">Imprimir</button>
                 <button type="button" class="btn btn-success">Enviar a Correo</button>
                 <button type="button" class="btn btn-info">Realizar Nota Crédito</button>
-             </div>
-            </div> <!-- row -->
-      </div>
+            </div>
+             </div> <!-- row -->
+        </div>
     </div>
 </div>
