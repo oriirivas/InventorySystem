@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer08">proveedor</label>
-                            <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer08" required>
+                            <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer08" value="Proveedor" required>
                                 <div class="invalid-feedback">
                                     {{lockProvider}}
                                 </div>
@@ -48,14 +48,14 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer03">Modelo</label>
-                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer09" required>
+                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer09" value="Modelo" required>
                                 <div class="invalid-feedback">
                                     {{lockModel}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationServer03">Categoria</label>
-                            <input (keyup)="categoryKeyup($event.target.value)" type="text" class="form-control {{validCategory}}" id="validationServer04" required>
+                            <input (keyup)="categoryKeyup($event.target.value)" type="text" class="form-control {{validCategory}}" id="validationServer04" value="Categoria" required>
                                 <div class="invalid-feedback">
                                     {{lockCategory}}
                                 </div>
@@ -64,28 +64,28 @@
                     <div class="form-row">
                         <div class="col-md-3 mb-3">
                             <label for="validationServer09">Stock</label>
-                            <input (keyup)="stockKeyup($event.target.value)" type="text" class="form-control {{validStock}}" id="validationServer05" required>
+                            <input (keyup)="stockKeyup($event.target.value)" type="number" class="form-control {{validStock}}" id="validationServer05" value="00" required>
                                 <div class="invalid-feedback">
                                     {{lockStock}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <label for="validationServer05">Precio de compra</label>
-                            <input (keyup)="buyPriceKeyup($event.target.value)" type="text" class="form-control {{validBuyPrice}}" id="validationServer06" required>
+                            <input (keyup)="buyPriceKeyup($event.target.value)" type="number" class="form-control {{validBuyPrice}}" id="validationServer06" value="00" required>
                                 <div class="invalid-feedback">
                                     {{lockBuyPrice}}
                                 </div>
                         </div>
                         <div class="col-md-1 mb-1">
                             <label for="validationServer05">% Ganancia</label>
-                            <input (keyup)="percentageKeyup($event.target.value)" type="text" class="form-control {{validPercentage}}" id="validationServer06" required>
+                            <input (keyup)="percentageKeyup($event.target.value)" type="number" class="form-control {{validPercentage}}" id="validationServer06" value="0" required>
                                 <div class="invalid-feedback">
                                     {{lockPercentage}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-4">
                             <label for="validationServer05">Precio de Venta</label>
-                            <input (keyup)="salePriceKeyup($event.target.value)" type="text" class="form-control {{validSalePrice}}" id="validationServer07" value="{{salePrice}}" required>
+                            <input (keyup)="salePriceKeyup($event.target.value)" type="number" class="form-control {{validSalePrice}}" id="validationServer07" value="{{salePrice}}" required>
                                 <div class="invalid-feedback">
                                     {{lockSalePrice}}
                                 </div>

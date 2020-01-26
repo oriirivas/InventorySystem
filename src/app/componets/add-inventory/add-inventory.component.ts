@@ -18,7 +18,7 @@ export class AddInventoryComponent implements OnInit {
   private model: string;
   private stock: number;
   private category: string;
-  private salePrice: number;
+  private salePrice: number=0;
   private buyPrice: number;
 
   
