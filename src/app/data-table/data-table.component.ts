@@ -17,11 +17,12 @@ import { ResponseProducto, InventoryTableItem } from '../componets/inventory/inv
 export class DataTableComponent implements AfterViewInit, OnInit {
   
   
-  public listaSale:Array<ResponseProducto>;
-  productoActual:ResponseProducto;
-  stock:number=1;
-  id:number;
-  totalVenta:number;
+  private productoActual:ResponseProducto;
+  
+  private howManyStock:number=1;
+  
+  private totalVenta:number;
+
   
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -31,93 +32,62 @@ export class DataTableComponent implements AfterViewInit, OnInit {
  
   displayedColumns = ['idProductoDto', 'marcaDto', 'modeloDto', 'sistemaOperativoDto', 'precioVentaDto', 'cantidadDto', 'sale'];
   
-  //listProducts: InventoryTableItem[];
-  //listaCarrito: ResponseProducto [];
-  idActual: number;
-  //litaSource:MatTableDataSource<ResponseProducto>;
   constructor(private productService:ProductsService, private router:Router) { }
   
   ngOnInit() { 
-
+    /** trae los productos desde la base de datos */
     this.productService.showProduct().subscribe(res=>{
-
+      /** los productos se los asigna dataSourcex bajo el formato de la intefaz DataTableItem */
       this.dataSourcex = new MatTableDataSource<DataTableItem>( res );
-      this.dataSourcex.paginator = this.paginator;
-      this.dataSourcex.sort = this.sort;
-
-      //this.dataSource.connect();
-      console.log(res);
-      //this.tableInfo=res;
+      this.dataSourcex.paginator = this.paginator; //paginacion
+      this.dataSourcex.sort = this.sort;//filtro y orden
     }); 
     
   }
 
   ngAfterViewInit() {
   }
-/*
-  mostrarProducto(){
-    let obs = this.productService.showProduct();
-    obs.subscribe(res => {
-      this.listProducts=res;
-      console.log(this.listProducts);
-      this.litaSource.paginator = this.paginator;
-      this.litaSource.sort = this.sort;
 
-   });
-  }
-*/
   applyFilter(filterValue: string) {
-    this.dataSourcex.filter = filterValue.trim().toLowerCase();    
-}
-newStock(value: number){
-  this.stock=value;
-
-}
-
-getPrice(vaule: number){
-  this.idActual= vaule;
+     this.dataSourcex.filter = filterValue.trim().toLowerCase();    
+  } 
   
-}
+  /** guardad la cantidad de productos que se quieren vender */
+  howManyStockKeyUp(value: number){
+    this.howManyStock=value;    
+  }
+  
+  /** guarda la informacion del producto seleccionado */
+  add(value: ResponseProducto){
+    this.productoActual=value;
+  }
 
-total(){
-  let total = (this.stock*this.idActual);
-  this.totalVenta=total;
-  this.productoActual.total=this.totalVenta
-  this.productoActual.cantidad=this.stock
-  console.log(this.productoActual.cantidad,this.totalVenta);
-  return this.productoActual;
-}
+  /**multiplica la cantidad de producto que se quiere vender por el precio del mismo, para calcular el total
+   * valida si la cantidad que se quiere vender es menor que la que hay en el inventario
+   * de ser asi envia la informacion al carrito de compras
+   */
+  total(){
+    let total = (this.howManyStock*this.productoActual.precioVentaDto);
+      this.totalVenta=total;
+      this.productoActual.total=this.totalVenta;
+      this.productoActual.cantidad=this.howManyStock;
+      console.log(this.productoActual.cantidad,this.totalVenta,this.howManyStock);
+    if (this.productoActual.cantidadDto>=this.howManyStock){
+      this.sendIfonCarrito();
+    }else{
+      alert(this.howManyStock +' exede la candita de stock: '+this.productoActual.cantidadDto)
+    };
+    return this.productoActual;
+  }
 
-add(value: ResponseProducto){
-  
-  
-  
-  this.productoActual=value;
-  //this.listaCarrito.push(value);
-  console.log(this.productoActual);
-  
-  //this.productService.carritoGetInfo(value);
+  /** envia al services la info del producto para asi agregarlo al carrito de compras */
+  sendIfonCarrito(){
+    this.productService.carritoGetInfo(this.productoActual);
+    console.log(this.productoActual);
+    alert('agregado al carrito');
+  }
 
-  //this.productService.
-
-  /*if(this.id ==null || this.stock == undefined){
-    alert("debe llenar todo los campos")
-  }else{
-    this.listaSale.push(value);
-    this.productService.getProduct(this.id);
-    console.log(this.listaSale);
-
-  }*/
-}
-
-sendIfonCarrito(){
   
-  this.productService.carritoGetInfo(this.productoActual);
-  console.log(this.productoActual);
-  alert('agregado al carrito');
-  
-  
-}
 
 }
 

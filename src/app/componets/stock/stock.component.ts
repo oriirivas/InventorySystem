@@ -11,10 +11,10 @@ import { LoginService } from '../service/login.service';
 export class StockComponent implements OnInit {
   private lista:ResponseDtoMarca[];
   private markName:string;
-  public lockTradeMark = 'ingrese marca';
-  public validTradeMark= "is-invalid";
-  public tradeMark: string;
-  public id:number;
+  private lockTradeMark = 'ingrese marca';
+  private validTradeMark= "is-invalid";
+  private tradeMark: string;
+  private id:number;
 
   private userList:ResponseDtoUsuario[];
   constructor(private productService:ProductsService,private userServices:LoginService) { }

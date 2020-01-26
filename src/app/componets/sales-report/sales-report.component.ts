@@ -8,7 +8,7 @@ import { ProductsService } from '../service/products.service';
   styleUrls: ['./sales-report.component.css']
 })
 export class SalesReportComponent implements OnInit {
-private listProducts: Array<ResponseProducto>;
+  private listProducts: Array<ResponseProducto>;
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {

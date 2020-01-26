@@ -9,12 +9,12 @@ import { LoginService } from '../../componets/service/login.service';
   styleUrls: ['./new-user.component.css']
 })
 export class NewUserComponent implements OnInit {
-  public charge="vendedor";
-  public name: string;
-  public pass: string;
-  public userName: string;
-  public date: Date;
-  public repass: string;
+  private charge="vendedor";
+  private name: string;
+  private pass: string;
+  private userName: string;
+  private date: Date;
+  private repass: string;
 
   constructor(private router: Router,
     private loginInfo: LoginService) { }

@@ -62,7 +62,7 @@
               <ng-container matColumnDef="sale">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Venta</th>
                 <td mat-cell *matCellDef="let row">{{row.sale}}
-                  <button type="button" (click)="add(row)" (click)="getPrice(row.precioVentaDto)" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#exampleModal1">
+                  <button type="button" (click)="add(row)" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#exampleModal1">
                     añadir al carrito
                   </button>
                   
@@ -82,7 +82,7 @@
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
                                 <label for="validationServer01">Ingrese cantidad de Producto</label>
-                                <input (keyup)="newStock($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
+                                <input (keyup)="howManyStockKeyUp($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                          <button type="submit" (click)="total()"  (click)="sendIfonCarrito()"  class="btn btn-primary">añadir al carrito</button>
+                          <button type="submit" (click)="total()"   class="btn btn-primary">añadir al carrito</button>
                         </div>
                       </div>
                     </div>

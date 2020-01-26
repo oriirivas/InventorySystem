@@ -5,6 +5,7 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { InventoryTableItem } from '../inventory/inventory-table-datasource';
 import {ProductsService} from '../service/products.service';
 import { Router } from '@angular/router';
+import { switchAll } from 'rxjs/operators';
 
 
 @Component({
@@ -13,15 +14,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./update-inventory.component.css']
 })
 export class UpdateInventoryComponent implements AfterViewInit, OnInit {
-  public newStock: number
-  public idProducto: number
-  public newPrice: number
-  public numberOperation: number
+  private newStock: number
+  private idProducto: number
+  private newPrice: number
+  private numberOperation: number
 
-  public validId = "is-invalid";
-  public validId1 = "is-invalid";
-  public validStock = "is-invalid";
-  public validPrice = "is-invalid";
+  private validId = "is-invalid";
+  private validId1 = "is-invalid";
+  private validStock = "is-invalid";
+  private validPrice = "is-invalid";
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -91,6 +92,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
         alert("Actualizado con exito")
+        
         this.router.navigate(['/update-inventory']);
       });
 
