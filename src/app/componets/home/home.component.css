@@ -1,3 +1,197 @@
 .btnn{
     background-color: black;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #07E797;  /* fallback for old browsers */ 
+background: -moz-radial-gradient(circle, #07E797, #101011);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-radial-gradient(circle, #07E797, #101011);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: radial-gradient(circle, #07E797, #101011); /* IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* ============= Card =============== */
+/* Card - base */
+.cardd {
+    display: inline-block;
+    position: relative;
+    height: 132px;
+    width: 335px;
+    background: #005436;  /* fallback for old browsers */ 
+    background: -moz-radial-gradient(circle, #005436, #0C167C);  /* Firefox 3.6-15, Firefox 16-60 */ 
+    background: -webkit-radial-gradient(circle, #005436, #0C167C);  /* Chrome 10-25, Safari 5.1-6 */ 
+    background: radial-gradient(circle, #005436, #0C167C); /* IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0.5px solid #dedede;
+    border-radius: 2px;
+    margin: 10px 365px;
+    transition: 0.2s linear;
+
+    
+}
+.cardddd:hover {box-shadow: 1px 1px 10px;}
+
+
+
+.cardddd{color: #1D9AF2;
+    background: #123B28;  /* fallback for old browsers */ 
+  background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+  background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+  background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0px solid #3a3f48;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    height:42px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  
+  .cardd:hover{transform: scale(1.2);}
+
+
+
+
+  .card-bttn{color: #1D9AF2;
+    background: #123B28;  /* fallback for old browsers */ 
+  background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+  background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+  background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0px solid #3a3f48;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    height:42px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;}
+
+
+  .card-bttn:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+    transform: translateX(-3px);}
+
+
+/* Card - Imagem do grupo */
+
+/* Card - Cabeçalho/Título */
+.cardd-header {
+    position: absolute;
+    float: right;
+    left: 100px;
+    top: 0;
+    height: 35px;
+    width: 210px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0);
+    padding: 15px 24px 15px 24px;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+.cardd-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgb(253, 251, 251);
+}
+
+/* Card - Etiqueta */
+.cardd-label {
+    position: absolute;
+    float: right;
+    left: 100px;
+    top: 35px;
+    height: 30px;
+    width: 210px;
+    
+    padding: 0px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 2;
+}
+.-label {
+    display: inline;
+    padding: 3px 6px;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+/* Card - Membros, botão e badge*/
+.cardd-bottom {
+    position: absolute;
+    float: right;
+    left: 100px;
+    top: 65px;
+    height: 35px;
+    width: 210px;
+    background: rgba(255, 255, 255, 0);
+    padding: 8px;
+}
+.cardd-members {
+  color: rgb(255, 255, 255);
+}
+
+.cardd-badge {
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #00C853;
+    border-radius: 10px;
+}
+
+/* ============= BOTÕES ============== */
+.bttn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 6px 12px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.1s linear;
+    outline: none;
+}
+/*  DANGER - RED  */
+.bttn-danger {
+    background: #F44336;
+    color: #fff;
+    border-color: #F44336;
+}
+.bttn-danger:hover {
+    background: #D32F2F;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.-small {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+/*  PRIMARY - BLUE  */
+.bttn-primary {
+    background: #2962FF;
+    color: #fff;
+    border-color: #2962FF;
+}
+.bttn-primary:hover {
+    background: #1565C0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-bttn { 
+    float: right;
+    margin-top: -10px;
+}

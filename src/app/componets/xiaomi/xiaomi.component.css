@@ -356,7 +356,7 @@ background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, F
   
   @media (min-width: 992px) {
     body.sidenav-toggled .content-wrapper {
-      margin-left: 55px;
+      margin-left: 155px;
     }
   }
   
@@ -1109,3 +1109,73 @@ background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, F
 
       .nav-item-log:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
         transform: translateX(-3px);}
+
+
+        .notaDebito{ color: #1D9AF2;
+          background: #123B28;  /* fallback for old browsers */ 
+      background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+      background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+      background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          border: 0px solid #3a3f48;
+          border-radius: 0px;
+          padding: 0px;
+          cursor: pointer;
+          height:42px;
+          font-size:14px;
+          transition: all 0.2s ease-in-out;}
+  
+        .notaDebito:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+          transform: translateX(-3px);}
+
+
+          .notaCredito{ color: #1D9AF2;
+            background: #123B28;  /* fallback for old browsers */ 
+        background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+        background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+        background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border: 0px solid #3a3f48;
+            border-radius: 0px;
+            padding: 0px;
+            cursor: pointer;
+            height:42px;
+            font-size:14px;
+            transition: all 0.2s ease-in-out;}
+    
+          .notaCredito:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+            transform: translateX(-3px);}
+
+
+            .ventas{ color: #1D9AF2;
+              background: #123B28;  /* fallback for old browsers */ 
+          background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+          background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+          background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+              border: 0px solid #3a3f48;
+              border-radius: 0px;
+              padding: 0px;
+              cursor: pointer;
+              height:42px;
+              font-size:14px;
+              transition: all 0.2s ease-in-out;}
+      
+            .ventas:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+              transform: translateX(-3px);}
+
+
+.nav-link-collapse .collapsed{color: #1D9AF2;
+  background: #123B28;  /* fallback for old browsers */ 
+background: -moz-linear-gradient(to right, #123B28, #1D846B);  /* Firefox 3.6-15, Firefox 16-60 */ 
+background: -webkit-linear-gradient(to right, #123B28, #1D846B);  /* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(to right, #123B28, #1D846B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: 0px solid #3a3f48;
+  border-radius: 0px;
+  padding: 0px;
+  cursor: pointer;
+  height:42px;
+  font-size:14px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.nav-link-collapse .collapsed:hover{box-shadow: 1px 1px #02f8e4, 2px 2px #02f8e4, 3px 3px #02f8e4;
+  transform: translateX(-3px);}

@@ -30,6 +30,18 @@ select{
     margin-top: 5%;
 }
 .titleMark{
+    display: inline-block;
+    position: relative;
+    height: 132px;
+    width: 335px;
+    background: #005436;  /* fallback for old browsers */ 
+    background: -moz-radial-gradient(circle, #005436, #0C167C);  /* Firefox 3.6-15, Firefox 16-60 */ 
+    background: -webkit-radial-gradient(circle, #005436, #0C167C);  /* Chrome 10-25, Safari 5.1-6 */ 
+    background: radial-gradient(circle, #005436, #0C167C); /* IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0.5px solid #dedede;
+    border-radius: 2px;
+    margin: 10px 365px;
+    transition: 0.2s linear;
     color: red;
 }
 .btn{
@@ -38,3 +50,4 @@ select{
     color: darkcyan;
     border-color: blanchedalmond;
 }
+
