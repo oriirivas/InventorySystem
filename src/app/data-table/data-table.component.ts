@@ -96,12 +96,16 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   sudProduct(){
     let sud=this.productoActual.cantidadDto-this.howManyStock;
     let obs =this.productService.modifyProduct(this.productoActual.idProductoDto,sud,this.productoActual.precioVentaDto);
-      obs.subscribe(res => {
-        alert("Actualizado con exito");
-        this.infoTable();
-      });
     
   }
+  public stockSell:number=10;
+  public modelSell:string="el que la da"
+
+  sellInfo(){
+   this.modelSell= this.productoActual.modeloDto;
+  }
+  
+ 
 
 }
 

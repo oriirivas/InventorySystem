@@ -52,3 +52,10 @@ export interface ResponseProducto {
   stock: number,
   total: number */
 }
+export interface ResponseSell {
+  cantidadVendidosDto: number,
+  fechaVentaDto: Date,
+  modeloDto: string,
+  nombreSucursalDto: string,
+  vendedorDto: string
+}

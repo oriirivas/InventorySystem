@@ -87,15 +87,25 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
     this.idProducto=value;
   }
 
+  getPrice(value : number){
+    this.newPrice=value;
+    console.log(value)
+  }
+
+  getStock(value : number){
+    this.newStock=value;
+    console.log(value)
+  }
+
   modifyProduct(){
-    if(this.newStock == null ||this.newPrice == null){
+    if(this.newStock == undefined ||this.newPrice == undefined){
       alert('Debe llenar todo los campos, si hay uno que no desea modificar, copielo como es encuentra en la tabla');
     }else{
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
         alert("Actualizado con exito")
         this.tableInfo();
-        this.router.navigate(['/update-inventory']);
+        
       });
 
 

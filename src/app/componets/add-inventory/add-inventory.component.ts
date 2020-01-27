@@ -11,7 +11,7 @@ import { ResponseDtoMarca } from '../inventory/inventory-table-datasource';
   styleUrls: ['./add-inventory.component.css']
 })
 export class AddInventoryComponent implements OnInit {
-  private date: Date;
+  public date: Date;
   private numberf: string;
   private provider: string;
   private percentage: number=0;
@@ -52,7 +52,7 @@ export class AddInventoryComponent implements OnInit {
   ngOnInit() {
 
     this.listarMarca();
-    //this.validate(); // si no tienes el back corriendo comentar esta linea
+    this.validate(); // si no tienes el back corriendo comentar esta linea
     
 
   }

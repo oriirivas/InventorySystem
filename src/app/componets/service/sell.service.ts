@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http/http';
+import { ResponseSell } from '../inventory/inventory-table-datasource';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class SellService {
   };
 
   constructor(private http: HttpClient) { }
+  private listSell: Array<ResponseSell> = [] as any;
 
   addSell(stock:number, date:Date, model:string, branchOffice: string, user:string){
     let body =  {
@@ -30,7 +32,18 @@ export class SellService {
     return this.http.post('http://localhost:8090/api/v1/ventas/vender', body, this.headersOptions );
   }
   getSell(){
-     return this.http.get('http://localhost:8090/api/v1/ventas/listar', this.headersOptions );
+     return this.http.get<ResponseSell[]>('http://localhost:8090/api/v1/ventas/listar', this.headersOptions );
+  }
+  public sellGetInfo(producto : ResponseSell){
+    let body =  {
+      "cantidadVendidosDto": producto.cantidadVendidosDto,
+      "fechaVentaDto": producto.fechaVentaDto,
+      "modeloDto": producto.modeloDto,
+      "nombreSucursalDto": producto.nombreSucursalDto,
+      "vendedorDto": producto.vendedorDto
+    }
+    //this.listSell.push(producto);
+    return this.http.post('http://localhost:8090/api/v1/ventas/vender', body, this.headersOptions );
   }
   
 }

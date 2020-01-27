@@ -67,7 +67,7 @@
               <ng-container matColumnDef="edit">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Editar</th>
                 <td mat-cell *matCellDef="let row">{{row.edit}}
-                  <button type="button" (click)="getId(row.idProductoDto)" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" (click)="getId(row.idProductoDto)" (click)="getStock(row.cantidadDto)" (click)="getPrice(row.precioVentaDto)" class="btn btn-primary btn-edit" data-toggle="modal" data-target="#exampleModal">
                     Editar
                   </button>
                   
@@ -136,7 +136,7 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Ingrese Id del Producto</label>
+                                <label for="validationServer01">Esta seguro que desea eliminar el producto</label>
                                 <input (keyup)="IdProduct1Keyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
@@ -146,8 +146,8 @@
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                          <button type="submit" (click)="deleteProduct()"  class="btn btn-primary">Guardar Cambios</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                          <button type="submit" (click)="deleteProduct()"  class="btn btn-primary">Si</button>
                         </div>
                       </div>
                     </div>
@@ -177,7 +177,7 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Cuantos productos deseas agreagar</label>
+                                <label for="validationServer01">Cuantos productos deseas agregar</label>
                                 <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
@@ -199,7 +199,7 @@
 
               <!-- sud Column -->
               <ng-container matColumnDef="sud">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Sumar</th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Restar</th>
                 <td mat-cell *matCellDef="let row">{{row.sud}}
                   <button type="button" (click)="getId(row.idProductoDto)" class="btn btn-primary btn-delete" data-toggle="modal" data-target="#exampleModalsud">
                     Restar
@@ -219,7 +219,7 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Cuantos productos deseas agreagar</label>
+                                <label for="validationServer01">Cuantos productos deseas restar</label>
                                 <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HAMMER_LOADER } from '@angular/platform-browser';
-import { InventoryTableItem, ResponseDtoMarca, ResponseProducto } from '../inventory/inventory-table-datasource';
+import { InventoryTableItem, ResponseDtoMarca, ResponseProducto, ResponseSell } from '../inventory/inventory-table-datasource';
 
 
 @Injectable({
@@ -124,6 +124,21 @@ export class ProductsService {
     let aux = this.http.delete('http://localhost:8090/api/v1/producto/'+id, this.headersOptions );
     return aux; 
   } 
+  public sellGetInfo(producto : ResponseSell){
+    let body =  {
+      "cantidadVendidosDto": producto.cantidadVendidosDto,
+      "fechaVentaDto": producto.fechaVentaDto,
+      "modeloDto": producto.modeloDto,
+      "nombreSucursalDto": producto.nombreSucursalDto,
+      "vendedorDto": producto.vendedorDto
+    }
+    debugger
+    //this.listSell.push(producto);
+    return this.http.post('http://localhost:8090/api/v1/ventas/vender', body, this.headersOptions );
+  }
+  getSell(){
+    return this.http.get<ResponseSell[]>('http://localhost:8090/api/v1/ventas/listar', this.headersOptions );
+ }
 }
 
 

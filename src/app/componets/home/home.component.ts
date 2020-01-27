@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
    this.validate();
-   //this.validate(); // si no tienes el back corriendo comentar esta linea 
+   this.validate(); // si no tienes el back corriendo comentar esta linea 
   }
    /** metodo que valida si hay una sesion abierta, de no ser asi no te deja entrar */
   validate(){

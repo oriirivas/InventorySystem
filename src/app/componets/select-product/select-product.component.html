@@ -72,9 +72,9 @@
                             <label class="sr-only" for="inlineFormInputGroup"></label>
                             <div class="input-group mb-2">
                               <div class="input-group-prepend">
-                                <div class="input-group-text">Factura:</div>
+                                <div class="input-group-text">Fecha:</div>
                               </div>
-                              <input type="date" class="form-control" id="inlineFormInputGroup">
+                              <input type="date" (keyup)="dateKeyup($event.target.value)" class="form-control" id="inlineFormInputGroup">
                             </div>
                           </div>
                           <div class="col-auto">
@@ -174,7 +174,7 @@
               <!-- container -->
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-dismiss="modal">Enviar a Correo</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal" (click)="addSell()">Enviar a Correo</button>
               <button type="button" class="btn btn-info">Imprimir</button>
             </div>
           </div>

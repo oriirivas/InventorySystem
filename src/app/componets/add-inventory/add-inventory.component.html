@@ -27,7 +27,7 @@
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer08">proveedor</label>
+                            <label for="validationServer08">Proveedor</label>
                             <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer08" value="Proveedor" required>
                                 <div class="invalid-feedback">
                                     {{lockProvider}}
@@ -36,8 +36,8 @@
                     </div>
                     <div class="form-row">  
                         <div class="col-md-4 mb-3">
-                            <br>
                             <div class="form-grup">
+                                <label for="validationServer02">Marca</label>
                                 <select [(ngModel)]="marcaLocal" name="marcaName" class="custom-select mr-sm-2 {{validTradeMark}}" (click)="tradeMarkKeyup()" id="inlineFormCustomSelec" required>
                                   <option  *ngFor = "let marca of lista" [ngValue]="marca" >{{marca.marcaDto}}</option>
                                 </select>
