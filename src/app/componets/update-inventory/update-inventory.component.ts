@@ -36,7 +36,14 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
   constructor(private router: Router, private productService:ProductsService) { }
 
   ngOnInit() {
-
+    this.tableInfo();
+    
+  }
+  
+  ngAfterViewInit() {
+  
+  }
+  tableInfo(){
     this.productService.showProduct().subscribe(res=>{
 
       this.dataSourcex = new MatTableDataSource<InventoryTableItem>( res );
@@ -49,12 +56,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       console.log(res);
       //this.tableInfo=res;
   }); 
-}
-  
-  ngAfterViewInit() {
-  
   }
-  
   applyFilter(filterValue: string) {
     this.dataSourcex.filter = filterValue.trim().toLowerCase();    
   }
@@ -92,7 +94,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
         alert("Actualizado con exito")
-        
+        this.tableInfo();
         this.router.navigate(['/update-inventory']);
       });
 
@@ -107,7 +109,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       let obs =this.productService.deleteProduct(this.idProducto);
       obs.subscribe(res => {
         alert("Eliminado con exito")
-        this.router.navigate(['/update-inventory']);
+        this.tableInfo();
       });   
     }
   }
@@ -124,7 +126,8 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
         this.newStock = totalStock;
         this.newPrice = res.precioVentaDto;
         this.modifyProduct();
-        alert("Operacion realizada con exito")
+        alert("Operacion realizada con exito");
+        this.tableInfo();
       });   
     }
     return this.newStock
@@ -141,7 +144,8 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
         this.newStock = totalStock;
         this.newPrice = res.precioVentaDto;
         this.modifyProduct();
-        alert("Operacion realizada con exito")
+        alert("Operacion realizada con exito");
+        this.tableInfo();
       });   
     }
     return this.newStock

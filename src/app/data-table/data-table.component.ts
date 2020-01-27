@@ -35,6 +35,14 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   constructor(private productService:ProductsService, private router:Router) { }
   
   ngOnInit() { 
+    
+    this.infoTable();
+  }
+
+  ngAfterViewInit() {
+  }
+
+  infoTable(){
     /** trae los productos desde la base de datos */
     this.productService.showProduct().subscribe(res=>{
       /** los productos se los asigna dataSourcex bajo el formato de la intefaz DataTableItem */
@@ -42,10 +50,6 @@ export class DataTableComponent implements AfterViewInit, OnInit {
       this.dataSourcex.paginator = this.paginator; //paginacion
       this.dataSourcex.sort = this.sort;//filtro y orden
     }); 
-    
-  }
-
-  ngAfterViewInit() {
   }
 
   applyFilter(filterValue: string) {
@@ -84,10 +88,20 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   sendIfonCarrito(){
     this.productService.carritoGetInfo(this.productoActual);
     console.log(this.productoActual);
+    this.sudProduct();
     alert('agregado al carrito');
+    
   }
 
-  
+  sudProduct(){
+    let sud=this.productoActual.cantidadDto-this.howManyStock;
+    let obs =this.productService.modifyProduct(this.productoActual.idProductoDto,sud,this.productoActual.precioVentaDto);
+      obs.subscribe(res => {
+        alert("Actualizado con exito");
+        this.infoTable();
+      });
+    
+  }
 
 }
 
