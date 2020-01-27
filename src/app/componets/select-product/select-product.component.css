@@ -1,4 +1,4 @@
-.table {
+.table-striped {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 15%;
 }
@@ -44,25 +44,26 @@ tfoot {
   text-align: right;
 }
 .modal-content{
-  width: 900px;
-  height: 795px;
+  width: 160%;
+  height: 595%;
   float: center;
-  
 }
 
 tfoot tr th:last-child {
   font-family: monospace;
 }
 
-.borderless{
+table{
   background: rgb(255, 255, 255);
   margin-left: 0px;
   margin-top: 0px;
 }
+
 .th,td{
   background: white;
   text-align: left;
 }
+
 tr{
   text-align: right;
 }
@@ -70,10 +71,13 @@ tr{
 .row{
   float: center;
   margin-left: 0px;
-  margin-top: 15px;
+  margin-top: 0%;
+  font-family: monospace;
+
 }
 
 .h5{
   margin-right: 500px;
 }
+
 
