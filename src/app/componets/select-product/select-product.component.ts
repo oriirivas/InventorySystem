@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductsService} from '../service/products.service'
-import { ResponseProducto, ResponseSell } from '../inventory/inventory-table-datasource';
+import { ResponseProducto } from '../inventory/inventory-table-datasource';
 import { DataTableComponent } from 'src/app/data-table/data-table.component';
 import { SellService } from '../service/sell.service';
+import { ResponseSellItem, ResponseSell } from '../sales-report/sales-report-table-datasource';
 
 @Component({
   selector: 'app-select-product',
@@ -11,10 +12,10 @@ import { SellService } from '../service/sell.service';
 })
 export class SelectProductComponent implements OnInit {
   private listProducts: Array<ResponseProducto>;
-  private listSell: Array<ResponseSell>;
+  private listSell: DataTableComponent
   private name: string;
   
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService,private sellServices: SellService) { }
 
   private stock:number;
   public model:string;
@@ -32,6 +33,14 @@ export class SelectProductComponent implements OnInit {
   prductSale(){
     this.listProducts=this.productService.carritoSendInfo()
   }
+  aja(){
+    this.listProducts=this.productService.carritoSendInfo()
+    this.listProducts.forEach(obj => {
+      this.model=obj.modeloDto,
+      this.stock=obj.cantidad
+      console.log(this.stock,this.model)
+     });
+  }
   sellerName(){
     this.name=localStorage.getItem("user");
   }
@@ -39,22 +48,28 @@ export class SelectProductComponent implements OnInit {
     this.dateSell = value;
     
   }
+  getModel(value: string){
+    this.model=value;
+    console.log(this.model)
+  }
+  getStock(value:number){
+    this.stock=value;
+    console.log(this.stock);
+  }
+
+
   addSell(){
     let product: ResponseSell ={
-      cantidadVendidosDto: 100,
+      cantidadVendidosDto: this.stock,
       fechaVentaDto:this.dateSell,
-      modeloDto:"s10",
+      modeloDto:this.model,
       nombreSucursalDto:"providencia",
       vendedorDto:this.name
     }
     console.log(product)
-    let obs=this.productService.sellGetInfo(product).subscribe(res =>{
-      alert('aja')
+    let obs=this.sellServices.sellSetInfo(product).subscribe(res =>{
+      alert('Vendido')
     });
-    
-    //stock:number, date:Date, model:string, branchOffice: string, user:string
-  }
-  sendIfonCarrito(){
     
   }
 

@@ -17,12 +17,13 @@ import { ResponseProducto, InventoryTableItem } from '../componets/inventory/inv
 export class DataTableComponent implements AfterViewInit, OnInit {
   
   
-  private productoActual:ResponseProducto;
+  public productoActual:ResponseProducto;
   
   private howManyStock:number=1;
   
   private totalVenta:number;
-
+  public modelo:string;
+  public cantidas:number
   
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -64,8 +65,20 @@ export class DataTableComponent implements AfterViewInit, OnInit {
   /** guarda la informacion del producto seleccionado */
   add(value: ResponseProducto){
     this.productoActual=value;
+    this.modelo=this.productoActual.modeloDto
+    this.cantidas=this.productoActual.cantidadDto
   }
-
+  public model:string
+  public stock:number
+  getModel(value: string){
+    this.model=value;
+    console.log(this.model)
+  }
+  getStock(value:number){
+    this.stock=value;
+    console.log(this.stock);
+  }
+  
   /**multiplica la cantidad de producto que se quiere vender por el precio del mismo, para calcular el total
    * valida si la cantidad que se quiere vender es menor que la que hay en el inventario
    * de ser asi envia la informacion al carrito de compras
@@ -98,15 +111,7 @@ export class DataTableComponent implements AfterViewInit, OnInit {
     let obs =this.productService.modifyProduct(this.productoActual.idProductoDto,sud,this.productoActual.precioVentaDto);
     
   }
-  public stockSell:number=10;
-  public modelSell:string="el que la da"
-
-  sellInfo(){
-   this.modelSell= this.productoActual.modeloDto;
-  }
-  
  
-
 }
 
     

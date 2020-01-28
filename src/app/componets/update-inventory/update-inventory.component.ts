@@ -53,7 +53,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
      
       
       //this.dataSource.connect();
-      console.log(res);
+      console.log(res+"aaaaaaa");
       //this.tableInfo=res;
   }); 
   }
@@ -104,7 +104,7 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
       let obs =this.productService.modifyProduct(this.idProducto,this.newStock,this.newPrice);
       obs.subscribe(res => {
         alert("Actualizado con exito")
-        this.tableInfo();
+        //this.tableInfo();
         
       });
 
@@ -136,11 +136,9 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
         this.newStock = totalStock;
         this.newPrice = res.precioVentaDto;
         this.modifyProduct();
-        alert("Operacion realizada con exito");
-        this.tableInfo();
+        
       });   
     }
-    return this.newStock
   }
   sudProduct(){
     console.log()
@@ -154,11 +152,10 @@ export class UpdateInventoryComponent implements AfterViewInit, OnInit {
         this.newStock = totalStock;
         this.newPrice = res.precioVentaDto;
         this.modifyProduct();
-        alert("Operacion realizada con exito");
-        this.tableInfo();
+        
       });   
     }
-    return this.newStock
+    
   }
 }
 

@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http/http';
-import { ResponseSell } from '../inventory/inventory-table-datasource';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ResponseSellItem, ResponseSell } from '../sales-report/sales-report-table-datasource';
+
+
+import { HAMMER_LOADER } from '@angular/platform-browser';
+import { InventoryTableItem, ResponseDtoMarca, ResponseProducto} from '../inventory/inventory-table-datasource';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,32 +23,19 @@ export class SellService {
   };
 
   constructor(private http: HttpClient) { }
-  private listSell: Array<ResponseSell> = [] as any;
-
-  addSell(stock:number, date:Date, model:string, branchOffice: string, user:string){
-    let body =  {
-      "cantidadVendidosDto": stock,
-      "fechaVentaDto": date,
-      "modeloDto": model,
-      "nombreSucursalDto": branchOffice,
-      "vendedorDto": user
-    }
-
-    return this.http.post('http://localhost:8090/api/v1/ventas/vender', body, this.headersOptions );
-  }
-  getSell(){
-     return this.http.get<ResponseSell[]>('http://localhost:8090/api/v1/ventas/listar', this.headersOptions );
-  }
-  public sellGetInfo(producto : ResponseSell){
+  public sellSetInfo(producto : ResponseSell){
     let body =  {
       "cantidadVendidosDto": producto.cantidadVendidosDto,
       "fechaVentaDto": producto.fechaVentaDto,
-      "modeloDto": producto.modeloDto,
+      "productoDto": producto.modeloDto,
       "nombreSucursalDto": producto.nombreSucursalDto,
       "vendedorDto": producto.vendedorDto
     }
+    debugger
     //this.listSell.push(producto);
     return this.http.post('http://localhost:8090/api/v1/ventas/vender', body, this.headersOptions );
   }
-  
+  public getSell(){
+    return this.http.get<ResponseSellItem[]>('http://localhost:8090/api/v1/ventas/listar', this.headersOptions );
+ }
 }

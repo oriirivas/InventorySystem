@@ -16,7 +16,7 @@
 
               <input (keyup)="applyFilter($event.target.value)" >
 
-              <span style="float: right;"><img src="https://img.icons8.com/color/40/000000/add-shopping-cart.png"  [routerLink]="['/sales-select']"></span>
+              <span (click)="getModel(product.modeloDto)" (click)="getstock(product.cantidad)" style="float: right;"><img src="https://img.icons8.com/color/40/000000/add-shopping-cart.png"  [routerLink]="['/sales-select']"></span>
 
               
 

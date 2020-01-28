@@ -86,8 +86,8 @@
                             
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer03">Nuevo Stock</label>
-                                <input (keyup)="newStockKeyup($event.target.value)"type="text" class="form-control {{validStock}}" id="validationServer03" required>
+                                <label for="validationServer11">Nuevo Stock</label>
+                                <input (keyup)="newStockKeyup($event.target.value)"type="text" class="form-control {{validStock}}" class="validationServer11" required>
                                 <div class="invalid-feedback">
                                   Please provide a valid city.
                                 </div>
@@ -95,8 +95,8 @@
                             </div>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12"align="center">
-                                <label for="validationServer01">Nuevo Precio</label>
-                                <input (keyup)="newPriceKeyup($event.target.value)" type="number" class="form-control {{validPrice}}" id="validationServer01" value="01" required>
+                                <label for="validationServer12">Nuevo Precio</label>
+                                <input (keyup)="newPriceKeyup($event.target.value)" type="number" class="form-control {{validPrice}}" class="validationServer12" value="01" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -105,7 +105,7 @@
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-secondary"  data-dismiss="modal">Cerrar</button>
                           <button type="submit" (click)="modifyProduct()" class="btn btn-primary">Guardar Cambios</button>
                         </div>
                       </div>
@@ -136,8 +136,8 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Esta seguro que desea eliminar el producto</label>
-                                <input (keyup)="IdProduct1Keyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
+                                <label for="validationServer13">Esta seguro que desea eliminar el producto</label>
+                                <input (keyup)="IdProduct1Keyup($event.target.value)" type="number" class="form-control {{validId1}}" class="validationServer13" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -177,8 +177,8 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Cuantos productos deseas agregar</label>
-                                <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
+                                <label for="validationServer14">Cuantos productos deseas agregar</label>
+                                <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" class="validationServer14" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>
@@ -219,8 +219,8 @@
                           <form>
                             <div class="form-row col-md-12 mb-12">
                               <div class="col-md-12 mb-12" align="center">
-                                <label for="validationServer01">Cuantos productos deseas restar</label>
-                                <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" id="validationServer01" value="1" required>
+                                <label for="validationServer15">Cuantos productos deseas restar</label>
+                                <input (keyup)="plusProductKeyup($event.target.value)" type="number" class="form-control {{validId1}}" class="validationServer15" value="1" required>
                                 <div class="valid-feedback">
                                   Looks good!
                                 </div>

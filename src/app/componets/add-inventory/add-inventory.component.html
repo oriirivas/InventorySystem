@@ -27,8 +27,8 @@
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer08">Proveedor</label>
-                            <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer08" value="Proveedor" required>
+                            <label for="validationServer03">Proveedor</label>
+                            <input (keyup)="providerKeyup($event.target.value)"  type="text" class="form-control {{validProvider}}" id="validationServer03" value="Proveedor" required>
                                 <div class="invalid-feedback">
                                     {{lockProvider}}
                                 </div>
@@ -37,7 +37,7 @@
                     <div class="form-row">  
                         <div class="col-md-4 mb-3">
                             <div class="form-grup">
-                                <label for="validationServer02">Marca</label>
+                                <label for="validationServer04">Marca</label>
                                 <select [(ngModel)]="marcaLocal" name="marcaName" class="custom-select mr-sm-2 {{validTradeMark}}" (click)="tradeMarkKeyup()" id="inlineFormCustomSelec" required>
                                   <option  *ngFor = "let marca of lista" [ngValue]="marca" >{{marca.marcaDto}}</option>
                                 </select>
@@ -47,15 +47,15 @@
                             </div>                                    
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer03">Modelo</label>
-                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer09" value="Modelo" required>
+                            <label for="validationServer05">Modelo</label>
+                            <input (keyup)="modelKeyup($event.target.value)" type="text" class="form-control {{validModel}}" id="validationServer05" value="Modelo" required>
                                 <div class="invalid-feedback">
                                     {{lockModel}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="validationServer03">Categoria</label>
-                            <input (keyup)="categoryKeyup($event.target.value)" type="text" class="form-control {{validCategory}}" id="validationServer04" value="Categoria" required>
+                            <label for="validationServer06">Categoria</label>
+                            <input (keyup)="categoryKeyup($event.target.value)" type="text" class="form-control {{validCategory}}" id="validationServer06" value="Categoria" required>
                                 <div class="invalid-feedback">
                                     {{lockCategory}}
                                 </div>
@@ -63,29 +63,29 @@
                     </div>
                     <div class="form-row">
                         <div class="col-md-3 mb-3">
-                            <label for="validationServer09">Stock</label>
-                            <input (keyup)="stockKeyup($event.target.value)" type="number" class="form-control {{validStock}}" id="validationServer05" value="00" required>
+                            <label for="validationServer07">Stock</label>
+                            <input (keyup)="stockKeyup($event.target.value)" type="number" class="form-control {{validStock}}" id="validationServer07" value="00" required>
                                 <div class="invalid-feedback">
                                     {{lockStock}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-4">
-                            <label for="validationServer05">Precio de compra</label>
-                            <input (keyup)="buyPriceKeyup($event.target.value)" type="number" class="form-control {{validBuyPrice}}" id="validationServer06" value="00" required>
+                            <label for="validationServer08">Precio de compra</label>
+                            <input (keyup)="buyPriceKeyup($event.target.value)" type="number" class="form-control {{validBuyPrice}}" id="validationServer08" value="00" required>
                                 <div class="invalid-feedback">
                                     {{lockBuyPrice}}
                                 </div>
                         </div>
                         <div class="col-md-1 mb-1">
-                            <label for="validationServer05">% Ganancia</label>
-                            <input (keyup)="percentageKeyup($event.target.value)" type="number" class="form-control {{validPercentage}}" id="validationServer06" value="0" required>
+                            <label for="validationServer09">% Ganancia</label>
+                            <input (keyup)="percentageKeyup($event.target.value)" type="number" class="form-control {{validPercentage}}" id="validationServer09" value="0" required>
                                 <div class="invalid-feedback">
                                     {{lockPercentage}}
                                 </div>
                         </div>
                         <div class="col-md-4 mb-4">
-                            <label for="validationServer05">Precio de Venta</label>
-                            <input (keyup)="salePriceKeyup($event.target.value)" type="number" class="form-control {{validSalePrice}}" id="validationServer07" value="{{salePrice}}" required>
+                            <label for="validationServer10">Precio de Venta</label>
+                            <input (keyup)="salePriceKeyup($event.target.value)" type="number" class="form-control {{validSalePrice}}" id="validationServer10" value="{{salePrice}}" required>
                                 <div class="invalid-feedback">
                                     {{lockSalePrice}}
                                 </div>

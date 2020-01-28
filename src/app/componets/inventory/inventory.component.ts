@@ -50,15 +50,7 @@ export class InventoryComponent implements AfterViewInit, OnInit {
   applyFilter(filterValue: string) {
       this.dataSourcex.filter = filterValue.trim().toLowerCase();    
   }
-  getColor(product) { (2)
-    if(product<5){
-      return 'green';
-    }else if(product>5 && product<10){
-      return 'yellow';
-    }else{
-      return 'red';
-    }
-  }
+  
 }
 
 

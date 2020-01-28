@@ -24,39 +24,39 @@
     
                  <table mat-table [dataSource]="dataSourcex" class="full-width-table data-table" matSort aria-label="Elements">
     
-                  <!-- Id Column -->
-                  <ng-container matColumnDef="cantidadVendidosDto">
+                  <!-- stock Column -->
+                  <ng-container matColumnDef="cantidadVendidoDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Cantidad</th>
-                    <td mat-cell *matCellDef="let row">{{row.cantidadVendidosDto}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.cantidadVendidoDto}}</td>
                   </ng-container>
             
-                  <!-- TradeMark Column -->
-                  <ng-container matColumnDef="fechaVentaDto">
+                  <!-- date Column -->
+                  <ng-container matColumnDef="fechaDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</th>
-                    <td mat-cell *matCellDef="let row">{{row.fechaVentaDto}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.fechaDto}}</td>
                   </ng-container>
     
-                  <!-- model Column -->
-                  <ng-container matColumnDef="modeloDto">
+                  <!-- product Column -->
+                  <ng-container matColumnDef="productoDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Modelo</th>
-                    <td mat-cell *matCellDef="let row">{{row.modeloDto}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.productoDto}}</td>
                   </ng-container>
     
                   <!-- category Column -->
-                  <ng-container matColumnDef="nombreSucursalDto">
+                  <ng-container matColumnDef="sucursalDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Sucursal</th>
-                    <td mat-cell *matCellDef="let row">{{row.nombreSucursalDto}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.sucursalDto}}</td>
                   </ng-container>
     
                   <!-- buyPrice Column -->
-                  <ng-container matColumnDef="vendedorDto">
+                  <ng-container matColumnDef="nombreVendedorDto">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Vendedor</th>
-                    <td mat-cell *matCellDef="let row">{{row.vendedorDto}}</td>
+                    <td mat-cell *matCellDef="let row">{{row.nombreVendedorDto}}</td>
                   </ng-container>
                   <!-- salePrice Column -->
-                  <ng-container matColumnDef="precioVentaDto">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Precio de Venta</th>
-                    <td mat-cell *matCellDef="let row">{{row.precioVentaDto}}</td>
+                  <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total</th>
+                    <td mat-cell *matCellDef="let row">{{row.total}}</td>
                   </ng-container>
                   
     
